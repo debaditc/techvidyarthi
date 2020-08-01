@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Data &amp; Tech Vidyārthī</title>
+    <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/series/</link>
+    <description>Recent content in Series on Data &amp; Tech Vidyārthī</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,120 @@
+baseurl = "http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/"
+
+title = "Data & Tech Vidyārthī"
+
+theme = ["hugo-coder"]
+
+languagecode = "en"
+defaultcontentlanguage = "en"
+paginate = 10
+canonifyurls = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "debaditya"
+
+[params]
+    author = "Debaditya Chakravorty"
+    description = "Debaditya Chakravorty personal website"
+    keywords = "blog,developer,personal"
+    info = "Love with Data and Technology"
+    avatarurl = "/images/dev1.jpg"
+    #gravatar = "dev.techvidyarthi@gmail.com"
+    #footercontent = "Enter a text here."
+
+    dateformat = "January 2, 2006"
+
+    hideFooter = false
+    hideCredits = false
+    hideCopyright = false
+    since = 2020
+
+    rtl = false
+
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "light"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    # Enable Twemoji
+    enableTwemoji = true
+
+    # Custom CSS
+    custom_css = []
+
+    # Custom JS
+    custom_js = []
+
+# If you want to use fathom(https://usefathom.com) for analytics, add this section
+#[params.fathomAnalytics]
+    #siteID = "ABCDE"
+    # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+    #serverURL = "analytics.example.com"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/debaditc/"
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 4
+    url = "https://www.linkedin.com/in/debaditya-chakravorty/"
+#[[params.social]]
+#    name = "RSS"
+#    icon = "fas fa-rss"
+#    weight = 6
+#    url = "https://myhugosite.com/index.xml"
+#    rel = "alternate"
+#    type = "application/rss+xml"
+
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+            name = "Home"
+            weight = 1
+            url = "/"
+
+            [[languages.en.menu.main]]
+            name = "About"
+            weight = 1
+            url = "/about/"
+
+            [[languages.en.menu.main]]
+            name = "AI & ML"
+            weight = 3
+            url = "/posts/"
+
+            [[languages.en.menu.main]]
+            name = "System-Design"
+            weight = 2
+            url = "/concepts/"
+
+            [[languages.en.menu.main]]
+            name = "Programming"
+            weight = 2
+            url = "/progs/"
+            
+            [[languages.en.menu.main]]
+            name = "Projects"
+            weight = 3
+            url = "/projects/"
+

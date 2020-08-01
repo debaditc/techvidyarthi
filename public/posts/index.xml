@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Data &amp; Tech Vidyārthī</title>
+    <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/</link>
+    <description>Recent content in Posts on Data &amp; Tech Vidyārthī</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 04 Jul 2020 10:52:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bagging &amp; Boosting in Machine Learning World</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/baggingboosting/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/baggingboosting/</guid>
+      <description>In my last tech blog, I discussed on Decision trees and Random Forrest. So I thought of articulating on Gradient Boosting model and XgBoost. But before these algorithms , its important to understand 2 basic concepts :
+ Bagging (Bootstrap Aggregation) Boosting  Bagging (Bootstrap Aggregation) Bootstrapping is a process of creating random samples with replacement for estimating sample statistics. With replacement means , the sample might have duplicated values from the original set.</description>
+    </item>
+    
+  </channel>
+</rss>

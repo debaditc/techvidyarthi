@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data &amp; Tech Vidyārthī</title>
+    <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/</link>
+    <description>Recent content on Data &amp; Tech Vidyārthī</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 11 Jul 2020 19:29:02 -0400</lastBuildDate>
+    
+	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OSI Model Layer</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/osilayer/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/osilayer/</guid>
+      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
+  Comparing OSI Model Layer with TCP/IP model   </description>
+    </item>
+    
+    <item>
+      <title>Bagging &amp; Boosting in Machine Learning World</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/baggingboosting/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/baggingboosting/</guid>
+      <description>In my last tech blog, I discussed on Decision trees and Random Forrest. So I thought of articulating on Gradient Boosting model and XgBoost. But before these algorithms , its important to understand 2 basic concepts :
+ Bagging (Bootstrap Aggregation) Boosting  Bagging (Bootstrap Aggregation) Bootstrapping is a process of creating random samples with replacement for estimating sample statistics. With replacement means , the sample might have duplicated values from the original set.</description>
+    </item>
+    
+    <item>
+      <title>About Data &amp; Tech Vidyārthī</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/</guid>
+      <description>Vidyārthī is a Sanskrit word which means &amp;ldquo;Student&amp;rdquo;. This website is a journal and journey of a Tech enthusiast (Debaditya Chakravorty [Deb]) who believes to be &amp;ldquo;Life long student&amp;rdquo;. This website mainly focusses on sharing technology knowledge with everyone and also learn during the journey.
+Areas of Interests  Architechture &amp;amp; System Design Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial &amp;amp; Machine learning Algorithms &amp;amp; Code complexities  Have questions or suggestions?</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/contact/</guid>
+      <description> Contact : dev.techvidyarthi@gmail.com | debaditya.chakravorty@gmail.com  </description>
+    </item>
+    
+    <item>
+      <title>Hobby Projects</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/</guid>
+      <description>Social Distancing Application In this fun project (Social distance Detection) , I am using YOLO (You only look once) + weights and COCO (Common Objects in Context) dataset for identifying person in real-time video.
+ Yolo V3 COCO labels Distance : Euclidean (between boxes)  We can create the same concept in our workplace and maintain social distancing.
+Inspiration This home project is inspired from Sir Andrew Ng&amp;rsquo;s startup More details are here</description>
+    </item>
+    
+  </channel>
+</rss>

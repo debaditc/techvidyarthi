@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concepts on Data &amp; Tech Vidyārthī</title>
+    <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/</link>
+    <description>Recent content in Concepts on Data &amp; Tech Vidyārthī</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 11 Jul 2020 19:29:02 -0400</lastBuildDate>
+    
+	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OSI Model Layer</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/osilayer/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/osilayer/</guid>
+      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
+  Comparing OSI Model Layer with TCP/IP model   </description>
+    </item>
+    
+  </channel>
+</rss>
