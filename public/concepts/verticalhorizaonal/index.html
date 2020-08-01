@@ -7,7 +7,8 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="Debaditya Chakravorty personal website">
+    <meta name="description" content="Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally.">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -15,23 +16,28 @@
     
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Data &amp; Tech Vidyārthī"/>
-<meta name="twitter:description" content="Debaditya Chakravorty personal website"/>
+<meta name="twitter:title" content="Vertical vs Horizontal Scaling"/>
+<meta name="twitter:description" content="Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally."/>
 
-    <meta property="og:title" content="Data &amp; Tech Vidyārthī" />
-<meta property="og:description" content="Debaditya Chakravorty personal website" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/" />
-<meta property="og:updated_time" content="2020-08-01T15:03:38-04:00" />
+    <meta property="og:title" content="Vertical vs Horizontal Scaling" />
+<meta property="og:description" content="Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/verticalhorizaonal/" />
+<meta property="article:published_time" content="2020-07-26T16:30:42-04:00" />
+<meta property="article:modified_time" content="2020-07-26T16:30:42-04:00" />
 
-
-    
-      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
-    
-    <title>Data &amp; Tech Vidyārthī</title>
 
     
-      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/verticalhorizaonal/">
+    
+    <title>
+  Vertical vs Horizontal Scaling · Data &amp; Tech Vidyārthī
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/verticalhorizaonal/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
@@ -55,7 +61,6 @@
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
 
-    <link rel="alternate" type="application/rss+xml" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/index.xml" title="Data & Tech Vidyārthī" />
     <meta name="generator" content="Hugo 0.73.0" />
   </head>
 
@@ -110,40 +115,36 @@
 
       <div class="content">
         
-  <section class="container centered">
-  <div class="about">
-    
-      
-        <div class="avatar"><img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/dev1.jpg" alt="avatar"></div>
-      
-    
-    
-    <h1>Debaditya Chakravorty</h1>
-    <h2>Love with Data and Technology</h2>
-    
-    <ul>
-      
-        
-          <li>
-            <a href="https://github.com/debaditc/" aria-label="Github"   >
-              <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="https://www.linkedin.com/in/debaditya-chakravorty/" aria-label="LinkedIn"   >
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-    </ul>
-    
-  </div>
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Vertical vs Horizontal Scaling</h1>
+    </header>
+
+    <h1 id="nutshell">Nutshell</h1>
+<ul>
+<li><strong>Horizontal scaling</strong> means that we scale by adding more machines into  pool of resources</li>
+<li><strong>Vertical scaling</strong> means that we scale by adding more power (CPU, RAM) to an existing machine.</li>
+</ul>
+<h1 id="high-level-difference">High level difference</h1>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/horver.JPG"/> 
+</figure>
+
+<h1 id="real-world-implementation">Real world implementation</h1>
+<p>Take the benfits of both Horizontal and Vertical scaling</p>
+<ul>
+<li><strong>Vertical scaling</strong> :  Inter process communication and data consistency</li>
+<li><strong>Horizontal scaling</strong> : Scalability and Resilient (no single point of failure)</li>
+</ul>
+<p>Ideal way - First have the veritical scaling (optimal level) and scale horizontally.</p>
+<h4 id="credits">Credits</h4>
+<p><a href="https://www.youtube.com/watch?v=xpDnVSmNFX0">Gaurav Sen</a> - Please watch video in Youtube</p>
+
+  </article>
 </section>
 
+  
 
       </div>
 

@@ -1,7 +1,7 @@
 ---
 title: "About Zookeeper"
 date: 2020-07-16T21:19:21-04:00
-draft: true
+draft: false
 ---
 
 Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.

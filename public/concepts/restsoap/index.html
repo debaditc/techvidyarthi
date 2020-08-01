@@ -7,7 +7,9 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="Debaditya Chakravorty personal website">
+    <meta name="description" content="REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
+REST vs SOAP   When to use REST &amp; SOAP REST Usage
+ Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -15,23 +17,30 @@
     
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Data &amp; Tech Vidyārthī"/>
-<meta name="twitter:description" content="Debaditya Chakravorty personal website"/>
+<meta name="twitter:title" content="What is REST &amp; SOAP"/>
+<meta name="twitter:description" content="REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
+REST vs SOAP   When to use REST &amp; SOAP REST Usage
+ Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site."/>
 
-    <meta property="og:title" content="Data &amp; Tech Vidyārthī" />
-<meta property="og:description" content="Debaditya Chakravorty personal website" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/" />
-<meta property="og:updated_time" content="2020-08-01T15:03:38-04:00" />
+    <meta property="og:title" content="What is REST &amp; SOAP" />
+<meta property="og:description" content="REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
+REST vs SOAP   When to use REST &amp; SOAP REST Usage
+ Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/restsoap/" />
+<meta property="article:published_time" content="2020-07-13T19:54:23-04:00" />
+<meta property="article:modified_time" content="2020-07-13T19:54:23-04:00" />
 
 
     
-      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/restsoap/">
     
-    <title>Data &amp; Tech Vidyārthī</title>
+    <title>
+  What is REST &amp; SOAP · Data &amp; Tech Vidyārthī
+</title>
 
     
-      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/restsoap/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
@@ -55,7 +64,6 @@
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
 
-    <link rel="alternate" type="application/rss+xml" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/index.xml" title="Data & Tech Vidyārthī" />
     <meta name="generator" content="Hugo 0.73.0" />
   </head>
 
@@ -110,40 +118,37 @@
 
       <div class="content">
         
-  <section class="container centered">
-  <div class="about">
-    
-      
-        <div class="avatar"><img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/dev1.jpg" alt="avatar"></div>
-      
-    
-    
-    <h1>Debaditya Chakravorty</h1>
-    <h2>Love with Data and Technology</h2>
-    
-    <ul>
-      
-        
-          <li>
-            <a href="https://github.com/debaditc/" aria-label="Github"   >
-              <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="https://www.linkedin.com/in/debaditya-chakravorty/" aria-label="LinkedIn"   >
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-    </ul>
-    
-  </div>
+  <section class="container page">
+  <article>
+    <header>
+      <h1>What is REST &amp; SOAP</h1>
+    </header>
+
+    <p>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.</p>
+<h1 id="rest-vs-soap">REST vs SOAP</h1>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/restsoap.JPG"/> 
+</figure>
+
+<h1 id="when-to-use-rest--soap">When to use REST &amp; SOAP</h1>
+<p><strong>REST Usage</strong></p>
+<ul>
+<li><strong>Limited resources and bandwidth</strong></li>
+<li><strong>Statelessness</strong> – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</li>
+<li><strong>Caching</strong> – Use-case where we need to cache a lot of requests , then REST is way to go. Use-case where it demands usage of similar requests.</li>
+<li><strong>Ease of coding</strong> – Coding + Implementation REST Services  is far easier than SOAP.</li>
+</ul>
+<p><strong>SOAP Usage</strong></p>
+<ul>
+<li><strong>Asynchronous processing and subsequent invocation</strong> – if there is a requirement that the client needs a guaranteed level of reliability and security</li>
+<li><strong>Strict format</strong> – if both the client and server have an agreement on the exchange format then SOAP 1.2 gives the rigid specifications for this type of interaction.</li>
+<li><strong>Stateful operations</strong> – Any Use-case which needs to store the state. This means SOAP is suitable for any online purchase site. Saving the state is very critical for any purchase site.</li>
+</ul>
+
+  </article>
 </section>
 
+  
 
       </div>
 

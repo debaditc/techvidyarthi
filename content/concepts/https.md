@@ -1,7 +1,7 @@
 ---
 title: "Demystifying HTTP and HTTPS"
 date: 2020-07-14T09:58:29-04:00
-draft: true
+draft: false
 ---
 
 # HTTP and HTTPS

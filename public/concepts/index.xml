@@ -6,10 +6,119 @@
     <description>Recent content in Concepts on Data &amp; Tech Vidyārthī</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Jul 2020 19:29:02 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 15:03:38 -0400</lastBuildDate>
     
 	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Event Driven model</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntdrive/</link>
+      <pubDate>Sat, 01 Aug 2020 15:03:38 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntdrive/</guid>
+      <description>Event driven model is often described in both Kappa or Lambda architechture.</description>
+    </item>
+    
+    <item>
+      <title>All about Eventual and Strongly Consistency</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntconst/</link>
+      <pubDate>Tue, 28 Jul 2020 23:15:05 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntconst/</guid>
+      <description>Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&amp;rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog</description>
+    </item>
+    
+    <item>
+      <title>Demystify Lambda and Kappa Architecture</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/lamkapp/</link>
+      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/lamkapp/</guid>
+      <description>Nutshell Lambda vs Kappa Architecture   Lambda Architecture   Kappa Architecture   </description>
+    </item>
+    
+    <item>
+      <title>Vertical vs Horizontal Scaling</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/verticalhorizaonal/</link>
+      <pubDate>Sun, 26 Jul 2020 16:30:42 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/verticalhorizaonal/</guid>
+      <description>Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally.</description>
+    </item>
+    
+    <item>
+      <title>AWS Basic Terminologies</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/awsterminology/</link>
+      <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/awsterminology/</guid>
+      <description>Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.</description>
+    </item>
+    
+    <item>
+      <title>What is Caching and its importance</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/caching/</link>
+      <pubDate>Sun, 19 Jul 2020 22:20:15 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/caching/</guid>
+      <description>3 Main use-case of Cache  Avoid Network calls Avoid repeated computation Avoid load on Database / System  Why not use cache every time  Hardware where Cache runs are mainly in SSDs which are expensive More data in Cache will increase the search time - so it will make cache data retrieval slower  Cache Policy The way we decide to load or evict data from cache is called Cache policy</description>
+    </item>
+    
+    <item>
+      <title>About Zookeeper</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/zookeeper/</link>
+      <pubDate>Thu, 16 Jul 2020 21:19:21 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/zookeeper/</guid>
+      <description>Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
+The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.
+Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service − Identifying the nodes in a cluster by name.</description>
+    </item>
+    
+    <item>
+      <title>Load Balancer</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/loadbalance/</link>
+      <pubDate>Thu, 16 Jul 2020 20:54:54 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/loadbalance/</guid>
+      <description>Load Balancing is the process of re-distributing network traffic across multiple server.
+  What Load Balancers can perform ?
+ Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying HTTP and HTTPS</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/https/</link>
+      <pubDate>Tue, 14 Jul 2020 09:58:29 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/https/</guid>
+      <description>HTTP and HTTPS HTTPS (Hyper Text transfer protoco secure) is basically http with security. SSL (Secure Socket Layer) certificate encrypts information users put into any website. Addtionally, HTTPS is also secured via TLS (Transport Layer Security) protocol. TLS is a succcessotr of SSL.
+SSL / TLS SSL/TLS works by binding the identities of entities such as websites and companies to cryptographic key pairs via digital documents known as X.509 certificates. Each key pair consists of a private key and a public key.</description>
+    </item>
+    
+    <item>
+      <title>What is REST &amp; SOAP</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/restsoap/</link>
+      <pubDate>Mon, 13 Jul 2020 19:54:23 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/restsoap/</guid>
+      <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
+REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage
+ Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
+    </item>
+    
+    <item>
+      <title>Authentication vs Authorization</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/auth/</link>
+      <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/auth/</guid>
+      <description>Authentication and authorization are important terms in world of security. Often these 2 words are confused and can be used interchangeably. In this blog, a simple differentiation has been tried to lay out to clearly define both the terms in layman&amp;rsquo;s language.
+  </description>
+    </item>
     
     <item>
       <title>OSI Model Layer</title>

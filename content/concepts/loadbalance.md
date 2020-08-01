@@ -1,7 +1,7 @@
 ---
 title: "Load Balancer"
 date: 2020-07-16T20:54:54-04:00
-draft: true
+draft: false
 ---
 
 Load Balancing is the process of re-distributing network traffic across multiple server.

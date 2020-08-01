@@ -7,7 +7,8 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="Debaditya Chakravorty personal website">
+    <meta name="description" content="Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -15,23 +16,28 @@
     
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Data &amp; Tech Vidyārthī"/>
-<meta name="twitter:description" content="Debaditya Chakravorty personal website"/>
+<meta name="twitter:title" content="All about Eventual and Strongly Consistency"/>
+<meta name="twitter:description" content="Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog"/>
 
-    <meta property="og:title" content="Data &amp; Tech Vidyārthī" />
-<meta property="og:description" content="Debaditya Chakravorty personal website" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/" />
-<meta property="og:updated_time" content="2020-08-01T15:03:38-04:00" />
+    <meta property="og:title" content="All about Eventual and Strongly Consistency" />
+<meta property="og:description" content="Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntconst/" />
+<meta property="article:published_time" content="2020-07-28T23:15:05-04:00" />
+<meta property="article:modified_time" content="2020-07-28T23:15:05-04:00" />
 
-
-    
-      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
-    
-    <title>Data &amp; Tech Vidyārthī</title>
 
     
-      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntconst/">
+    
+    <title>
+  All about Eventual and Strongly Consistency · Data &amp; Tech Vidyārthī
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntconst/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
@@ -55,7 +61,6 @@
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
 
-    <link rel="alternate" type="application/rss+xml" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/index.xml" title="Data & Tech Vidyārthī" />
     <meta name="generator" content="Hugo 0.73.0" />
   </head>
 
@@ -110,40 +115,40 @@
 
       <div class="content">
         
-  <section class="container centered">
-  <div class="about">
-    
-      
-        <div class="avatar"><img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/dev1.jpg" alt="avatar"></div>
-      
-    
-    
-    <h1>Debaditya Chakravorty</h1>
-    <h2>Love with Data and Technology</h2>
-    
-    <ul>
-      
-        
-          <li>
-            <a href="https://github.com/debaditc/" aria-label="Github"   >
-              <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="https://www.linkedin.com/in/debaditya-chakravorty/" aria-label="LinkedIn"   >
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
-            </a>
-          </li>
-        
-      
-    </ul>
-    
-  </div>
+  <section class="container page">
+  <article>
+    <header>
+      <h1>All about Eventual and Strongly Consistency</h1>
+    </header>
+
+    <h2 id="eventual-consistent">Eventual Consistent</h2>
+<ul>
+<li>Mainly used in NoSQL databases (Solr, Cassandra , MongoDb)</li>
+<li>Used for analytics  , time series analysis , etc</li>
+<li>Low latency - Faster writes</li>
+</ul>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/evenct.JPG"/> 
+</figure>
+
+<p>Please follow Werner Voggel&rsquo;s blog - <a href="https://www.allthingsdistributed.com/2008/12/eventually_consistent.html">here</a></p>
+<h2 id="strongly-consistent">Strongly Consistent</h2>
+<ul>
+<li>Mainly used in RDBMS like Oracle , MySQL , PostgreSQL</li>
+<li>Primarily used in banking and payment systems</li>
+<li>High latency - Slower writes</li>
+</ul>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/strct.JPG"/> 
+</figure>
+
+<h3 id="please-read-about-f1-database-by-google-herehttpsresearchgooglepubspub41344">Please read about F1 database by Google <a href="https://research.google/pubs/pub41344/">here</a></h3>
+<p>Photo Credits : Google Blog</p>
+
+  </article>
 </section>
 
+  
 
       </div>
 

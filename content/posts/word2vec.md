@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2020-07-11T20:24:10-04:00
 title = "Word2Vec Algorithm"
 description = ""

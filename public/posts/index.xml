@@ -6,10 +6,31 @@
     <description>Recent content in Posts on Data &amp; Tech Vidyārthī</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Jul 2020 10:52:27 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 20:24:10 -0400</lastBuildDate>
     
 	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Word2Vec Algorithm</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/word2vec/</link>
+      <pubDate>Sat, 11 Jul 2020 20:24:10 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/word2vec/</guid>
+      <description>About Word2Vec algorithm  Word2Vec is not a single algorithm Word2vec is a group of related models that are used to produce word embedding&amp;rsquo;s. These models are two-layer neural networks that are trained to reconstruct linguistic contexts of words. Word2vec takes large corpus of text as its input and produces a vector-space, with each unique word in the corpus being assigned a corresponding vector in the space.  Word2Vec can utilize either of 2 model architectures –  CBOW (Continuous Bag of Words) Skip Gram    CBOW (Continuous Bag of Words) The input to the model could be wi−2,wi−1,wi+1,wi+2wi−2,wi−1,wi+1,wi+2, the preceding and following words of the current word we are at.</description>
+    </item>
+    
+    <item>
+      <title>Trees in Machine Learning World</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/treesml/</link>
+      <pubDate>Sun, 05 Jul 2020 01:35:10 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/treesml/</guid>
+      <description>Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.
+A tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.
+The Image at the beginning of the article (Source) explains the terminologies of a Tree.
+Decision Trees Decision trees represent rules, which can be understood by humans and used in knowledge system such as database</description>
+    </item>
     
     <item>
       <title>Bagging &amp; Boosting in Machine Learning World</title>

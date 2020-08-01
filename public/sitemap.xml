@@ -4,12 +4,87 @@
   
   <url>
     <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/</loc>
-    <lastmod>2020-07-11T19:29:02-04:00</lastmod>
+    <lastmod>2020-08-01T15:03:38-04:00</lastmod>
   </url>
   
   <url>
     <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/</loc>
-    <lastmod>2020-07-11T19:29:02-04:00</lastmod>
+    <lastmod>2020-08-01T15:03:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntdrive/</loc>
+    <lastmod>2020-08-01T15:03:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntconst/</loc>
+    <lastmod>2020-07-28T23:15:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/lamkapp/</loc>
+    <lastmod>2020-07-27T21:15:14-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/verticalhorizaonal/</loc>
+    <lastmod>2020-07-26T16:30:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/awsterminology/</loc>
+    <lastmod>2020-07-24T00:10:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/</loc>
+    <lastmod>2020-07-24T00:03:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/tscomplexity/</loc>
+    <lastmod>2020-07-24T00:03:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/caching/</loc>
+    <lastmod>2020-07-19T22:20:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/zookeeper/</loc>
+    <lastmod>2020-07-16T21:19:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/loadbalance/</loc>
+    <lastmod>2020-07-16T20:54:54-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/https/</loc>
+    <lastmod>2020-07-14T09:58:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/restsoap/</loc>
+    <lastmod>2020-07-13T19:54:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/auth/</loc>
+    <lastmod>2020-07-12T16:51:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/</loc>
+    <lastmod>2020-07-11T20:24:10-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/word2vec/</loc>
+    <lastmod>2020-07-11T20:24:10-04:00</lastmod>
   </url>
   
   <url>
@@ -18,12 +93,12 @@
   </url>
   
   <url>
-    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/baggingboosting/</loc>
-    <lastmod>2020-07-04T10:52:27-04:00</lastmod>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/treesml/</loc>
+    <lastmod>2020-07-05T01:35:10-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/</loc>
+    <loc>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/baggingboosting/</loc>
     <lastmod>2020-07-04T10:52:27-04:00</lastmod>
   </url>
   

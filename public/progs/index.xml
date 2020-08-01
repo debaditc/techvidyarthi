@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Progs on Data &amp; Tech Vidyārthī</title>
+    <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/</link>
+    <description>Recent content in Progs on Data &amp; Tech Vidyārthī</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Jul 2020 00:03:26 -0400</lastBuildDate>
+    
+	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Time &amp; Space Complexity</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/tscomplexity/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/tscomplexity/</guid>
+      <description>Time Complexity Big-O , Big-Omega , Big-Theta
+ Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
+In recursive calls counts,the code would take 0 (n) time and O( n) space.</description>
+    </item>
+    
+  </channel>
+</rss>

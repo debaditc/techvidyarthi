@@ -118,3 +118,8 @@ disqusShortname = "debaditya"
             weight = 3
             url = "/projects/"
 
+[deployment]
+[[deployment.targets]]
+name = "s3 target"
+URL = "s3://techvidyarthi.com?region=us-east-1"
+

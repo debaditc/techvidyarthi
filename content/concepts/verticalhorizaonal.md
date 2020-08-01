@@ -1,7 +1,7 @@
 ---
 title: "Vertical vs Horizontal Scaling"
 date: 2020-07-26T16:30:42-04:00
-draft: true
+draft: false
 ---
 
 # Nutshell 

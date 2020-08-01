@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AWS Basic Terminologies"/>
+<meta name="twitter:description" content="Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs."/>
+
+    <meta property="og:title" content="AWS Basic Terminologies" />
+<meta property="og:description" content="Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/awsterminology/" />
+<meta property="article:published_time" content="2020-07-24T00:10:26-04:00" />
+<meta property="article:modified_time" content="2020-07-24T00:10:26-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/awsterminology/">
+    
+    <title>
+  AWS Basic Terminologies · Data &amp; Tech Vidyārthī
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/awsterminology/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Data &amp; Tech Vidyārthī
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>AWS Basic Terminologies</h1>
+    </header>
+
+    <h5 id="terminology-credits--intellipaatcom">Terminology credits : intellipaat.com</h5>
+<h2 id="networking-services">Networking Services</h2>
+<ul>
+<li><strong>VPC</strong>: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources.</li>
+<li><strong>Direct Connect</strong>: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection.</li>
+<li><strong>Route 53</strong>: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.</li>
+</ul>
+<h2 id="computing-services">Computing Services</h2>
+<ul>
+<li><strong>EC2</strong>: It is a virtual server that provides resizable compute capacity on the cloud.</li>
+<li><strong>Elastic Beanstalk</strong>: It is an application container used for deploying and managing containers. It creates an environment for working with web applications.</li>
+<li><strong>Lambda</strong>: It is a computing service that runs the code in response to events and automatically manages the computing resources.</li>
+<li><strong>EC2 Container Service</strong>: It allows us to easily run and manage Docker containers across a cluster of EC2 instances.</li>
+</ul>
+<h2 id="storage-services">Storage Services</h2>
+<ul>
+<li><strong>S3</strong>: It refers to Simple Storage Service and allows the storage of data objects of any sort and flat files in the cloud. It is secure, scalable, and durable.</li>
+<li><strong>CloudFront</strong>: It defines a Content Delivery Network. It provides a way to distribute content to end-users with low-latency and high data-transfer speeds.</li>
+<li><strong>Glacier</strong>: It is a low-cost storage service that provides secure and durable storage for long-term data archiving and backup.</li>
+<li><strong>EFS (Elastic File Storage)</strong>: It is a file storage service used in EC2 instances and connects to multiple EC2 instances.</li>
+<li><strong>Snowball</strong>: It is used for moving large amounts of data into/out of AWS using secure appliances, i.e., it provides the data archiving functionality for the data that no longer needs to be accessed actively.</li>
+<li><strong>Storage Gateway</strong>: It is used for securely integrating on-premises IT environments with cloud storage for backup and disaster recovery.</li>
+</ul>
+<h2 id="database">Database</h2>
+<ul>
+<li><strong>RDS (Relational Database Service)</strong>: It allows the storage of data objects as part of the relational database. It makes it easy to set up, operate, and scale familiar relational databases in the cloud.</li>
+<li><strong>DynamoDB</strong>: It is a scalable NoSQL data store that is used to manage distributed replicas of data for high availability.</li>
+<li><strong>ElastiCache</strong>: It improves application performance by allowing us to retrieve information from an in-memory caching system. It is a way of caching databases in the cloud.</li>
+<li><strong>Redshift</strong>: It is a fast, fully managed data warehousing service, which makes it cost-effective to analyze all data using the existing Business Intelligence tools.</li>
+<li><strong>DMS (Data Migration Service)</strong>: It helps in migrating databases to the cloud easily and securely. It can also be used for converting databases.</li>
+</ul>
+<h2 id="analytics">Analytics</h2>
+<ul>
+<li><strong>EMR</strong>: Amazon Elastic MapReduce helps in performing big data tasks such as web indexing, data mining, and log file analysis.</li>
+<li><strong>Data Pipeline</strong>: It helps in moving data from one service to another. It is a service used for periodic, data-driven workflows.</li>
+<li><strong>AWS Elasticsearch</strong>: It is a managed service that helps in deploying, operating, and scaling Elasticsearch.</li>
+<li><strong>Kinesis</strong>: It makes it easy to work with real-time streaming data in the AWS cloud.</li>
+<li><strong>AWS Machine Learnin</strong>g: It is a service that enables us to easily build smart applications.</li>
+<li><strong>AWS QuickSight</strong>: It is a cloud-assisted Business Intelligence service that helps in deriving insights from data easily.</li>
+</ul>
+<h2 id="security-and-identity">Security and Identity</h2>
+<ul>
+<li><strong>IAM (Identity and Access Management)</strong>: It helps in configuring security for all the services. It is used to ensure that our other services remain safe and inaccessible to others.</li>
+<li>*<strong>Directory Service</strong>: It is used to provide a managed directory in the cloud.</li>
+<li><strong>Inspector</strong>: It enables us to analyze the behavior of the applications we run on AWS and helps in identifying potential security issues.</li>
+<li><strong>WAF (Web Application Firewall)</strong>: It protects our web application from attacks by providing web traffic filters.</li>
+<li><strong>Cloud HSM</strong>: It is a Hardware Security Module.</li>
+<li><strong>KMS (Key Management Service)</strong>: It is a Key Management Service.</li>
+</ul>
+<h2 id="management-tools">Management Tools</h2>
+<ul>
+<li><strong>CloudWatch</strong>: It is used to create different metrics. It provides monitoring for resources and applications.</li>
+<li><strong>CloudFormation</strong>: It helps in creating and updating a collection of related AWS resources.</li>
+<li><strong>CloudTrial</strong>: It provides increased visibility into user activity by recording API calls made on an account.</li>
+<li><strong>OpsWorks</strong>: It is a DevOps platform for managing applications of any size or complexity on the AWS cloud.</li>
+<li><strong>Config</strong>: It gives an inventory of AWS resources, lets us audit the AWS resource configuration history, and notifies the changes.</li>
+<li><strong>Service Catalog</strong>: It allows organizations to manage approved catalogs of IT resources.</li>
+<li><strong>Trusted Advisor</strong>: It inspects the AWS environment and finds opportunities to save money and improve system performance.</li>
+</ul>
+<h2 id="application-services">Application Services</h2>
+<ul>
+<li><strong>API Gateway</strong>: It is used to create, maintain, monitor, and secure APIs.</li>
+<li><strong>AppStream:</strong> It is used to stream resource-intensive applications and games from the cloud to multiple users.</li>
+<li><strong>CloudSearch</strong>: It is a completely managed search service for websites and apps.</li>
+<li><strong>Elastic Transcoder</strong>: It is used to convert media files in the cloud easily at a lower cost.</li>
+<li><strong>SES (Simple Email Service)</strong>: It is used to send and receive emails.</li>
+<li><strong>SQS (Simple Queue Service)</strong>: It is a reliable, hosted queue for storing messages.</li>
+<li><strong>SWF (Simple Workflow Service)</strong>: It is used to coordinate all the processing steps with an application.</li>
+</ul>
+<h2 id="developer-tools">Developer Tools</h2>
+<ul>
+<li><strong>Code commit</strong>: It is a managed source-control service that hosts private Git repositories.</li>
+<li><strong>Code deploy</strong>: It is used to automate the code deployment.</li>
+<li><strong>Code pipeline</strong>: It is a continuous delivery service that enables us to visualize and automate the steps required to release software.</li>
+</ul>
+<h1 id="s3-vs-ebs-vs-efs">S3 vs EBS vs EFS</h1>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/s3ebsefs.JPG"/> 
+</figure>
+
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

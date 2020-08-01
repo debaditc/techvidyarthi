@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="3 Main use-case of Cache  Avoid Network calls Avoid repeated computation Avoid load on Database / System  Why not use cache every time  Hardware where Cache runs are mainly in SSDs which are expensive More data in Cache will increase the search time - so it will make cache data retrieval slower  Cache Policy The way we decide to load or evict data from cache is called Cache policy">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What is Caching and its importance"/>
+<meta name="twitter:description" content="3 Main use-case of Cache  Avoid Network calls Avoid repeated computation Avoid load on Database / System  Why not use cache every time  Hardware where Cache runs are mainly in SSDs which are expensive More data in Cache will increase the search time - so it will make cache data retrieval slower  Cache Policy The way we decide to load or evict data from cache is called Cache policy"/>
+
+    <meta property="og:title" content="What is Caching and its importance" />
+<meta property="og:description" content="3 Main use-case of Cache  Avoid Network calls Avoid repeated computation Avoid load on Database / System  Why not use cache every time  Hardware where Cache runs are mainly in SSDs which are expensive More data in Cache will increase the search time - so it will make cache data retrieval slower  Cache Policy The way we decide to load or evict data from cache is called Cache policy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/caching/" />
+<meta property="article:published_time" content="2020-07-19T22:20:15-04:00" />
+<meta property="article:modified_time" content="2020-07-19T22:20:15-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/caching/">
+    
+    <title>
+  What is Caching and its importance · Data &amp; Tech Vidyārthī
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/caching/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Data &amp; Tech Vidyārthī
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>What is Caching and its importance</h1>
+    </header>
+
+    <h1 id="3-main-use-case-of-cache">3 Main use-case of Cache</h1>
+<ul>
+<li>Avoid Network calls</li>
+<li>Avoid repeated computation</li>
+<li>Avoid load on Database / System</li>
+</ul>
+<h1 id="why-not-use-cache-every-time">Why not use cache every time</h1>
+<ul>
+<li>Hardware where Cache runs are mainly in SSDs which are expensive</li>
+<li>More data in Cache will increase the search time - so it will make cache data retrieval slower</li>
+</ul>
+<h1 id="cache-policy">Cache Policy</h1>
+<p>The way we decide to load or evict data from cache is called Cache policy</p>
+<h1 id="lru---least-recently-used-cache">LRU - Least Recently Used Cache</h1>
+<p>It organizes items in order of use, allowing us to quickly identify which item hasn&rsquo;t been used for the longest amount of time. Its similar as a clothes rack, where clothes are always hung up on one side. Unsed clothes are at other end.</p>
+<p>LRU cache is often implemented by pairing a doubly linked list with a hash map.</p>
+<ul>
+<li>
+<p>Strengths:</p>
+<ul>
+<li>
+<p>Super fast accesses. LRU caches store items in order from most-recently used to least-recently used. That means both can be accessed in <strong>O(1) time.</strong></p>
+</li>
+<li>
+<p>Super fast updates. Each time an item is accessed, updating the cache takes <strong>O(1) time.</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Weaknesses</p>
+<ul>
+<li>Space heavy. An LRU cache tracking nn items requires a linked list of length nn, and a hash map holding nn items. That&rsquo;s <strong>O(n) space.</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="lru-eviction">LRU eviction</h1>
+<p><a href="https://www.interviewcake.com/concept/java/lru-cache">More details</a></p>
+<p>An LRU cache is an efficient cache data structure that can be used to figure out what we should evict when the cache is full. The goal is to always have the least-recently used item accessible in O(1) time.</p>
+<p>Sliding window cache
+Global cache - About redis</p>
+<p>Varnish Cache</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
+The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.
+Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service − Identifying the nodes in a cluster by name.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="About Zookeeper"/>
+<meta name="twitter:description" content="Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
+The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.
+Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service − Identifying the nodes in a cluster by name."/>
+
+    <meta property="og:title" content="About Zookeeper" />
+<meta property="og:description" content="Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
+The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.
+Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service − Identifying the nodes in a cluster by name." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/zookeeper/" />
+<meta property="article:published_time" content="2020-07-16T21:19:21-04:00" />
+<meta property="article:modified_time" content="2020-07-16T21:19:21-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/zookeeper/">
+    
+    <title>
+  About Zookeeper · Data &amp; Tech Vidyārthī
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/zookeeper/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Data &amp; Tech Vidyārthī
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>About Zookeeper</h1>
+    </header>
+
+    <p>Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.</p>
+<p>The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.</p>
+<h1 id="services-provided-by-zookeeper-nccllh---thats-how-i-remember">Services Provided by Zookeeper (NCCLLH - thats How I remember)</h1>
+<ul>
+<li>
+<p><strong>Naming service</strong> − Identifying the nodes in a cluster by name.</p>
+</li>
+<li>
+<p><strong>Configuration management</strong> − Update configuration information of the system for a joining node.</p>
+</li>
+<li>
+<p><strong>Cluster management</strong> − Joining / leaving of a node in a cluster and node status at real time.</p>
+</li>
+<li>
+<p><strong>Leader election</strong> − Electing a node as leader for coordination purpose. (SOLR)</p>
+</li>
+<li>
+<p><strong>Locking and synchronization service</strong> − Locking the data while modifying it.</p>
+</li>
+<li>
+<p><strong>Highly reliable data registry</strong> − Availability of data even when one or a few nodes are down.</p>
+</li>
+</ul>
+<h1 id="how-does-zookeeper-work-">How does Zookeeper work ?</h1>
+<p>The data within Zookeeper is divided across multiple collection of nodes (<strong>ZNODES</strong>) and this is how it achieves its high availability and consistency. In case a node fails, Zookeeper can perform instant failover migration; e.g. if a master node fails, a new one is selected in real-time by polling within an ensemble. A client connecting to the server can query a different node if the first one fails to respond.</p>
+<h1 id="can-load-balancer-act-as-zookeeper">Can Load Balancer act as Zookeeper?</h1>
+<p><strong>NO</strong> - Load balancer helps in distribution of work loads across multiple servers.
+Whereas , Zookeeper is good for master election , crash detection , storing configurations / state of the services , etc.</p>
+<h1 id="why-is-zookeeper-necessary-for-apache-kafka">Why is Zookeeper necessary for Apache Kafka?</h1>
+<p>I remember it as &ldquo;C-CAM&rdquo;</p>
+<ul>
+<li><strong>Controller election</strong></li>
+</ul>
+<p>The controller is one of the most important broking entity in a Kafka ecosystem, and it also has the responsibility to maintain the leader-follower relationship across all the partitions. If a node by some reason is shutting down, it’s the controller’s responsibility to tell all the replicas to act as partition leaders in order to fulfill the duties of the partition leaders on the node that is about to fail. So, whenever a node shuts down, a new controller can be elected and it can also be made sure that at any given time, there is only one controller and all the follower nodes have agreed on that.</p>
+<ul>
+<li><strong>Configuration Of Topics</strong></li>
+</ul>
+<p>The configuration regarding all the topics including the list of existing topics, the number of partitions for each topic, the location of all the replicas, list of configuration overrides for all topics and which node is the preferred leader, etc.</p>
+<ul>
+<li><strong>Access control lists</strong></li>
+</ul>
+<p>Access control lists or ACLs for all the topics are also maintained within Zookeeper.</p>
+<ul>
+<li><strong>Membership of the cluster</strong></li>
+</ul>
+<p>Zookeeper also maintains a list of all the brokers that are functioning at any given moment and are a part of the cluster.</p>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/zkkafka.JPG"/> 
+</figure>
+
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>
