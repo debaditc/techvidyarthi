@@ -5,3 +5,5 @@ draft: false
 ---
 
 Event driven model is often described in both Kappa or Lambda architechture.
+
+

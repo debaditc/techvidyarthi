@@ -6,10 +6,21 @@
     <description>Recent content on Data &amp; Tech Vidyārthī</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Aug 2020 15:03:38 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 23:36:51 -0400</lastBuildDate>
     
 	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nutshell on Synchronous and Asynchronous process</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/synasync/</link>
+      <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/synasync/</guid>
+      <description>Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series. A-&amp;gt;B-&amp;gt;C-&amp;gt;D.  Single Thread
+|&amp;lt;---T1----&amp;gt;||&amp;lt;----T2----------&amp;gt;||&amp;lt;------T3-----&amp;gt;| Multi Thread
+thread A -&amp;gt; |&amp;lt;---T1----&amp;gt;| \ thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| \ thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.</description>
+    </item>
     
     <item>
       <title>Event Driven model</title>
@@ -17,7 +28,11 @@
       <pubDate>Sat, 01 Aug 2020 15:03:38 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntdrive/</guid>
-      <description>Event driven model is often described in both Kappa or Lambda architechture.</description>
+      <description>Event driven model is often described in both Kappa or Lambda architechture.
+FIrst lets understand Synchronous and Asynchronous processing
+ Synchronous processing : Synchronous execution means the execution happens in a single series. A-&amp;gt;B-&amp;gt;C-&amp;gt;D.  Single Thread
+|&amp;lt;---A----&amp;gt;||&amp;lt;----B----------&amp;gt;||&amp;lt;------C-----&amp;gt;| Multi Thread
+thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| \ thread B ------------&amp;gt; -&amp;gt;|&amp;lt;----B----------&amp;gt;| \ thread C ----------------------------------&amp;gt; -&amp;gt;|&amp;lt;------C-----&amp;gt;| </description>
     </item>
     
     <item>
