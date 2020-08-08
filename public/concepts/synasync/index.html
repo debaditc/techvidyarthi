@@ -7,9 +7,9 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series. A-&gt;B-&gt;C-&gt;D.  Single Thread
+    <meta name="description" content="Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread
 |&lt;---T1----&gt;||&lt;----T2----------&gt;||&lt;------T3-----&gt;| Multi Thread
-thread A -&gt; |&lt;---T1----&gt;| \ thread B ----------------&gt;|&lt;----B----------&gt;| \ thread C -------------------------------------&gt;|&lt;------C-----&gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.">
+thread A -&gt; |&lt;---A----&gt;| thread B ----------------&gt;|&lt;----B----------&gt;| thread C -------------------------------------&gt;|&lt;------C-----&gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -18,14 +18,14 @@ thread A -&gt; |&lt;---T1----&gt;| \ thread B ----------------&gt;|&lt;----B----
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Nutshell on Synchronous and Asynchronous process"/>
-<meta name="twitter:description" content="Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series. A-&gt;B-&gt;C-&gt;D.  Single Thread
+<meta name="twitter:description" content="Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread
 |&lt;---T1----&gt;||&lt;----T2----------&gt;||&lt;------T3-----&gt;| Multi Thread
-thread A -&gt; |&lt;---T1----&gt;| \ thread B ----------------&gt;|&lt;----B----------&gt;| \ thread C -------------------------------------&gt;|&lt;------C-----&gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing."/>
+thread A -&gt; |&lt;---A----&gt;| thread B ----------------&gt;|&lt;----B----------&gt;| thread C -------------------------------------&gt;|&lt;------C-----&gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing."/>
 
     <meta property="og:title" content="Nutshell on Synchronous and Asynchronous process" />
-<meta property="og:description" content="Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series. A-&gt;B-&gt;C-&gt;D.  Single Thread
+<meta property="og:description" content="Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread
 |&lt;---T1----&gt;||&lt;----T2----------&gt;||&lt;------T3-----&gt;| Multi Thread
-thread A -&gt; |&lt;---T1----&gt;| \ thread B ----------------&gt;|&lt;----B----------&gt;| \ thread C -------------------------------------&gt;|&lt;------C-----&gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing." />
+thread A -&gt; |&lt;---A----&gt;| thread B ----------------&gt;|&lt;----B----------&gt;| thread C -------------------------------------&gt;|&lt;------C-----&gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/synasync/" />
 <meta property="article:published_time" content="2020-08-01T23:36:51-04:00" />
@@ -126,15 +126,15 @@ thread A -&gt; |&lt;---T1----&gt;| \ thread B ----------------&gt;|&lt;----B----
 
     <h2 id="synchronous-and-asynchronous-process">Synchronous and Asynchronous process</h2>
 <ul>
-<li><strong>Synchronous processing</strong>  :   Synchronous execution means the execution happens in a single series. A-&gt;B-&gt;C-&gt;D.</li>
+<li><strong>Synchronous processing</strong>  :   Synchronous execution means the execution happens in a single series.</li>
 </ul>
 <p><strong>Single Thread</strong></p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">|&lt;---T1----&gt;||&lt;----T2----------&gt;||&lt;------T3-----&gt;|
 </code></pre></div><p><strong>Multi Thread</strong></p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">thread A -&gt; |&lt;---T1----&gt;|   
-                        \  
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">thread A -&gt; |&lt;---A----&gt;|   
+                        
 thread B ----------------&gt;|&lt;----B----------&gt;|   
-                                              \   
+
 thread C -------------------------------------&gt;|&lt;------C-----&gt;|
 </code></pre></div><ul>
 <li><strong>Asynchronous processing</strong> : Execution of a multiple process can happen without having dependency on each other.</li>

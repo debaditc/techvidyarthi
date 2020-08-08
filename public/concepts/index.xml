@@ -17,9 +17,9 @@
       <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/synasync/</guid>
-      <description>Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series. A-&amp;gt;B-&amp;gt;C-&amp;gt;D.  Single Thread
+      <description>Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread
 |&amp;lt;---T1----&amp;gt;||&amp;lt;----T2----------&amp;gt;||&amp;lt;------T3-----&amp;gt;| Multi Thread
-thread A -&amp;gt; |&amp;lt;---T1----&amp;gt;| \ thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| \ thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.</description>
+thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.</description>
     </item>
     
     <item>
@@ -28,11 +28,10 @@ thread A -&amp;gt; |&amp;lt;---T1----&amp;gt;| \ thread B ----------------&amp;g
       <pubDate>Sat, 01 Aug 2020 15:03:38 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/evntdrive/</guid>
-      <description>Event driven model is often described in both Kappa or Lambda architechture.
-FIrst lets understand Synchronous and Asynchronous processing
- Synchronous processing : Synchronous execution means the execution happens in a single series. A-&amp;gt;B-&amp;gt;C-&amp;gt;D.  Single Thread
-|&amp;lt;---A----&amp;gt;||&amp;lt;----B----------&amp;gt;||&amp;lt;------C-----&amp;gt;| Multi Thread
-thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| \ thread B ------------&amp;gt; -&amp;gt;|&amp;lt;----B----------&amp;gt;| \ thread C ----------------------------------&amp;gt; -&amp;gt;|&amp;lt;------C-----&amp;gt;| </description>
+      <description>Event Driven Model Event driven model is based on either Pub/sub or Event streaming model
+Pub-sub model Messaging infrastructure is based on subscription based model (Active MQ)
+Event streaming model Events are written into logs. Consumers need not require to subscribe event - rather they can be read or join from any part of the stream (Kafka)
+System Design - Microservice + Kafka + KSQL Picture credits : Please visit Confluent site for more details</description>
     </item>
     
     <item>

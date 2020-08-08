@@ -6,7 +6,7 @@ theme = ["hugo-coder"]
 
 languagecode = "en"
 defaultcontentlanguage = "en"
-paginate = 10
+paginate = 20
 canonifyurls = true
 
 pygmentsstyle = "b2"
@@ -110,7 +110,7 @@ disqusShortname = "debaditya"
 
             [[languages.en.menu.main]]
             name = "Programming"
-            weight = 2
+            weight = 3
             url = "/progs/"
             
             [[languages.en.menu.main]]
