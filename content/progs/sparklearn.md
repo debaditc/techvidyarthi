@@ -1,7 +1,7 @@
 ---
 title: "Spark Learnings"
 date: 2020-08-08T17:14:45-04:00
-draft: true
+draft: false
 ---
 
 ### Install Spark ###
