@@ -3,7 +3,7 @@ title = "About the Blog"
 slug = "about"
 +++
 
-Debaditya considers himself as Vidyārthī which is a Sanskrit word (means "Student"). This website is my journal on sharing technology knowledge with everyone and also learn during the journey.
+Debaditya considers himself as Vidyārthī which is a Sanskrit word (means "Student"). This website is Deb's journal on sharing technology knowledge with everyone and also learn during his tech journey.
 
 # Areas of Interests
 

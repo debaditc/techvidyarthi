@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data &amp; Tech Vidyārthī</title>
+    <title>Debaditya&#39;s Tech Journal</title>
     <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/</link>
-    <description>Recent content on Data &amp; Tech Vidyārthī</description>
+    <description>Recent content on Debaditya&#39;s Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 08 Aug 2020 20:57:34 -0400</lastBuildDate>
@@ -35,7 +35,12 @@
       <pubDate>Sat, 08 Aug 2020 18:04:27 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/kafka/</guid>
-      <description></description>
+      <description>About Kafka Architecture   Install Zookeeper and Kafka Link is here
+Once Zookeeper and Kafka are installed - You can play with below commands
+Start Zookeeper in background
+zkserver Start Kafka in background Make sure to shorten the parent directory - else you would recieve error as &amp;ldquo;Tool long input line&amp;rdquo;
+.\bin\windows\kafka-server-start.bat .\config\server.properties Create topic in Kafka
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic Start producer</description>
     </item>
     
     <item>
@@ -225,13 +230,14 @@ Decision Trees Decision trees represent rules, which can be understood by humans
     </item>
     
     <item>
-      <title>About Data &amp; Tech Vidyārthī</title>
+      <title>About the Blog</title>
       <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/</guid>
-      <description>Vidyārthī is a Sanskrit word which means &amp;ldquo;Student&amp;rdquo;. This website is a journal and journey of a Tech enthusiast (Debaditya Chakravorty [Deb]) who believes to be &amp;ldquo;Life long student&amp;rdquo;. This website mainly focusses on sharing technology knowledge with everyone and also learn during the journey.
-Areas of Interests  Architechture &amp;amp; System Design Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial &amp;amp; Machine learning Algorithms &amp;amp; Code complexities  Have questions or suggestions?</description>
+      <description>Debaditya considers himself as Vidyārthī which is a Sanskrit word (means &amp;ldquo;Student&amp;rdquo;). This website is Deb&amp;rsquo;s journal on sharing technology knowledge with everyone and also learn during his tech journey.
+Areas of Interests  Architechture &amp;amp; System Design Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial &amp;amp; Machine learning Algorithms &amp;amp; Code complexities  Have questions or suggestions? Feel free to email - dev.techvidyarthi@gmail.com
+Thanks for reading!</description>
     </item>
     
     <item>

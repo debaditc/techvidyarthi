@@ -7,7 +7,12 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="Debaditya Chakravorty personal website">
+    <meta name="description" content="About Kafka Architecture   Install Zookeeper and Kafka Link is here
+Once Zookeeper and Kafka are installed - You can play with below commands
+Start Zookeeper in background
+zkserver Start Kafka in background Make sure to shorten the parent directory - else you would recieve error as &ldquo;Tool long input line&rdquo;
+.\bin\windows\kafka-server-start.bat .\config\server.properties Create topic in Kafka
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic Start producer">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -16,10 +21,20 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="About Kafka"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="About Kafka Architecture   Install Zookeeper and Kafka Link is here
+Once Zookeeper and Kafka are installed - You can play with below commands
+Start Zookeeper in background
+zkserver Start Kafka in background Make sure to shorten the parent directory - else you would recieve error as &ldquo;Tool long input line&rdquo;
+.\bin\windows\kafka-server-start.bat .\config\server.properties Create topic in Kafka
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic Start producer"/>
 
     <meta property="og:title" content="About Kafka" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="About Kafka Architecture   Install Zookeeper and Kafka Link is here
+Once Zookeeper and Kafka are installed - You can play with below commands
+Start Zookeeper in background
+zkserver Start Kafka in background Make sure to shorten the parent directory - else you would recieve error as &ldquo;Tool long input line&rdquo;
+.\bin\windows\kafka-server-start.bat .\config\server.properties Create topic in Kafka
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic Start producer" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/kafka/" />
 <meta property="article:published_time" content="2020-08-08T18:04:27-04:00" />
@@ -30,7 +45,7 @@
       <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/kafka/">
     
     <title>
-  About Kafka · Data &amp; Tech Vidyārthī
+  About Kafka · Debaditya&#39;s Tech Journal
 </title>
 
     
@@ -70,7 +85,7 @@
       <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
-      Data &amp; Tech Vidyārthī
+      Debaditya&#39;s Tech Journal
     </a>
     
     <input type="checkbox" id="menu-toggle" />
@@ -118,7 +133,26 @@
       <h1>About Kafka</h1>
     </header>
 
-    
+    <h2 id="about-kafka-architecture">About Kafka Architecture</h2>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/kafka.JPG"/> 
+</figure>
+
+<h4 id="install-zookeeper-and-kafka-">Install Zookeeper and Kafka</h4>
+<p>Link is <a href="https://dzone.com/articles/running-apache-kafka-on-windows-os">here</a></p>
+<p>Once Zookeeper and Kafka are installed - You can play with below commands</p>
+<p><strong>Start Zookeeper in background</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">zkserver
+</code></pre></div><p><strong>Start Kafka in background</strong>
+Make sure to shorten the parent directory - else you would recieve error as &ldquo;Tool long input line&rdquo;</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">.\bin\windows\kafka-server-start.bat .\config\server.properties
+</code></pre></div><p><strong>Create topic in Kafka</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic
+</code></pre></div><p><strong>Start producer</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">kafka-console-producer.bat --broker-list localhost:9092 --topic testtopic
+</code></pre></div><p><strong>Start consumer</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic testtopic
+</code></pre></div>
   </article>
 </section>
 
