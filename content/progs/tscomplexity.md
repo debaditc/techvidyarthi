@@ -75,7 +75,7 @@ In this way , if we observe - we are stepping down n/2 elements , then n/4 and t
 
 {{< figure src="/images/timecomplex8.JPG" >}}
 
-This is how we reach to O(log N) time complexity. It is nicely explained in CTCI book - Please have the book ad has really good content.
+This is how we reach to O(log N) time complexity. It is nicely explained in CTCI book - Please have the book - it has really good content.
 
 - ### Recursive functions
 
@@ -99,7 +99,7 @@ For each level and node , lets compute the number of calls
 
 Note : **O( branches^depth )** for most of recursive functions. 
 
-This is the reason why Recursive calls are very expensive.
+**This is the reason why Recursive calls are very expensive.**
 
 Pic credit : CTCI (Big O chapter)
 
