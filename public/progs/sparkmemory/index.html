@@ -7,7 +7,10 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="Debaditya Chakravorty personal website">
+    <meta name="description" content="Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
+ Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
+  Designed for 2 main pruposes :
+ Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -15,11 +18,17 @@
     
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="About Spark Memory and Optimizer "/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Brief on Spark Memory and Optimizer "/>
+<meta name="twitter:description" content="Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
+ Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
+  Designed for 2 main pruposes :
+ Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e."/>
 
-    <meta property="og:title" content="About Spark Memory and Optimizer " />
-<meta property="og:description" content="" />
+    <meta property="og:title" content="Brief on Spark Memory and Optimizer " />
+<meta property="og:description" content="Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
+ Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
+  Designed for 2 main pruposes :
+ Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/sparkmemory/" />
 <meta property="article:published_time" content="2020-08-08T20:28:12-04:00" />
@@ -30,7 +39,7 @@
       <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/sparkmemory/">
     
     <title>
-  About Spark Memory and Optimizer  · Debaditya&#39;s Tech Journal
+  Brief on Spark Memory and Optimizer  · Debaditya&#39;s Tech Journal
 </title>
 
     
@@ -115,10 +124,41 @@
   <section class="container page">
   <article>
     <header>
-      <h1>About Spark Memory and Optimizer </h1>
+      <h1>Brief on Spark Memory and Optimizer </h1>
     </header>
 
-    
+    <h2 id="spark-memory-and-optimizer">Spark Memory and Optimizer</h2>
+<h4 id="optimizer">Optimizer</h4>
+<ul>
+<li>
+<p>Core of Spark SQL has <strong>Catalyst optimizer</strong> which leverages 2 important Scala features</p>
+<ul>
+<li>Pattern matching</li>
+<li>Quasi Notes (Easy to generate code at runtime from composable expressions)</li>
+</ul>
+</li>
+<li>
+<p>Catalyst supports both rule-based and cost-based optimization.</p>
+</li>
+<li>
+<p>Designed for 2 main pruposes :</p>
+<ul>
+<li>Easily add new optimization techniques and features to Spark SQL</li>
+<li>Enable external developers to extend the optimizer (e.g. adding data source specific rules, support for new data types, etc)</li>
+</ul>
+</li>
+</ul>
+<p>More details are <a href="https://databricks.com/glossary/catalyst-optimizer">here</a></p>
+<h4 id="memory">Memory</h4>
+<p>For better memory management - Spark included <strong>Tungsten</strong></p>
+<p>It has 3 basic features</p>
+<ul>
+<li>Memory management and binary processing   :   It removes the overhead of JVM and Garbage collection</li>
+<li>Cache aware computaion : algorithms and data structures to exploit memory hierarchy</li>
+<li>Code generation : using code generation to exploit modern compilers and CPUs</li>
+</ul>
+<p>More details are <a href="https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html">here</a></p>
+
   </article>
 </section>
 

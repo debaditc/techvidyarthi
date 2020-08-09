@@ -6,10 +6,19 @@
     <description>Recent content on Debaditya&#39;s Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2020 20:57:34 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 02:47:18 -0400</lastBuildDate>
     
 	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spark streaming with Kafka</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/sparkstream/</link>
+      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/sparkstream/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Basic Spark Commands</title>
@@ -17,16 +26,20 @@
       <pubDate>Sat, 08 Aug 2020 20:57:34 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/sparkcommands/</guid>
-      <description></description>
+      <description>Useful Site Analytics Vidya link
+Commands </description>
     </item>
     
     <item>
-      <title>About Spark Memory and Optimizer </title>
+      <title>Brief on Spark Memory and Optimizer </title>
       <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/sparkmemory/</link>
       <pubDate>Sat, 08 Aug 2020 20:28:12 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/progs/sparkmemory/</guid>
-      <description></description>
+      <description>Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
+ Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
+  Designed for 2 main pruposes :
+ Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.</description>
     </item>
     
     <item>
