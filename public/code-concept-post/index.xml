@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code-concept posts on Debaditya&#39;s Tech Journal</title>
+    <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/</link>
+    <description>Recent content in Code-concept posts on Debaditya&#39;s Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Aug 2020 02:47:18 -0400</lastBuildDate>
+    
+	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spark streaming with Kafka</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkstream/</link>
+      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkstream/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Basic Spark Commands</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkcommands/</link>
+      <pubDate>Sat, 08 Aug 2020 20:57:34 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkcommands/</guid>
+      <description>Useful Site Analytics Vidya link
+Commands </description>
+    </item>
+    
+    <item>
+      <title>Brief on Spark Memory and Optimizer </title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkmemory/</link>
+      <pubDate>Sat, 08 Aug 2020 20:28:12 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkmemory/</guid>
+      <description>Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
+ Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
+  Designed for 2 main pruposes :
+ Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.</description>
+    </item>
+    
+    <item>
+      <title>Spark Learnings</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparklearn/</link>
+      <pubDate>Sat, 08 Aug 2020 17:14:45 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparklearn/</guid>
+      <description>Install Spark For Windows : Please follow this site
+Basics of Spark Flow Run Spark application -&amp;gt; Driver program starts -&amp;gt; Main function starts -&amp;gt; SparkContext gets initiated -&amp;gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&amp;rsquo;t work.
+Execution of Spark Job   Image Credits to Data Flair</description>
+    </item>
+    
+    <item>
+      <title>Time &amp; Space Complexity</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/tscomplexity/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/tscomplexity/</guid>
+      <description>Time Complexity Big-O , Big-Omega , Big-Theta
+ Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
+In recursive calls counts,the code would take 0 (n) time and O( n) space.</description>
+    </item>
+    
+  </channel>
+</rss>

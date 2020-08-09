@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Kafka Architecture   Kafka uses ZooKeeper to manage the cluster.
+  ZooKeeper is used to coordinate the brokers/cluster topology.
+  ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.
+  Kafka producers write to Topics -&gt; Kafka consumers read from Topics.
+  Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="About Kafka"/>
+<meta name="twitter:description" content="Kafka Architecture   Kafka uses ZooKeeper to manage the cluster.
+  ZooKeeper is used to coordinate the brokers/cluster topology.
+  ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.
+  Kafka producers write to Topics -&gt; Kafka consumers read from Topics.
+  Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log."/>
+
+    <meta property="og:title" content="About Kafka" />
+<meta property="og:description" content="Kafka Architecture   Kafka uses ZooKeeper to manage the cluster.
+  ZooKeeper is used to coordinate the brokers/cluster topology.
+  ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.
+  Kafka producers write to Topics -&gt; Kafka consumers read from Topics.
+  Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/kafka/" />
+<meta property="article:published_time" content="2020-08-08T18:04:27-04:00" />
+<meta property="article:modified_time" content="2020-08-08T18:04:27-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/kafka/">
+    
+    <title>
+  About Kafka · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/kafka/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>About Kafka</h1>
+    </header>
+
+    <h2 id="kafka-architecture">Kafka Architecture</h2>
+<ul>
+<li>
+<p>Kafka uses ZooKeeper to manage the cluster.</p>
+</li>
+<li>
+<p>ZooKeeper is used to coordinate the brokers/cluster topology.</p>
+</li>
+<li>
+<p>ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.</p>
+</li>
+<li>
+<p>Kafka producers write to Topics -&gt; Kafka consumers read from Topics.</p>
+</li>
+<li>
+<p>Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log. A topic log consists of many partitions that are spread over multiple files which can be spread on multiple Kafka cluster nodes. Consumers read from Kafka topics at their cadence and can pick where they are (offset) in the topic log. Each consumer group tracks offset from where they left off reading. Kafka distributes topic log partitions on different nodes in a cluster for high performance with horizontal scalability. Spreading partitions aids in writing data quickly. Topic log partitions are Kafka way to shard reads and writes to the topic log.</p>
+</li>
+</ul>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/kafka.jpg"/> 
+</figure>
+
+<p>More details are <a href="http://cloudurable.com/blog/kafka-architecture/index.html">here</a></p>
+<h4 id="kafka-brokers">Kafka Brokers</h4>
+<ul>
+<li>A Kafka cluster is made up of multiple Kafka Brokers.</li>
+<li>Each Kafka Broker has a unique ID (number).</li>
+<li>Kafka Brokers contain topic log partitions.</li>
+<li>For failover, you want to start with at least three to five brokers.</li>
+<li>A Kafka cluster can have, 10, 100, or 1,000 brokers in a cluster if needed.</li>
+</ul>
+<h4 id="kafka-disaster-recover">Kafka Disaster Recover</h4>
+<p>Use of Kafka Mirror Maker - It replicates kafka cluster to another data center.</p>
+<h4 id="install-zookeeper-and-kafka-">Install Zookeeper and Kafka</h4>
+<p>Step by step procedure is <a href="https://dzone.com/articles/running-apache-kafka-on-windows-os">here</a></p>
+<p>Once Zookeeper and Kafka are installed - You can play with below commands</p>
+<p><strong>Start Zookeeper in background</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">zkserver
+</code></pre></div><p><strong>Start Kafka in background</strong></p>
+<p>Make sure to shorten the parent directory - else you would recieve error as &ldquo;Tool long input line&rdquo;</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">.\bin\windows\kafka-server-start.bat .\config\server.properties
+</code></pre></div><p><strong>Create topic in Kafka</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic
+</code></pre></div><p><strong>Start producer</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">kafka-console-producer.bat --broker-list localhost:9092 --topic testtopic
+</code></pre></div><p><strong>Start consumer</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic testtopic
+</code></pre></div>
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vertical vs Horizontal Scaling"/>
+<meta name="twitter:description" content="Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally."/>
+
+    <meta property="og:title" content="Vertical vs Horizontal Scaling" />
+<meta property="og:description" content="Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/verticalhorizaonal/" />
+<meta property="article:published_time" content="2020-07-26T16:30:42-04:00" />
+<meta property="article:modified_time" content="2020-07-26T16:30:42-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/verticalhorizaonal/">
+    
+    <title>
+  Vertical vs Horizontal Scaling · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/verticalhorizaonal/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Vertical vs Horizontal Scaling</h1>
+    </header>
+
+    <h1 id="nutshell">Nutshell</h1>
+<ul>
+<li><strong>Horizontal scaling</strong> means that we scale by adding more machines into  pool of resources</li>
+<li><strong>Vertical scaling</strong> means that we scale by adding more power (CPU, RAM) to an existing machine.</li>
+</ul>
+<h1 id="high-level-difference">High level difference</h1>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/horver.JPG"/> 
+</figure>
+
+<h1 id="real-world-implementation">Real world implementation</h1>
+<p>Take the benfits of both Horizontal and Vertical scaling</p>
+<ul>
+<li><strong>Vertical scaling</strong> :  Inter process communication and data consistency</li>
+<li><strong>Horizontal scaling</strong> : Scalability and Resilient (no single point of failure)</li>
+</ul>
+<p>Ideal way - First have the veritical scaling (optimal level) and scale horizontally.</p>
+<h4 id="credits">Credits</h4>
+<p><a href="https://www.youtube.com/watch?v=xpDnVSmNFX0">Gaurav Sen</a> - Please watch video in Youtube</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

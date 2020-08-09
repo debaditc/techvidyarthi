@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Time Complexity Big-O , Big-Omega , Big-Theta
+ Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
+In recursive calls counts,the code would take 0 (n) time and O( n) space.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Time &amp; Space Complexity"/>
+<meta name="twitter:description" content="Time Complexity Big-O , Big-Omega , Big-Theta
+ Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
+In recursive calls counts,the code would take 0 (n) time and O( n) space."/>
+
+    <meta property="og:title" content="Time &amp; Space Complexity" />
+<meta property="og:description" content="Time Complexity Big-O , Big-Omega , Big-Theta
+ Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
+In recursive calls counts,the code would take 0 (n) time and O( n) space." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/tscomplexity/" />
+<meta property="article:published_time" content="2020-07-24T00:03:26-04:00" />
+<meta property="article:modified_time" content="2020-07-24T00:03:26-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/tscomplexity/">
+    
+    <title>
+  Time &amp; Space Complexity · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/tscomplexity/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Time &amp; Space Complexity</h1>
+    </header>
+
+    <h1 id="time-complexity">Time Complexity</h1>
+<p><strong>Big-O , Big-Omega , Big-Theta</strong></p>
+<ul>
+<li><strong>Big-O</strong> is the upper asymptotic bound for an algorithm . Worst-case scenarios</li>
+<li><strong>Big-Omega</strong> is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio</li>
+<li><strong>Big-Theta</strong> is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario</li>
+</ul>
+<h1 id="space-complexity">Space Complexity</h1>
+<p>Amount of memory or space required by an algorithm</p>
+<p>In recursive calls counts,the code would take 0 (n) time and O( n) space.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">int</span> <span style="color:#fff;font-weight:bold">sum</span>(<span style="color:#fff;font-weight:bold">int</span> n) { 
+<span style="color:#fff;font-weight:bold">if</span> (n &lt;= a) {
+<span style="color:#fff;font-weight:bold">return</span> B;
+ }
+ <span style="color:#fff;font-weight:bold">return</span> n + <span style="color:#fff;font-weight:bold">sum</span>(n-<span style="color:#ff0;font-weight:bold">1</span>);
+ }
+</code></pre></div><p>Each call adds a level to the stack.</p>
+<ul>
+<li>
+<blockquote>
+<p>sum(4)</p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p>sum(3)</p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p>sum(2)</p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p>sum(l)</p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p>sum(0)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Each of these calls is added to the call stack and takes up actual memory.</p>
+<h1 id="a-few-tips">A few tips</h1>
+<ul>
+<li>
+<h3 id="drop-the-non-dominant-terms">Drop the non-dominant terms</h3>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">1. O(W + N) becomes O(W)
+2. O(N + log N) becomes O(N)
+3. 0(5*2N + 1000N^100 ) becomes O(2N)
+</code></pre></div><ul>
+<li>
+<h3 id="multi-part-algorithms---add-vs-multiply">Multi-part algorithms - Add vs Multiply</h3>
+</li>
+</ul>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex1.JPG"/> 
+</figure>
+
+<ul>
+<li>
+<h3 id="amortized-time">Amortized time</h3>
+<ul>
+<li>An ArrayList or a dynamically resizing array, allows the benefits of  array + resizing</li>
+<li>Array has finite size while arrayList have flixbility in size.</li>
+</ul>
+</li>
+</ul>
+<p>The array could be full. Suppose an array contains N elements, then inserting a new element will take 0 (N) time.
+We need to create a new array of size 2N and then copy N elements over. This insertion will take 0 (N)
+time. This insertion wont happen time and again , however it(insertion) would take O(1) time.
+This is the time where we say time is <strong>&ldquo;Amortized&rdquo;</strong></p>
+<ul>
+<li>
+<h3 id="log-n-runtimes">Log N Runtimes</h3>
+</li>
+</ul>
+<p>Lets take example of Binary search.
+We first compare x to the midpoint of the array.</p>
+<ul>
+<li>If x == middle, then we return 1</li>
+<li>If x &lt; middle, then we search on the left side of the array.</li>
+<li>If x &gt; middle, then we search on the right side ofthe array.</li>
+</ul>
+<p>In this way , if we observe - we are stepping down n/2 elements , then n/4 and then n/8 ,etc.</p>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex7.JPG"/> 
+</figure>
+
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex8.JPG"/> 
+</figure>
+
+<p>This is how we reach to O(log N) time complexity. It is nicely explained in CTCI book - Please have the book - it has really good content.</p>
+<ul>
+<li>
+<h3 id="recursive-functions">Recursive functions</h3>
+</li>
+</ul>
+<p>Example of Fibonacci series using recursive function</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">int</span> f(<span style="color:#fff;font-weight:bold">int</span> n) {
+ <span style="color:#fff;font-weight:bold">if</span> (n &lt;= <span style="color:#ff0;font-weight:bold">1</span>) {
+ <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">1</span>;
+ }
+ <span style="color:#fff;font-weight:bold">return</span> f(n - <span style="color:#ff0;font-weight:bold">1</span>) + f(n - <span style="color:#ff0;font-weight:bold">1</span>); 
+</code></pre></div><p>Lets consider how the calls of above code in tree stack</p>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex2.JPG"/> 
+</figure>
+
+<p>For each level and node , lets compute the number of calls</p>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex3.JPG"/> 
+</figure>
+
+<p>Note : <strong>O( branches^depth )</strong> for most of recursive functions.</p>
+<p><strong>This is the reason why Recursive calls are very expensive.</strong></p>
+<p>Pic credit : CTCI (Big O chapter)</p>
+<h1 id="examples-from-ctci-book">Examples from CTCI Book</h1>
+<p><strong>Example 1</strong>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex4.JPG"/> 
+</figure>
+
+<strong>Time Complexity = O(N)</strong></p>
+<p><strong>Example 2</strong>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex5.JPG"/> 
+</figure>
+
+<strong>Time Complexity = O(N^2)</strong></p>
+<p><strong>Example 3</strong>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex6.JPG"/> 
+</figure>
+
+<strong>Time Complexity = O(N^2)</strong></p>
+<p><strong>Example 4</strong>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/timecomplex7.JPG"/> 
+</figure>
+
+<strong>Time Complexity = O(ab)</strong></p>
+<p>Note : There are 2 different arrays (a and b) in the nested loop</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

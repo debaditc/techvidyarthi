@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Load Balancing is the process of re-distributing network traffic across multiple server.
+  What Load Balancers can perform ?
+ Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Load Balancer"/>
+<meta name="twitter:description" content="Load Balancing is the process of re-distributing network traffic across multiple server.
+  What Load Balancers can perform ?
+ Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation."/>
+
+    <meta property="og:title" content="Load Balancer" />
+<meta property="og:description" content="Load Balancing is the process of re-distributing network traffic across multiple server.
+  What Load Balancers can perform ?
+ Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/loadbalance/" />
+<meta property="article:published_time" content="2020-07-16T20:54:54-04:00" />
+<meta property="article:modified_time" content="2020-07-16T20:54:54-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/loadbalance/">
+    
+    <title>
+  Load Balancer · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/loadbalance/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Load Balancer</h1>
+    </header>
+
+    <p>Load Balancing is the process of re-distributing network traffic across multiple server.</p>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/lb.JPG"/> 
+</figure>
+
+<p><strong>What Load Balancers can perform ?</strong></p>
+<ul>
+<li>Detect server failures and redirect client traffic automatically/</li>
+<li>Provide automated disaster recovery to backup sites</li>
+<li>Add and remove application servers without disruption</li>
+<li>Monitor and block malicious content</li>
+</ul>
+<h1 id="load-balance-algorithms-remember-as-crri">Load Balance Algorithms (remember as CRRI)</h1>
+<p>There is a variety of load balancing methods, which use different algorithms best suited for a particular situation.</p>
+<ul>
+<li><strong>Least Connection Method</strong> — directs traffic to the server with the fewest active connections</li>
+<li><strong>Least Response Time Method</strong> — directs traffic to the server with the fewest active connections and the lowest average response time.</li>
+<li><strong>Round Robin Method</strong> — rotates servers by directing traffic to the first available server and then moves that server to the bottom of the queue.</li>
+<li><strong>IP Hash</strong> — the IP address of the client determines which server receives the request.</li>
+</ul>
+<h1 id="layer-4-and-layer-7-load-balacing">Layer 4 and Layer 7 Load balacing</h1>
+<ul>
+<li>
+<p>Layer 4 operates on Transport layer which involves TCP , UDP.</p>
+</li>
+<li>
+<p>It does not inspect the message contents</p>
+</li>
+<li>
+<p>Layer 7 operates on application layer basically combines 5,6,7 - http,https,ssl,etc</p>
+</li>
+<li>
+<p>It has application awareness and can use this additional application information to make more complex and informed load balancing decisions.</p>
+</li>
+<li>
+<p>It has great feature &ldquo;Cookie Persistance&rdquo;</p>
+</li>
+</ul>
+<h1 id="about-dns">About DNS</h1>
+<p>The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.
+The process of DNS resolution involves converting a hostname (such as <a href="http://www.example.com">www.example.com</a>) into a computer-friendly IP address (such as 192.168.1.1)</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

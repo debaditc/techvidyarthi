@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Debaditya&#39;s Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Jul 2020 20:24:10 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 11:29:04 -0400</lastBuildDate>
     
 	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS in Machine Learning</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/awsml/</link>
+      <pubDate>Sun, 09 Aug 2020 11:29:04 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/awsml/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Word2Vec Algorithm</title>

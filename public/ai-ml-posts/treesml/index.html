@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.
+A tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.
+The Image at the beginning of the article (Source) explains the terminologies of a Tree.
+Decision Trees Decision trees represent rules, which can be understood by humans and used in knowledge system such as database">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Trees in Machine Learning World"/>
+<meta name="twitter:description" content="Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.
+A tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.
+The Image at the beginning of the article (Source) explains the terminologies of a Tree.
+Decision Trees Decision trees represent rules, which can be understood by humans and used in knowledge system such as database"/>
+
+    <meta property="og:title" content="Trees in Machine Learning World" />
+<meta property="og:description" content="Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.
+A tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.
+The Image at the beginning of the article (Source) explains the terminologies of a Tree.
+Decision Trees Decision trees represent rules, which can be understood by humans and used in knowledge system such as database" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/treesml/" />
+<meta property="article:published_time" content="2020-07-05T01:35:10-04:00" />
+<meta property="article:modified_time" content="2020-07-05T01:35:10-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/treesml/">
+    
+    <title>
+  Trees in Machine Learning World · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/treesml/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Trees in Machine Learning World</h1>
+    </header>
+
+    <p>Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.</p>
+<p>A tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.</p>
+<p>The Image at the beginning of the article (Source) explains the terminologies of a Tree.</p>
+<h1 id="decision-trees">Decision Trees</h1>
+<p>Decision trees represent rules, which can be understood by humans and used in knowledge system such as database</p>
+<p><figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/decisiontrees.jpg"/> 
+</figure>
+
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/decisiontrees2.jpg"/> 
+</figure>
+
+Here is the <a href="https://www.youtube.com/watch?v=eKD5gxPPeY0">Link</a> and source of above image</p>
+<h1 id="strengths">Strengths</h1>
+<ul>
+<li>Less computation process is required</li>
+<li>Rules generated by Decision trees are quite easy to understand</li>
+</ul>
+<h1 id="weakness">Weakness</h1>
+<ul>
+<li>Perform poorly with many class and small data.</li>
+<li>Training is computationally expensive process . As at each node, each field (which is getting splitted) must be sorted before its best split can be found.</li>
+<li>Its not the best choice for predicting continuous attributes</li>
+<li>Random Forrest</li>
+<li>Learning ensemble consisting of a bagging of un-pruned decision tree learners with a randomized selection of features at each split</li>
+</ul>
+<h1 id="purpose-in-nutshell">Purpose (in nutshell)</h1>
+<ul>
+<li>Definition : Collection of unpruned CARTs + Rule to combine individual tree decisions</li>
+<li>Purpose : Improve prediction accuracy</li>
+<li>Principle : Encouraging diversity among the tree</li>
+<li>Solution : Bagging + Random decision trees (rCART)</li>
+</ul>
+<h1 id="flow">Flow</h1>
+<ul>
+<li>Let N trees be the number of trees to build for each of N trees iterations</li>
+<li>Select a new bootstrap sample (See Bagging) from training set</li>
+<li>Grow an un-pruned tree on this bootstrap.</li>
+<li>At each internal node, randomly select ‘m’ predictors and determine the best split using only these predictors.</li>
+<li>Do not perform cost complexity pruning. Save tree as is, along side those built thus far.</li>
+<li>Output overall prediction as the average response (regression) or majority vote (classification) from all individually trained trees</li>
+</ul>
+<h1 id="strengths-1">Strengths</h1>
+<ul>
+<li>Unlike decision trees - it can handle thousands of input variables without variable deletion.</li>
+<li>Forrest generated during the process can be used for other tasks</li>
+<li>With my personal experience , it runs efficiently on large datasets</li>
+</ul>
+<h1 id="weakness-1">Weakness</h1>
+<ul>
+<li>It has been observed to overfit for some datasets with noisy classification/regression tasks.</li>
+<li>The categorical variables with different number of levels, the algorithm is biased in favor of those attributes with more levels.</li>
+</ul>
+<h1 id="my-databricks-notebook">My DataBricks Notebook</h1>
+<p>I am publishing my Databricks Notebook where I have tested the Decision Tree and Random Forrest Spark code (which is referred from Apache Spark site)</p>
+<h1 id="decision-trees-1">Decision Trees</h1>
+<p><a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2718522690254083/2090336460746042/4283590658906401/latest.html">Link for Databricks - Decision Trees</a></p>
+<h1 id="random-forrest">Random Forrest</h1>
+<p><a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2718522690254083/1766630042158090/4283590658906401/latest.html">Link for Databricks - Random forrest</a></p>
+<h1 id="note">Note</h1>
+<p>This article is prepared after reading a lot of articles from various sources (blogs,pdfs,lectures,videos,etc) and articulating them in single blog.</p>
+<p>For this article, we will keep it short with Decision and Random Forrest - Next article will be followed with Gradient Boost (with more details) and the famous XGBOOST.</p>
+<h1 id="sources">Sources</h1>
+<ul>
+<li><a href="https://www.cse.ust.hk/~twinsen/Decision_Tree.ppt">https://www.cse.ust.hk/~twinsen/Decision_Tree.ppt</a></li>
+<li><a href="https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm">https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm</a></li>
+<li><a href="http://www.cs.ucsb.edu/~ambuj/Courses/165B/Lectures/ensemble%20learning.ppt">http://www.cs.ucsb.edu/~ambuj/Courses/165B/Lectures/ensemble%20learning.ppt</a></li>
+<li><a href="https://www.edureka.co/community/46102/disadvantages-of-using-decision-tree">https://www.edureka.co/community/46102/disadvantages-of-using-decision-tree</a></li>
+<li><a href="https://perso.math.univ-toulouse.fr/motimo/files/2013/07/random-forest.pdf">https://perso.math.univ-toulouse.fr/motimo/files/2013/07/random-forest.pdf</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/decision-tree-vs-random-forest-vs-boosted-trees-explained">https://www.datasciencecentral.com/profiles/blogs/decision-tree-vs-random-forest-vs-boosted-trees-explained</a></li>
+<li><a href="https://www.youtube.com/watch?v=eKD5gxPPeY0">https://www.youtube.com/watch?v=eKD5gxPPeY0</a></li>
+<li><a href="https://spark.apache.org/docs/latest/ml-classification-regression.html">https://spark.apache.org/docs/latest/ml-classification-regression.html</a></li>
+</ul>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

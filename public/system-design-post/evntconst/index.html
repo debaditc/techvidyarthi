@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="All about Eventual and Strongly Consistency"/>
+<meta name="twitter:description" content="Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog"/>
+
+    <meta property="og:title" content="All about Eventual and Strongly Consistency" />
+<meta property="og:description" content="Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/evntconst/" />
+<meta property="article:published_time" content="2020-07-28T23:15:05-04:00" />
+<meta property="article:modified_time" content="2020-07-28T23:15:05-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/evntconst/">
+    
+    <title>
+  All about Eventual and Strongly Consistency · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/evntconst/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>All about Eventual and Strongly Consistency</h1>
+    </header>
+
+    <h2 id="eventual-consistent">Eventual Consistent</h2>
+<ul>
+<li>Mainly used in NoSQL databases (Solr, Cassandra , MongoDb)</li>
+<li>Used for analytics  , time series analysis , etc</li>
+<li>Low latency - Faster writes</li>
+</ul>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/evenct.JPG"/> 
+</figure>
+
+<p>Please follow Werner Voggel&rsquo;s blog - <a href="https://www.allthingsdistributed.com/2008/12/eventually_consistent.html">here</a></p>
+<h2 id="strongly-consistent">Strongly Consistent</h2>
+<ul>
+<li>Mainly used in RDBMS like Oracle , MySQL , PostgreSQL</li>
+<li>Primarily used in banking and payment systems</li>
+<li>High latency - Slower writes</li>
+</ul>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/strct.JPG"/> 
+</figure>
+
+<h3 id="please-read-about-f1-database-by-google-herehttpsresearchgooglepubspub41344">Please read about F1 database by Google <a href="https://research.google/pubs/pub41344/">here</a></h3>
+<p>Photo Credits : Google Blog</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

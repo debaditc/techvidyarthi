@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Install Spark For Windows : Please follow this site
+Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
+Execution of Spark Job   Image Credits to Data Flair">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spark Learnings"/>
+<meta name="twitter:description" content="Install Spark For Windows : Please follow this site
+Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
+Execution of Spark Job   Image Credits to Data Flair"/>
+
+    <meta property="og:title" content="Spark Learnings" />
+<meta property="og:description" content="Install Spark For Windows : Please follow this site
+Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
+Execution of Spark Job   Image Credits to Data Flair" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/programming/sparklearn/" />
+<meta property="article:published_time" content="2020-08-08T17:14:45-04:00" />
+<meta property="article:modified_time" content="2020-08-08T17:14:45-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/programming/sparklearn/">
+    
+    <title>
+  Spark Learnings · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/programming/sparklearn/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/programming/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Spark Learnings</h1>
+    </header>
+
+    <h3 id="install-spark-">Install Spark</h3>
+<p>For Windows : Please follow <a href="https://phoenixnap.com/kb/install-spark-on-windows-10">this site</a></p>
+<h4 id="basics-of-spark-flow-">Basics of Spark Flow</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt;  
+SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes.
+</code></pre></div><p>SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext.
+By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.</p>
+<h4 id="execution-of-spark-job-">Execution of Spark Job</h4>
+<p><figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/executionspark.JPG"/> 
+</figure>
+
+<strong>Image Credits to Data Flair</strong></p>
+<h4 id="spark-stages-">Spark Stages</h4>
+<p>2 types of Spark Stages</p>
+<ul>
+<li>
+<p>ShuffleMapStage   :   Intermediate stage in physical excution of DAG.
+In Adaptive Query Planning , it can be considered as final stage as well which can save output map files.</p>
+</li>
+<li>
+<p>ResultStage       :   Final stage in Spark. It helps in computation of result of an action.</p>
+</li>
+</ul>
+<h4 id="lazy-execution-">Lazy Execution</h4>
+<p>Lazy evaluation in Spark means execution of any task wont start start until an action is triggered.
+Spark has 2 operations</p>
+<ul>
+<li>Transformation</li>
+<li>Action</li>
+</ul>
+<p>Transformation is lazy which means operation wont be performed until an action is triggered.</p>
+<p><strong>Major Advantage of Lazy execution</strong></p>
+<ul>
+<li>Reduces number of queries - Increase optimization</li>
+<li>Increases speed of the application - less trips between cluster and driver</li>
+</ul>
+<p><figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/apache-spark-lazy-evaluation.gif"/> 
+</figure>
+
+<strong>Image Credits to Data Flair</strong></p>
+<h4 id="rdd-vs-data-frame-vs-data-set-">RDD vs Data frame vs Data Set</h4>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/rdddfds.JPG"/> 
+</figure>
+
+<p>*<strong>Type safe</strong></p>
+<ul>
+<li>RDDs and Datasets are type safe means that compiler know the Columns and it&rsquo;s data type of the Column</li>
+<li>In Dataframe, it will always return the result as an Array of Rows not as Long, String data type</li>
+</ul>
+<h4 id="broadcast-and-accumulators-">Broadcast and Accumulators</h4>
+<p>Spark provides Shared variables which are broadcast and accumulator variables.</p>
+<p><strong>Broadcast variables</strong>
+It allows users to keep a copy of variable (which can consist of large dataset) cached in each machine which can be utilized during task execution.
+It saves the communication cost and thus increases speed of application.</p>
+<p><strong>Accumulators</strong>
+They can be used to implement counters (as in MapReduce) or sums.
+Its only “added” to through an associative and commutative operation</p>
+<h4 id="cache-in-spark-">Cache in Spark</h4>
+<p>Cache is an important factor in Spark application.
+Cache the dataframe whenever user feels the data is going to be used several times.
+It helps to improve the <strong>performance of application</strong> and also <strong>create checkpoints in application</strong></p>
+<p><strong>Types of Storage level in Spark</strong></p>
+<ul>
+<li><strong>DISK_ONLY</strong>: Persist data on disk only in serialized format.</li>
+<li><strong>MEMORY_ONLY</strong>: Persist data in memory only in deserialized format (<strong>DEFAULT</strong>)</li>
+<li><strong>MEMORY_AND_DISK</strong>: Persist data in memory and if enough memory is not available evicted blocks will be stored on disk.</li>
+<li><strong>OFF_HEAP</strong> : Persist data in off-heap memory.</li>
+</ul>
+<p><strong>Note</strong> - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.</p>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

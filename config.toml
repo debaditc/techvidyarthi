@@ -101,17 +101,17 @@ disqusShortname = "debaditya"
             [[languages.en.menu.main]]
             name = "AI & ML"
             weight = 3
-            url = "/posts/"
+            url = "/AI-ML posts/"
 
             [[languages.en.menu.main]]
             name = "System-Design"
             weight = 2
-            url = "/concepts/"
+            url = "/System-Design post/"
 
             [[languages.en.menu.main]]
             name = "Programming"
             weight = 3
-            url = "/progs/"
+            url = "/Code-concept post/"
             
             [[languages.en.menu.main]]
             name = "Projects"

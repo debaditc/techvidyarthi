@@ -12,3 +12,7 @@ draft: false
 
 ## Kappa Architecture
 {{< figure src="/images/kappa.JPG" >}}
+
+Picture credits are to Talend.
+
+Please visit Talend site [here](https://www.talend.com/blog/2017/08/28/lambda-kappa-real-time-big-data-architectures/) for more details.
