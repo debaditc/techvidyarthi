@@ -35,12 +35,11 @@
       <pubDate>Sat, 08 Aug 2020 18:04:27 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/concepts/kafka/</guid>
-      <description>About Kafka Architecture   Install Zookeeper and Kafka Link is here
-Once Zookeeper and Kafka are installed - You can play with below commands
-Start Zookeeper in background
-zkserver Start Kafka in background Make sure to shorten the parent directory - else you would recieve error as &amp;ldquo;Tool long input line&amp;rdquo;
-.\bin\windows\kafka-server-start.bat .\config\server.properties Create topic in Kafka
-kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic Start producer</description>
+      <description>Kafka Architecture   Kafka uses ZooKeeper to manage the cluster.
+  ZooKeeper is used to coordinate the brokers/cluster topology.
+  ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.
+  Kafka producers write to Topics -&amp;gt; Kafka consumers read from Topics.
+  Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log.</description>
     </item>
     
     <item>
