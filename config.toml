@@ -1,6 +1,6 @@
 baseurl = "http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/"
 
-title = "Data & Tech Vidyārthī"
+title = "Debaditya's Tech Journal"
 
 theme = ["hugo-coder"]
 
@@ -20,7 +20,7 @@ disqusShortname = "debaditya"
     description = "Debaditya Chakravorty personal website"
     keywords = "blog,developer,personal"
     info = "Love with Data and Technology"
-    avatarurl = "/images/dev1.jpg"
+    avatarurl = "/images/deb2.jpg"
     #gravatar = "dev.techvidyarthi@gmail.com"
     #footercontent = "Enter a text here."
 
