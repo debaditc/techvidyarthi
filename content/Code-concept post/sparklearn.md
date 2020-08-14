@@ -1,5 +1,5 @@
 ---
-title: "Spark Learnings"
+title: "Spark definition and overall execution"
 date: 2020-08-08T17:14:45-04:00
 draft: false
 ---
@@ -79,3 +79,7 @@ It helps to improve the **performance of application** and also **create checkpo
 - **OFF_HEAP** : Persist data in off-heap memory. 
 
 **Note** - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.
+
+
+#### Spark Narrow vs Wide dependency
+{{< figure src="/images/sparkdep.JPG" >}}

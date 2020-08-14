@@ -17,12 +17,12 @@ Execution of Spark Job   Image Credits to Data Flair">
     
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Spark Learnings"/>
+<meta name="twitter:title" content="Spark definition and overall execution"/>
 <meta name="twitter:description" content="Install Spark For Windows : Please follow this site
 Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
 Execution of Spark Job   Image Credits to Data Flair"/>
 
-    <meta property="og:title" content="Spark Learnings" />
+    <meta property="og:title" content="Spark definition and overall execution" />
 <meta property="og:description" content="Install Spark For Windows : Please follow this site
 Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
 Execution of Spark Job   Image Credits to Data Flair" />
@@ -36,7 +36,7 @@ Execution of Spark Job   Image Credits to Data Flair" />
       <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparklearn/">
     
     <title>
-  Spark Learnings · Debaditya&#39;s Tech Journal
+  Spark definition and overall execution · Debaditya&#39;s Tech Journal
 </title>
 
     
@@ -85,11 +85,11 @@ Execution of Spark Job   Image Credits to Data Flair" />
       
         
           <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
           </li>
         
           <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
           </li>
         
           <li class="navigation-item">
@@ -121,7 +121,7 @@ Execution of Spark Job   Image Credits to Data Flair" />
   <section class="container page">
   <article>
     <header>
-      <h1>Spark Learnings</h1>
+      <h1>Spark definition and overall execution</h1>
     </header>
 
     <h3 id="install-spark-">Install Spark</h3>
@@ -196,6 +196,11 @@ It helps to improve the <strong>performance of application</strong> and also <st
 <li><strong>OFF_HEAP</strong> : Persist data in off-heap memory.</li>
 </ul>
 <p><strong>Note</strong> - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.</p>
+<h4 id="spark-narrow-vs-wide-dependency">Spark Narrow vs Wide dependency</h4>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/sparkdep.JPG"/> 
+</figure>
+
 
   </article>
 </section>

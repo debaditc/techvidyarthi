@@ -95,7 +95,7 @@ disqusShortname = "debaditya"
 
             [[languages.en.menu.main]]
             name = "About"
-            weight = 1
+            weight = 2
             url = "/about/"
 
             [[languages.en.menu.main]]

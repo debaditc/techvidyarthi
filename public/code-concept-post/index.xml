@@ -12,16 +12,18 @@
     
     
     <item>
-      <title>Spark streaming with Kafka</title>
+      <title>Basic code : Spark streaming</title>
       <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkstream/</link>
       <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkstream/</guid>
-      <description></description>
+      <description>A simple code to read words in stream and count number of words.
+Save the code for word count and run producer with netcat command
+from pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \ .builder \ .appName(&amp;#34;Word Count&amp;#34;) \ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \ .readStream \ .format(&amp;#34;socket&amp;#34;) \ .option(&amp;#34;host&amp;#34;, &amp;#34;localhost&amp;#34;) \ .</description>
     </item>
     
     <item>
-      <title>Basic Spark Commands</title>
+      <title>Spark Commands</title>
       <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkcommands/</link>
       <pubDate>Sat, 08 Aug 2020 20:57:34 -0400</pubDate>
       
@@ -43,7 +45,7 @@ Commands </description>
     </item>
     
     <item>
-      <title>Spark Learnings</title>
+      <title>Spark definition and overall execution</title>
       <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparklearn/</link>
       <pubDate>Sat, 08 Aug 2020 17:14:45 -0400</pubDate>
       
