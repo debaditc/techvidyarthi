@@ -158,7 +158,12 @@
 <li><strong>Code generation</strong> : using code generation to exploit modern compilers and CPUs</li>
 </ul>
 <p>More details are <a href="https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html">here</a></p>
-
+<h4 id="kyro-serializer">Kyro-Serializer</h4>
+<p>Kryo is a significantly optimized serializer, and performs better than the standard java serializer.
+It helps in shuffles (wide transformatiions) where mostly serialization is utilized.</p>
+<p>It can be setup as</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">conf.<span style="color:#007f7f">set</span>( <span style="color:#0ff;font-weight:bold">&#34;spark.serializer&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;org.apache.spark.serializer.KryoSerializer&#34;</span> )
+</code></pre></div>
   </article>
 </section>
 

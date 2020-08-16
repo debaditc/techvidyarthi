@@ -9,7 +9,7 @@
     <meta name="author" content="Debaditya Chakravorty">
     <meta name="description" content="Install Spark For Windows : Please follow this site
 Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
-Execution of Spark Job   Image Credits to Data Flair">
+Serialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream.">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -20,12 +20,12 @@ Execution of Spark Job   Image Credits to Data Flair">
 <meta name="twitter:title" content="Spark definition and overall execution"/>
 <meta name="twitter:description" content="Install Spark For Windows : Please follow this site
 Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
-Execution of Spark Job   Image Credits to Data Flair"/>
+Serialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream."/>
 
     <meta property="og:title" content="Spark definition and overall execution" />
 <meta property="og:description" content="Install Spark For Windows : Please follow this site
 Basics of Spark Flow Run Spark application -&gt; Driver program starts -&gt; Main function starts -&gt; SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.
-Execution of Spark Job   Image Credits to Data Flair" />
+Serialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparklearn/" />
 <meta property="article:published_time" content="2020-08-08T17:14:45-04:00" />
@@ -131,6 +131,13 @@ Execution of Spark Job   Image Credits to Data Flair" />
 SparkContext gets initiated -&gt; Driver program runs the operations inside the executors on worker nodes.
 </code></pre></div><p>SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext.
 By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&rsquo;t work.</p>
+<h4 id="serialization-and-deserialization">Serialization and Deserialization</h4>
+<p>Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory.</p>
+<ul>
+<li>Serialization   : Java object -&gt; Byte stream</li>
+<li>Deserialization : Byte stream -&gt; Java object</li>
+</ul>
+<p>We need serialization because the hard disk or network infrastructure are hardware component and we cannot send java objects because it understands just bytes :)</p>
 <h4 id="execution-of-spark-job-">Execution of Spark Job</h4>
 <p><figure>
     <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/executionspark.JPG"/> 

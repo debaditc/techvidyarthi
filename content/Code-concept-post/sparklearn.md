@@ -17,6 +17,15 @@ SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext.
 By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won't work.
 
 
+#### Serialization and Deserialization
+Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory.
+
+- Serialization   : Java object -> Byte stream
+- Deserialization : Byte stream -> Java object
+
+We need serialization because the hard disk or network infrastructure are hardware component and we cannot send java objects because it understands just bytes :)
+
+
 #### Execution of Spark Job ####
 
 {{< figure src="/images/executionspark.JPG" >}}
@@ -83,3 +92,4 @@ It helps to improve the **performance of application** and also **create checkpo
 
 #### Spark Narrow vs Wide dependency
 {{< figure src="/images/sparkdep.JPG" >}}
+

@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>System-Design posts on Debaditya&#39;s Tech Journal</title>
+    <title>System-Design-posts on Debaditya&#39;s Tech Journal</title>
     <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/</link>
-    <description>Recent content in System-Design posts on Debaditya&#39;s Tech Journal</description>
+    <description>Recent content in System-Design-posts on Debaditya&#39;s Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2020 18:04:27 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2020 13:01:06 -0400</lastBuildDate>
     
 	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windowing in Data Stream Management</title>
+      <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/windowops/</link>
+      <pubDate>Sun, 16 Aug 2020 13:01:06 -0400</pubDate>
+      
+      <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/windowops/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>About Kafka</title>
@@ -30,9 +39,11 @@
       <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
       
       <guid>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/synasync/</guid>
-      <description>Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread
+      <description>Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.
+  Asynchronous processing : Ordering food in restaurant , FTP , email , social media.
+  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread
 |&amp;lt;---T1----&amp;gt;||&amp;lt;----T2----------&amp;gt;||&amp;lt;------T3-----&amp;gt;| Multi Thread
-thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.  |--------A--------| |--------B--------| Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.</description>
+thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.</description>
     </item>
     
     <item>

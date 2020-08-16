@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Debaditya Chakravorty">
+    <meta name="description" content="Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&rsquo;s data is utilized for computation else the event&rsquo;s data is dropped for that time interval.
+Unsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spark Structured Streaming"/>
+<meta name="twitter:description" content="Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&rsquo;s data is utilized for computation else the event&rsquo;s data is dropped for that time interval.
+Unsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets."/>
+
+    <meta property="og:title" content="Spark Structured Streaming" />
+<meta property="og:description" content="Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&rsquo;s data is utilized for computation else the event&rsquo;s data is dropped for that time interval.
+Unsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/srucstream/" />
+<meta property="article:published_time" content="2020-08-14T20:22:49-04:00" />
+<meta property="article:modified_time" content="2020-08-14T20:22:49-04:00" />
+
+
+    
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/srucstream/">
+    
+    <title>
+  Spark Structured Streaming · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/srucstream/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.73.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
+      Debaditya&#39;s Tech Journal
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Spark Structured Streaming</h1>
+    </header>
+
+    <h4 id="comparison-of-spark-streaming--structured-streaming-and-kafka-streams">Comparison of Spark streaming , Structured streaming and Kafka Streams</h4>
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/sparkstrcmp.JPG"/> 
+</figure>
+
+<h4 id="what-is-a-watermark">What is a Watermark?</h4>
+<p>Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&rsquo;s data is utilized for computation else the event&rsquo;s data is dropped for that time interval.</p>
+<h4 id="unsupported-operations-in-structured-spark-streaming">Unsupported Operations in Structured Spark streaming</h4>
+<ul>
+<li>Multiple streaming aggregations are not yet supported on streaming Datasets.</li>
+<li>Limit and take the first N rows are not supported on streaming Datasets.</li>
+<li>Distinct operations on streaming Datasets</li>
+<li>Sorting operations are supported on streaming Datasets only after an aggregation and in Complete Output Mode.</li>
+<li>Few types of outer joins on streaming Datasets are not supported. <a href="https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#support-matrix-for-joins-in-streaming-queries">List is here</a></li>
+</ul>
+<p>Details and credits are [here] (<a href="https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#unsupported-operations">https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#unsupported-operations</a>)</p>
+<h4 id="sample-code-on-stuctured-spark-streaming-apache-site">Sample code on Stuctured Spark Streaming (Apache site)</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">spark = SparkSession. ...
+
+<span style="color:#007f7f"># Read text from socket</span>
+socketDF = spark \
+    .readStream \
+    .format(<span style="color:#0ff;font-weight:bold">&#34;socket&#34;</span>) \
+    .option(<span style="color:#0ff;font-weight:bold">&#34;host&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;localhost&#34;</span>) \
+    .option(<span style="color:#0ff;font-weight:bold">&#34;port&#34;</span>, <span style="color:#ff0;font-weight:bold">9999</span>) \
+    .load()
+
+socketDF.isStreaming()    <span style="color:#007f7f"># Returns True for DataFrames that have streaming sources</span>
+
+socketDF.printSchema()
+
+<span style="color:#007f7f"># Read all the csv files written atomically in a directory</span>
+userSchema = StructType().add(<span style="color:#0ff;font-weight:bold">&#34;name&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;string&#34;</span>).add(<span style="color:#0ff;font-weight:bold">&#34;age&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;integer&#34;</span>)
+csvDF = spark \
+    .readStream \
+    .option(<span style="color:#0ff;font-weight:bold">&#34;sep&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;;&#34;</span>) \
+    .schema(userSchema) \
+    .csv(<span style="color:#0ff;font-weight:bold">&#34;/path/to/directory&#34;</span>)  <span style="color:#007f7f"># Equivalent to format(&#34;csv&#34;).load(&#34;/path/to/directory&#34;)</span>
+</code></pre></div>
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2020
+         Debaditya Chakravorty 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

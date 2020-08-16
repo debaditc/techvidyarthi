@@ -29,3 +29,15 @@ It has 3 basic features
 - **Code generation** : using code generation to exploit modern compilers and CPUs
 
 More details are [here](https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html)
+
+
+#### Kyro-Serializer
+
+Kryo is a significantly optimized serializer, and performs better than the standard java serializer.
+It helps in shuffles (wide transformatiions) where mostly serialization is utilized.
+
+It can be setup as 
+
+```java
+conf.set( "spark.serializer", "org.apache.spark.serializer.KryoSerializer" )
+```

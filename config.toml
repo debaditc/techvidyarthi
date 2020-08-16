@@ -38,7 +38,7 @@ disqusShortname = "debaditya"
     # "auto" (use preference set by browser)
     # "dark" (dark background, light foreground)
     # "light" (light background, dark foreground) (default)
-    colorscheme = "light"
+    colorscheme = "dark"
 
     # Series see also post count
     maxSeeAlsoItems = 5
@@ -101,17 +101,17 @@ disqusShortname = "debaditya"
             [[languages.en.menu.main]]
             name = "AI & ML"
             weight = 3
-            url = "/AI-ML posts/"
+            url = "/AI-ML-posts/"
 
             [[languages.en.menu.main]]
             name = "System-Design"
             weight = 2
-            url = "/System-Design post/"
+            url = "/System-Design-post/"
 
             [[languages.en.menu.main]]
             name = "Programming"
             weight = 3
-            url = "/Code-concept post/"
+            url = "/Code-concept-post/"
             
             [[languages.en.menu.main]]
             name = "Projects"
@@ -122,4 +122,3 @@ disqusShortname = "debaditya"
 [[deployment.targets]]
 name = "s3 target"
 URL = "s3://techvidyarthi.com?region=us-east-1"
-

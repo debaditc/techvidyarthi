@@ -15,23 +15,26 @@
     
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="System-Design-posts"/>
-<meta name="twitter:description" content="Debaditya Chakravorty personal website"/>
+<meta name="twitter:title" content="Windowing in Data Stream Management"/>
+<meta name="twitter:description" content=""/>
 
-    <meta property="og:title" content="System-Design-posts" />
-<meta property="og:description" content="Debaditya Chakravorty personal website" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/" />
-<meta property="og:updated_time" content="2020-08-16T13:01:06-04:00" />
+    <meta property="og:title" content="Windowing in Data Stream Management" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/windowops/" />
+<meta property="article:published_time" content="2020-08-16T13:01:06-04:00" />
+<meta property="article:modified_time" content="2020-08-16T13:01:06-04:00" />
 
-
-    
-      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">
-    
-    <title>System-Design-posts · Debaditya&#39;s Tech Journal</title>
 
     
-      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">
+      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/windowops/">
+    
+    <title>
+  Windowing in Data Stream Management · Debaditya&#39;s Tech Journal
+</title>
+
+    
+      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/windowops/">
     
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
@@ -55,7 +58,6 @@
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
 
-    <link rel="alternate" type="application/rss+xml" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/index.xml" title="Debaditya's Tech Journal" />
     <meta name="generator" content="Hugo 0.73.0" />
   </head>
 
@@ -110,102 +112,17 @@
 
       <div class="content">
         
-  <section class="container list">
-  <h1 class="title">System-Design-posts</h1>
-  
-  <ul>
-    
-    <li>
-      <span class="date">August 16, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/windowops/">Windowing in Data Stream Management</a>
-    </li>
-    
-    <li>
-      <span class="date">August 8, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/kafka/">About Kafka</a>
-    </li>
-    
-    <li>
-      <span class="date">August 1, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/synasync/">Nutshell on Synchronous and Asynchronous process</a>
-    </li>
-    
-    <li>
-      <span class="date">August 1, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/evntdrive/">Event Driven model</a>
-    </li>
-    
-    <li>
-      <span class="date">July 28, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/evntconst/">All about Eventual and Strongly Consistency</a>
-    </li>
-    
-    <li>
-      <span class="date">July 27, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/lamkapp/">Demystify Lambda and Kappa Architecture</a>
-    </li>
-    
-    <li>
-      <span class="date">July 26, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/verticalhorizaonal/">Vertical vs Horizontal Scaling</a>
-    </li>
-    
-    <li>
-      <span class="date">July 24, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/awsterminology/">AWS Basic Terminologies</a>
-    </li>
-    
-    <li>
-      <span class="date">July 19, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/caching/">What is Caching and its importance</a>
-    </li>
-    
-    <li>
-      <span class="date">July 16, 2020</span>
-      <a class="title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/zookeeper/">About Zookeeper</a>
-    </li>
-    
-  </ul>
-  
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Windowing in Data Stream Management</h1>
+    </header>
 
-
-
-
-
-<ul class="pagination">
-  
-  
     
-    
-      
-    
-    
-      
-      <li>1</li>
-      
-    
-  
-    
-    
-      
-    
-    
-      
-      <li><a href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/page/2/">2</a></li>
-      
-    
-  
-  
-    <li class="hidden"><a href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/page/2/">&rsaquo;</a></li>
-    
-    <li><a href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/page/2/">&raquo;</a></li>
-    
-  
-</ul>
-
-
+  </article>
 </section>
 
+  
 
       </div>
 

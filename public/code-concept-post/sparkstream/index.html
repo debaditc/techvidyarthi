@@ -7,9 +7,8 @@
     <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="A simple code to read words in stream and count number of words.
-Save the code for word count and run producer with netcat command
-from pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \ .builder \ .appName(&#34;Word Count&#34;) \ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \ .readStream \ .format(&#34;socket&#34;) \ .option(&#34;host&#34;, &#34;localhost&#34;) \ .">
+    <meta name="description" content="Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
+Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.">
     <meta name="keywords" content="blog,developer,personal">
 
     
@@ -18,14 +17,12 @@ from pyspark.sql import SparkSession from pyspark.sql.functions import explode f
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Basic code : Spark streaming"/>
-<meta name="twitter:description" content="A simple code to read words in stream and count number of words.
-Save the code for word count and run producer with netcat command
-from pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \ .builder \ .appName(&#34;Word Count&#34;) \ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \ .readStream \ .format(&#34;socket&#34;) \ .option(&#34;host&#34;, &#34;localhost&#34;) \ ."/>
+<meta name="twitter:description" content="Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
+Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs."/>
 
     <meta property="og:title" content="Basic code : Spark streaming" />
-<meta property="og:description" content="A simple code to read words in stream and count number of words.
-Save the code for word count and run producer with netcat command
-from pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \ .builder \ .appName(&#34;Word Count&#34;) \ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \ .readStream \ .format(&#34;socket&#34;) \ .option(&#34;host&#34;, &#34;localhost&#34;) \ ." />
+<meta property="og:description" content="Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
+Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/sparkstream/" />
 <meta property="article:published_time" content="2020-08-09T02:47:18-04:00" />
@@ -124,7 +121,44 @@ from pyspark.sql import SparkSession from pyspark.sql.functions import explode f
       <h1>Basic code : Spark streaming</h1>
     </header>
 
-    <p>A simple code to read words in stream and count number of words.</p>
+    <h3 id="spark-streaming">Spark Streaming</h3>
+<h4 id="dstreams-discretized-streams">DStreams (Discretized Streams)</h4>
+<ul>
+<li>It is an abstraction provided by Spark streaming</li>
+<li>It is basically represents series of RDD
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/sparkdstream.JPG"/> 
+</figure>
+</li>
+</ul>
+<p>Directory monitoring (dataDirectory) is described <a href="https://spark.apache.org/docs/2.4.6/streaming-programming-guide.html#how-directories-are-monitored">here</a></p>
+<h4 id="window-operations">Window Operations</h4>
+<p>Spark provides window operation which helps to perform transformation on sliding window
+<figure>
+    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/sparkwindow.JPG"/> 
+</figure>
+</p>
+<ul>
+<li><strong>Window length</strong> - The duration of the window</li>
+<li><strong>Sliding interval</strong> - The interval at which the window operation is performed</li>
+</ul>
+<h4 id="example-of-window-operation">Example of window operation</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Reduce last 30 seconds of data, every 10 seconds</span>
+windowedWordCounts = pairs.reduceByKeyAndWindow(<span style="color:#fff;font-weight:bold">lambda</span> x, y: x + y, <span style="color:#fff;font-weight:bold">lambda</span> x, y: x - y, <span style="color:#ff0;font-weight:bold">30</span>, <span style="color:#ff0;font-weight:bold">10</span>)
+</code></pre></div><h4 id="checkpointing">Checkpointing</h4>
+<p>2 types of checkpoints in Spark streaming</p>
+<ul>
+<li>
+<p><strong>Metadata checkpointing</strong> : Saving information defining the streaming computation to fault-tolerant storage like HDFS. Required to recover from failure of the node running the driver of the streaming application
+<strong>Metadata checkpointing</strong> -&gt;  recovery from driver failures</p>
+</li>
+<li>
+<p><strong>Data checkpointing</strong> : Saving generated RDDs to reliable storage like HDFS. Necessary during stateful transformation where previous batch information (RDD) is important.
+<strong>Data checkpointing</strong> -&gt; Necessary for Stateful transformation scenario</p>
+</li>
+</ul>
+<h4 id="example-spark-streaming-code-from-apache-site">Example Spark streaming code (from Apache site)</h4>
+<p>A simple code to read words in stream and count number of words.</p>
 <p>Save the code for word count and run producer with netcat command</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">from</span> pyspark.sql <span style="color:#fff;font-weight:bold">import</span> SparkSession
 <span style="color:#fff;font-weight:bold">from</span> pyspark.sql.functions <span style="color:#fff;font-weight:bold">import</span> explode
@@ -168,7 +202,8 @@ query.awaitTermination()
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ncat.exe -lk <span style="color:#ff0;font-weight:bold">9999</span>
 </code></pre></div><p>Open another CMD (in Windows) or Terminal (in Linux/Mac) and the run the code to see the result</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">spark-submit sparkstream.py localhost <span style="color:#ff0;font-weight:bold">9999</span>
-</code></pre></div>
+</code></pre></div><p>Pic / documentation credits : <a href="https://spark.apache.org/">Apache Spark</a></p>
+
   </article>
 </section>
 
