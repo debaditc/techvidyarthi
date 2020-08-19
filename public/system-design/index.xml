@@ -24,15 +24,6 @@ Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the ba
     </item>
     
     <item>
-      <title>Windowing in Data Stream Management</title>
-      <link>/system-design/windowops/</link>
-      <pubDate>Sun, 16 Aug 2020 13:01:06 -0400</pubDate>
-      
-      <guid>/system-design/windowops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>About Kafka</title>
       <link>/system-design/kafka/</link>
       <pubDate>Sat, 08 Aug 2020 18:04:27 -0400</pubDate>

@@ -84,13 +84,6 @@
 	"content": ""
 },
 {
-	"uri": "/system-design/windowops/",
-	"title": "Windowing in Data Stream Management",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "/code-programming/srucstream/",
 	"title": "Spark Structured Streaming",
 	"tags": [],
