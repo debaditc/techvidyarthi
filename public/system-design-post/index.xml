@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>System Design Post on Debaditya Tech Journal</title>
+    <title>System Design on Debaditya Tech Journal</title>
     <link>/system-design-post/</link>
-    <description>Recent content in System Design Post on Debaditya Tech Journal</description>
+    <description>Recent content in System Design on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 16 Aug 2020 15:47:23 -0400</lastBuildDate>

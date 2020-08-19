@@ -3,18 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/ai-ml-post/</loc>
-    <lastmod>2020-07-11T20:24:10-04:00</lastmod>
+    <loc>/code-programming/</loc>
+    <lastmod>2020-08-14T20:22:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/</loc>
+    <loc>/system-design/</loc>
     <lastmod>2020-08-16T15:47:23-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/code-programming-post/</loc>
-    <lastmod>2020-08-14T20:22:49-04:00</lastmod>
+    <loc>/ai-ml/</loc>
+    <lastmod>2020-07-11T20:24:10-04:00</lastmod>
   </url>
   
   <url>
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>/system-design-post/installation/</loc>
+    <loc>/system-design/installation/</loc>
     <lastmod>2020-08-16T15:47:23-04:00</lastmod>
   </url>
   
@@ -63,136 +63,123 @@
   </url>
   
   <url>
-    <loc>/system-design-post/windowops/</loc>
+    <loc>/system-design/windowops/</loc>
     <lastmod>2020-08-16T13:01:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/code-programming-post/srucstream/</loc>
+    <loc>/code-programming/srucstream/</loc>
     <lastmod>2020-08-14T20:22:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/code-programming-post/sparkstream/</loc>
+    <loc>/code-programming/sparkstream/</loc>
     <lastmod>2020-08-09T02:47:18-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/code-programming-post/sparkcommands/</loc>
-    <lastmod>2020-08-08T20:57:34-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/code-programming-post/sparkmemory/</loc>
+    <loc>/code-programming/sparkmemory/</loc>
     <lastmod>2020-08-08T20:28:12-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/kafka/</loc>
+    <loc>/system-design/kafka/</loc>
     <lastmod>2020-08-08T18:04:27-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/code-programming-post/sparklearn/</loc>
+    <loc>/code-programming/sparklearn/</loc>
     <lastmod>2020-08-08T17:14:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/synasync/</loc>
+    <loc>/system-design/synasync/</loc>
     <lastmod>2020-08-01T23:36:51-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/evntdrive/</loc>
+    <loc>/system-design/evntdrive/</loc>
     <lastmod>2020-08-01T15:03:38-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/evntconst/</loc>
+    <loc>/system-design/evntconst/</loc>
     <lastmod>2020-07-28T23:15:05-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/lamkapp/</loc>
+    <loc>/system-design/lamkapp/</loc>
     <lastmod>2020-07-27T21:15:14-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/verticalhorizaonal/</loc>
+    <loc>/system-design/verticalhorizaonal/</loc>
     <lastmod>2020-07-26T16:30:42-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/awsterminology/</loc>
+    <loc>/system-design/awsterminology/</loc>
     <lastmod>2020-07-24T00:10:26-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/code-programming-post/tscomplexity/</loc>
+    <loc>/code-programming/tscomplexity/</loc>
     <lastmod>2020-07-24T00:03:26-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/caching/</loc>
+    <loc>/system-design/caching/</loc>
     <lastmod>2020-07-19T22:20:15-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/zookeeper/</loc>
+    <loc>/system-design/zookeeper/</loc>
     <lastmod>2020-07-16T21:19:21-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/loadbalance/</loc>
+    <loc>/system-design/loadbalance/</loc>
     <lastmod>2020-07-16T20:54:54-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/https/</loc>
+    <loc>/system-design/https/</loc>
     <lastmod>2020-07-14T09:58:29-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/restsoap/</loc>
+    <loc>/system-design/restsoap/</loc>
     <lastmod>2020-07-13T19:54:23-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/auth/</loc>
+    <loc>/system-design/auth/</loc>
     <lastmod>2020-07-12T16:51:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/ai-ml-post/word2vec/</loc>
+    <loc>/ai-ml/word2vec/</loc>
     <lastmod>2020-07-11T20:24:10-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/system-design-post/osilayer/</loc>
+    <loc>/system-design/osilayer/</loc>
     <lastmod>2020-07-11T19:29:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/ai-ml-post/treesml/</loc>
+    <loc>/ai-ml/treesml/</loc>
     <lastmod>2020-07-05T01:35:10-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/ai-ml-post/baggingboosting/</loc>
+    <loc>/ai-ml/baggingboosting/</loc>
     <lastmod>2020-07-04T10:52:27-04:00</lastmod>
   </url>
   
   <url>
     <loc>/credits/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/contact/</loc>
   </url>
   
   <url>

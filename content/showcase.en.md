@@ -20,8 +20,6 @@ More details are [here](https://landing.ai/landing-ai-creates-an-ai-tool-to-help
 {{< youtube FpsEc2RADgM >}}
 
 
-
-
 ### Face Mask detector using Opencv , keras , CNN
 Fun/Hobby project on Real-time face mask detector during quarantine period 😊. It can be enhanced a lot and can be integrated with Mobile app (Pythonista) , Raspeberry Pi (Miniconda3) , etc and can be utilized in many ways.
 

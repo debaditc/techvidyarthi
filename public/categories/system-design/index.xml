@@ -13,10 +13,10 @@
     
     <item>
       <title>Database Sharding</title>
-      <link>/system-design-post/installation/</link>
+      <link>/system-design/installation/</link>
       <pubDate>Sun, 16 Aug 2020 15:47:23 -0400</pubDate>
       
-      <guid>/system-design-post/installation/</guid>
+      <guid>/system-design/installation/</guid>
       <description>Simple definition Process of making paritions of data in database
 Vertical and Horizontal Sharding Let us understand using simple example
 Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the basis of salary.

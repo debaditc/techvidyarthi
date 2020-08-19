@@ -1,7 +1,7 @@
 ---
-title: AI ML Posts
-weight: 1
-pre: "<b>1. </b>"
+title: AI ML
+weight: 3
+pre: "<b>3. </b>"
 chapter: true
 ---
 

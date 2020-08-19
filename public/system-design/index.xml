@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System Design on Debaditya Tech Journal</title>
+    <link>/system-design/</link>
+    <description>Recent content in System Design on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 16 Aug 2020 15:47:23 -0400</lastBuildDate>
+    
+	<atom:link href="/system-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Database Sharding</title>
+      <link>/system-design/installation/</link>
+      <pubDate>Sun, 16 Aug 2020 15:47:23 -0400</pubDate>
+      
+      <guid>/system-design/installation/</guid>
+      <description>Simple definition Process of making paritions of data in database
+Vertical and Horizontal Sharding Let us understand using simple example
+Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the basis of salary.
+ Horizontal Shard1 = salary &amp;lt; 100000 Horizontal Shard2 = salary &amp;gt; 100000 AND salary &amp;lt; 250000 Horizontal Shard3 = salary &amp;gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?</description>
+    </item>
+    
+    <item>
+      <title>Windowing in Data Stream Management</title>
+      <link>/system-design/windowops/</link>
+      <pubDate>Sun, 16 Aug 2020 13:01:06 -0400</pubDate>
+      
+      <guid>/system-design/windowops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About Kafka</title>
+      <link>/system-design/kafka/</link>
+      <pubDate>Sat, 08 Aug 2020 18:04:27 -0400</pubDate>
+      
+      <guid>/system-design/kafka/</guid>
+      <description>Kafka Architecture   Kafka uses ZooKeeper to manage the cluster.
+  ZooKeeper is used to coordinate the brokers/cluster topology.
+  ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.
+  Kafka producers write to Topics -&amp;gt; Kafka consumers read from Topics.
+  Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log.</description>
+    </item>
+    
+    <item>
+      <title>Nutshell on Synchronous and Asynchronous process</title>
+      <link>/system-design/synasync/</link>
+      <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
+      
+      <guid>/system-design/synasync/</guid>
+      <description>Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.
+  Asynchronous processing : Ordering food in restaurant , FTP , email , social media.
+  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread |&amp;lt;---T1----&amp;gt;||&amp;lt;----T2----------&amp;gt;||&amp;lt;------T3-----&amp;gt;| Multi Thread thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.</description>
+    </item>
+    
+    <item>
+      <title>Event Driven model</title>
+      <link>/system-design/evntdrive/</link>
+      <pubDate>Sat, 01 Aug 2020 15:03:38 -0400</pubDate>
+      
+      <guid>/system-design/evntdrive/</guid>
+      <description>Event Driven Model Event driven model is based on either Pub/sub or Event streaming model
+Pub-sub model Messaging infrastructure is based on subscription based model (Active MQ)
+Event streaming model Events are written into logs. Consumers need not require to subscribe event - rather they can be read or join from any part of the stream (Kafka)
+System Design - Microservice + Kafka + KSQL Picture credits : Please visit Confluent site for more details</description>
+    </item>
+    
+    <item>
+      <title>All about Eventual and Strongly Consistency</title>
+      <link>/system-design/evntconst/</link>
+      <pubDate>Tue, 28 Jul 2020 23:15:05 -0400</pubDate>
+      
+      <guid>/system-design/evntconst/</guid>
+      <description>Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&amp;rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog</description>
+    </item>
+    
+    <item>
+      <title>Demystify Lambda and Kappa Architecture</title>
+      <link>/system-design/lamkapp/</link>
+      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
+      
+      <guid>/system-design/lamkapp/</guid>
+      <description>Nutshell Lambda vs Kappa Architecture   Lambda Architecture   Kappa Architecture   Picture credits are to Talend.
+Please visit Talend site here for more details.</description>
+    </item>
+    
+    <item>
+      <title>Vertical vs Horizontal Scaling</title>
+      <link>/system-design/verticalhorizaonal/</link>
+      <pubDate>Sun, 26 Jul 2020 16:30:42 -0400</pubDate>
+      
+      <guid>/system-design/verticalhorizaonal/</guid>
+      <description>Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally.</description>
+    </item>
+    
+    <item>
+      <title>AWS Basic Terminologies</title>
+      <link>/system-design/awsterminology/</link>
+      <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
+      
+      <guid>/system-design/awsterminology/</guid>
+      <description>Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.</description>
+    </item>
+    
+    <item>
+      <title>What is Caching and its importance</title>
+      <link>/system-design/caching/</link>
+      <pubDate>Sun, 19 Jul 2020 22:20:15 -0400</pubDate>
+      
+      <guid>/system-design/caching/</guid>
+      <description>3 Main use-case of Cache  Avoid Network calls Avoid repeated computation Avoid load on Database / System  Why not use cache every time  Hardware where Cache runs are mainly in SSDs which are expensive More data in Cache will increase the search time - so it will make cache data retrieval slower  Cache Policy The way we decide to load or evict data from cache is called Cache policy</description>
+    </item>
+    
+    <item>
+      <title>About Zookeeper</title>
+      <link>/system-design/zookeeper/</link>
+      <pubDate>Thu, 16 Jul 2020 21:19:21 -0400</pubDate>
+      
+      <guid>/system-design/zookeeper/</guid>
+      <description>Definition Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
+The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.
+Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service − Identifying the nodes in a cluster by name.</description>
+    </item>
+    
+    <item>
+      <title>Load Balancer</title>
+      <link>/system-design/loadbalance/</link>
+      <pubDate>Thu, 16 Jul 2020 20:54:54 -0400</pubDate>
+      
+      <guid>/system-design/loadbalance/</guid>
+      <description>Definition Load Balancing is the process of re-distributing network traffic across multiple server.
+  What Load Balancers can perform ?  Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying HTTP and HTTPS</title>
+      <link>/system-design/https/</link>
+      <pubDate>Tue, 14 Jul 2020 09:58:29 -0400</pubDate>
+      
+      <guid>/system-design/https/</guid>
+      <description>HTTP and HTTPS HTTPS (Hyper Text transfer protoco secure) is basically http with security. SSL (Secure Socket Layer) certificate encrypts information users put into any website. Addtionally, HTTPS is also secured via TLS (Transport Layer Security) protocol. TLS is a succcessotr of SSL.
+SSL / TLS SSL/TLS works by binding the identities of entities such as websites and companies to cryptographic key pairs via digital documents known as X.509 certificates. Each key pair consists of a private key and a public key.</description>
+    </item>
+    
+    <item>
+      <title>What is REST &amp; SOAP</title>
+      <link>/system-design/restsoap/</link>
+      <pubDate>Mon, 13 Jul 2020 19:54:23 -0400</pubDate>
+      
+      <guid>/system-design/restsoap/</guid>
+      <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
+REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
+    </item>
+    
+    <item>
+      <title>Authentication vs Authorization</title>
+      <link>/system-design/auth/</link>
+      <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
+      
+      <guid>/system-design/auth/</guid>
+      <description>Definition Authentication and authorization are important terms in world of security. Often these 2 words are confused and can be used interchangeably. In this blog, a simple differentiation has been tried to lay out to clearly define both the terms in layman&amp;rsquo;s language.
+  </description>
+    </item>
+    
+    <item>
+      <title>OSI Model Layer</title>
+      <link>/system-design/osilayer/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>/system-design/osilayer/</guid>
+      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
+  Comparing OSI Model Layer with TCP/IP model   </description>
+    </item>
+    
+  </channel>
+</rss>

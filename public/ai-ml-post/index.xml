@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI ML Posts on Debaditya Tech Journal</title>
+    <title>AI ML on Debaditya Tech Journal</title>
     <link>/ai-ml-post/</link>
-    <description>Recent content in AI ML Posts on Debaditya Tech Journal</description>
+    <description>Recent content in AI ML on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 11 Jul 2020 20:24:10 -0400</lastBuildDate>
@@ -30,16 +30,6 @@
 A tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.
 The Image at the beginning of the article (Source) explains the terminologies of a Tree.
 Decision Trees Decision trees represent rules, which can be understood by humans and used in knowledge system such as database</description>
-    </item>
-    
-    <item>
-      <title>Bagging &amp; Boosting in Machine Learning World</title>
-      <link>/ai-ml-post/baggingboosting/</link>
-      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
-      
-      <guid>/ai-ml-post/baggingboosting/</guid>
-      <description>In my last tech blog, I discussed on Decision trees and Random Forrest. So I thought of articulating on Gradient Boosting model and XgBoost. But before these algorithms , its important to understand 2 basic concepts :
- Bagging (Bootstrap Aggregation) Boosting  Bagging (Bootstrap Aggregation) Bootstrapping is a process of creating random samples with replacement for estimating sample statistics. With replacement means , the sample might have duplicated values from the original set.</description>
     </item>
     
   </channel>
