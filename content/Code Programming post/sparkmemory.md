@@ -4,9 +4,9 @@ date: 2020-08-08T20:28:12-04:00
 draft: false
 ---
 
-## Spark Memory and Optimizer
+### Spark Memory and Optimizer
 
-#### Optimizer
+### Optimizer
 - Core of Spark SQL has **Catalyst optimizer** which leverages 2 important Scala features 
     - Pattern matching 
     - Quasi Notes (Easy to generate code at runtime from composable expressions)
@@ -19,7 +19,7 @@ draft: false
 
 More details are [here](https://databricks.com/glossary/catalyst-optimizer)
 
-#### Memory
+### Memory
 For better memory management - Spark included **Tungsten**
 
 It has 3 basic features
@@ -31,7 +31,7 @@ It has 3 basic features
 More details are [here](https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html)
 
 
-#### Kyro-Serializer
+### Kyro-Serializer
 
 Kryo is a significantly optimized serializer, and performs better than the standard java serializer.
 It helps in shuffles (wide transformatiions) where mostly serialization is utilized.

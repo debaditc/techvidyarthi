@@ -5,22 +5,22 @@ draft: false
 ---
 
 
-#### Real life examples
+### Real life examples
 
 - Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.
 
 - Asynchronous processing : Ordering food in restaurant , FTP , email , social media.
 
 
-## Synchronous and Asynchronous process
+### Synchronous and Asynchronous process
 
 - **Synchronous processing**  :   Synchronous execution means the execution happens in a single series.
 
-**Single Thread**
+### Single Thread
 ```
 |<---T1---->||<----T2---------->||<------T3----->|
 ```
-**Multi Thread**
+### Multi Thread
 ```
 thread A -> |<---A---->|   
                         

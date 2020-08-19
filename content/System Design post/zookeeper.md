@@ -4,11 +4,13 @@ date: 2020-07-16T21:19:21-04:00
 draft: false
 ---
 
+### Definition
+
 Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
 
 The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks. 
 
-# Services Provided by Zookeeper (NCCLLH - thats How I remember) 
+### Services Provided by Zookeeper (NCCLLH - thats How I remember) 
 
 - **Naming service** − Identifying the nodes in a cluster by name.
 
@@ -23,17 +25,17 @@ The ZooKeeper framework was originally built at “Yahoo!” for accessing their
 - **Highly reliable data registry** − Availability of data even when one or a few nodes are down.
 
 
-# How does Zookeeper work ?
+### How does Zookeeper work ?
 
 The data within Zookeeper is divided across multiple collection of nodes (**ZNODES**) and this is how it achieves its high availability and consistency. In case a node fails, Zookeeper can perform instant failover migration; e.g. if a master node fails, a new one is selected in real-time by polling within an ensemble. A client connecting to the server can query a different node if the first one fails to respond.
 
-# Can Load Balancer act as Zookeeper?
+### Can Load Balancer act as Zookeeper?
 
 **NO** - Load balancer helps in distribution of work loads across multiple servers.
 Whereas , Zookeeper is good for master election , crash detection , storing configurations / state of the services , etc.
 
 
-# Why is Zookeeper necessary for Apache Kafka?
+### Why is Zookeeper necessary for Apache Kafka?
 I remember it as "C-CAM" 
 
 - **Controller election**

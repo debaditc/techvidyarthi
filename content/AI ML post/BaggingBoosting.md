@@ -7,7 +7,7 @@ In my last tech blog, I discussed on Decision trees and Random Forrest. So I tho
 * Bagging  (Bootstrap Aggregation)       
 * Boosting
 
-# Bagging (Bootstrap Aggregation)
+### Bagging (Bootstrap Aggregation)
 Bootstrapping is a process of creating random samples with replacement for estimating sample statistics. With replacement means , the sample might have duplicated values from the original set.
 
 For example:
@@ -21,7 +21,7 @@ Bootstrap sample 2                {23, 10, 12, 11, 14, 2, 14} – 14 is duplicat
 Bootstrap sample n :   {10, 1, 2, 2, 14, 1, 23}
 ```
 
-# Reason to create BootStrap samples
+### Reason to create BootStrap samples
 
 Once bootstrap samples are created, model classifier is used for training or building a model and then selecting model based on popularity votes.
 
@@ -36,10 +36,10 @@ Refer to below diagram to understand the Bagging process
 
 For [confidence interval](http://hosted.jalt.org/test/PDF/Brown35.pdf)
 
-# Sample Code in Python for Bagging
+### Sample Code in Python for Bagging
 [Databricks link for Bagging](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2718522690254083/197903457957926/4283590658906401/latest.html)
 
-# Boosting
+### Boosting
 In layman’s term , it is a process to convert the weak learners to strong learners
 
 Consider our life where we develop life skills by learning from our mistakes, we can train our model to learn from the errors predicted and improvise the model’s prediction .
@@ -51,13 +51,13 @@ Source
 
 Finally, it combines the outputs from weak learner and creates a strong learner which eventually improves the prediction power of the model. .
 
-# Types of Boosting algorithms
+### Types of Boosting algorithms
 
 * Ada-Boost
 * Gradient Boosting algorithm
 * XgBoost (Oe of the popular ones in Kaggle J )
 
-# Source
+### Source
 
 * https://web.stanford.edu/class/stats202/content/lec20.pdf     
 * https://www.analyticsvidhya.com/blog/2015/11/quick-introduction-boosting-algorithms-machine-learning/     

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>System Design posts on Debaditya Tech Journal</title>
+    <title>System Design Post on Debaditya Tech Journal</title>
     <link>/system-design-post/</link>
-    <description>Recent content in System Design posts on Debaditya Tech Journal</description>
+    <description>Recent content in System Design Post on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 16 Aug 2020 15:47:23 -0400</lastBuildDate>
@@ -19,9 +19,7 @@
       <guid>/system-design-post/installation/</guid>
       <description>Simple definition Process of making paritions of data in database
 Vertical and Horizontal Sharding Let us understand using simple example
-Table
-  Veritical Sharding   Horizontal Sharding
-Sharding is performed on the basis of salary.
+Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the basis of salary.
  Horizontal Shard1 = salary &amp;lt; 100000 Horizontal Shard2 = salary &amp;gt; 100000 AND salary &amp;lt; 250000 Horizontal Shard3 = salary &amp;gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?</description>
     </item>
     
@@ -55,9 +53,7 @@ Sharding is performed on the basis of salary.
       <guid>/system-design-post/synasync/</guid>
       <description>Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.
   Asynchronous processing : Ordering food in restaurant , FTP , email , social media.
-  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread
-|&amp;lt;---T1----&amp;gt;||&amp;lt;----T2----------&amp;gt;||&amp;lt;------T3-----&amp;gt;| Multi Thread
-thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.</description>
+  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread |&amp;lt;---T1----&amp;gt;||&amp;lt;----T2----------&amp;gt;||&amp;lt;------T3-----&amp;gt;| Multi Thread thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.</description>
     </item>
     
     <item>
@@ -126,7 +122,7 @@ Please visit Talend site here for more details.</description>
       <pubDate>Thu, 16 Jul 2020 21:19:21 -0400</pubDate>
       
       <guid>/system-design-post/zookeeper/</guid>
-      <description>Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
+      <description>Definition Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.
 The ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.
 Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service − Identifying the nodes in a cluster by name.</description>
     </item>
@@ -137,9 +133,8 @@ Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service 
       <pubDate>Thu, 16 Jul 2020 20:54:54 -0400</pubDate>
       
       <guid>/system-design-post/loadbalance/</guid>
-      <description>Load Balancing is the process of re-distributing network traffic across multiple server.
-  What Load Balancers can perform ?
- Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation.</description>
+      <description>Definition Load Balancing is the process of re-distributing network traffic across multiple server.
+  What Load Balancers can perform ?  Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation.</description>
     </item>
     
     <item>
@@ -159,8 +154,7 @@ SSL / TLS SSL/TLS works by binding the identities of entities such as websites a
       
       <guid>/system-design-post/restsoap/</guid>
       <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
-REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage
- Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
+REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
     </item>
     
     <item>
@@ -169,7 +163,7 @@ REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage
       <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
       
       <guid>/system-design-post/auth/</guid>
-      <description>Authentication and authorization are important terms in world of security. Often these 2 words are confused and can be used interchangeably. In this blog, a simple differentiation has been tried to lay out to clearly define both the terms in layman&amp;rsquo;s language.
+      <description>Definition Authentication and authorization are important terms in world of security. Often these 2 words are confused and can be used interchangeably. In this blog, a simple differentiation has been tried to lay out to clearly define both the terms in layman&amp;rsquo;s language.
   </description>
     </item>
     

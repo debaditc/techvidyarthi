@@ -4,16 +4,16 @@ date: 2020-07-26T16:30:42-04:00
 draft: false
 ---
 
-# Nutshell 
+### Nutshell 
 - **Horizontal scaling** means that we scale by adding more machines into  pool of resources 
 - **Vertical scaling** means that we scale by adding more power (CPU, RAM) to an existing machine.
 
-# High level difference
+### High level difference
 
 {{< figure src="/images/horver.JPG" >}}
 
 
-# Real world implementation
+### Real world implementation
 
 Take the benfits of both Horizontal and Vertical scaling
 
@@ -22,5 +22,5 @@ Take the benfits of both Horizontal and Vertical scaling
 
 Ideal way - First have the veritical scaling (optimal level) and scale horizontally.
 
-#### Credits 
+### Credits 
 [Gaurav Sen](https://www.youtube.com/watch?v=xpDnVSmNFX0) - Please watch video in Youtube

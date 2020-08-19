@@ -4,10 +4,10 @@ date: 2020-08-08T17:14:45-04:00
 draft: false
 ---
 
-### Install Spark ###
+### Install Spark 
 For Windows : Please follow [this site](https://phoenixnap.com/kb/install-spark-on-windows-10)
 
-#### Basics of Spark Flow ####
+### Basics of Spark Flow 
 ```
 Run Spark application -> Driver program starts -> Main function starts ->  
 SparkContext gets initiated -> Driver program runs the operations inside the executors on worker nodes.
@@ -17,7 +17,7 @@ SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext.
 By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won't work.
 
 
-#### Serialization and Deserialization
+### Serialization and Deserialization
 Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory.
 
 - Serialization   : Java object -> Byte stream
@@ -26,20 +26,20 @@ Serialization is a mechanism of converting the state of an object into a byte st
 We need serialization because the hard disk or network infrastructure are hardware component and we cannot send java objects because it understands just bytes :)
 
 
-#### Execution of Spark Job ####
+### Execution of Spark Job 
 
 {{< figure src="/images/executionspark.JPG" >}}
 **Image Credits to Data Flair**
 
 
-#### Spark Stages ####
+### Spark Stages 
 2 types of Spark Stages
 - ShuffleMapStage   :   Intermediate stage in physical excution of DAG. 
                         In Adaptive Query Planning , it can be considered as final stage as well which can save output map files.
                         
 - ResultStage       :   Final stage in Spark. It helps in computation of result of an action.
 
-#### Lazy Execution #### 
+### Lazy Execution 
 
 Lazy evaluation in Spark means execution of any task wont start start until an action is triggered.
 Spark has 2 operations
@@ -55,7 +55,7 @@ Transformation is lazy which means operation wont be performed until an action i
 {{< figure src="/images/apache-spark-lazy-evaluation.gif" >}}
 **Image Credits to Data Flair**
 
-#### RDD vs Data frame vs Data Set #### 
+### RDD vs Data frame vs Data Set 
 
 {{< figure src="/images/rdddfds.JPG" >}}
 
@@ -63,7 +63,7 @@ Transformation is lazy which means operation wont be performed until an action i
 - RDDs and Datasets are type safe means that compiler know the Columns and it's data type of the Column
 - In Dataframe, it will always return the result as an Array of Rows not as Long, String data type
 
-#### Broadcast and Accumulators #### 
+### Broadcast and Accumulators 
 Spark provides Shared variables which are broadcast and accumulator variables.
 
 **Broadcast variables**
@@ -76,7 +76,7 @@ Its only “added” to through an associative and commutative operation
 
 
 
-#### Cache in Spark #### 
+### Cache in Spark  
 Cache is an important factor in Spark application. 
 Cache the dataframe whenever user feels the data is going to be used several times.
 It helps to improve the **performance of application** and also **create checkpoints in application**
@@ -90,6 +90,6 @@ It helps to improve the **performance of application** and also **create checkpo
 **Note** - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.
 
 
-#### Spark Narrow vs Wide dependency
+### Spark Narrow vs Wide dependency
 {{< figure src="/images/sparkdep.JPG" >}}
 

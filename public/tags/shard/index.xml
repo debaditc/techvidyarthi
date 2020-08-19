@@ -19,9 +19,7 @@
       <guid>/system-design-post/installation/</guid>
       <description>Simple definition Process of making paritions of data in database
 Vertical and Horizontal Sharding Let us understand using simple example
-Table
-  Veritical Sharding   Horizontal Sharding
-Sharding is performed on the basis of salary.
+Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the basis of salary.
  Horizontal Shard1 = salary &amp;lt; 100000 Horizontal Shard2 = salary &amp;gt; 100000 AND salary &amp;lt; 250000 Horizontal Shard3 = salary &amp;gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?</description>
     </item>
     

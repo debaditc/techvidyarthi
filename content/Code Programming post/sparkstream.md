@@ -6,7 +6,7 @@ draft: false
 
 ### Spark Streaming
 
-#### DStreams (Discretized Streams)
+### DStreams (Discretized Streams)
 - It is an abstraction provided by Spark streaming
 - It is basically represents series of RDD
 {{< figure src="/images/sparkdstream.JPG" >}}
@@ -14,7 +14,7 @@ draft: false
 
 Directory monitoring (dataDirectory) is described [here](https://spark.apache.org/docs/2.4.6/streaming-programming-guide.html#how-directories-are-monitored)
 
-#### Window Operations
+### Window Operations
 
 Spark provides window operation which helps to perform transformation on sliding window
 {{< figure src="/images/sparkwindow.JPG" >}}
@@ -28,7 +28,7 @@ Spark provides window operation which helps to perform transformation on sliding
 windowedWordCounts = pairs.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y: x - y, 30, 10)
 ```
 
-#### Checkpointing
+### Checkpointing
 
 2 types of checkpoints in Spark streaming
 
@@ -38,7 +38,7 @@ windowedWordCounts = pairs.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y:
 - **Data checkpointing** : Saving generated RDDs to reliable storage like HDFS. Necessary during stateful transformation where previous batch information (RDD) is important.
 **Data checkpointing** -> Necessary for Stateful transformation scenario 
 
-#### Example Spark streaming code (from Apache site)
+### Example Spark streaming code (from Apache site)
 
 A simple code to read words in stream and count number of words.
 

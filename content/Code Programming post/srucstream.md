@@ -4,14 +4,14 @@ date: 2020-08-14T20:22:49-04:00
 draft: false
 ---
 
-#### Comparison of Spark streaming , Structured streaming and Kafka Streams
+### Comparison of Spark streaming , Structured streaming and Kafka Streams
 {{< figure src="/images/sparkstrcmp.JPG" >}}
 
 
-#### What is a Watermark?
+### What is a Watermark?
 Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event's data is utilized for computation else the event's data is dropped for that time interval.
 
-####  Unsupported Operations in Structured Spark streaming
+###  Unsupported Operations in Structured Spark streaming
 
 - Multiple streaming aggregations are not yet supported on streaming Datasets.
 - Limit and take the first N rows are not supported on streaming Datasets.
@@ -21,7 +21,7 @@ Its a method to hande the lateness. Basically , it can be regarded as threshold 
 
 Details and credits are [here] (https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#unsupported-operations)
 
-#### Sample code on Stuctured Spark Streaming (Apache site)
+### Sample code on Stuctured Spark Streaming (Apache site)
 
 ```python
 spark = SparkSession. ...

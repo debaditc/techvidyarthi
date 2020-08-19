@@ -5,7 +5,7 @@ draft: false
 
 ---
 
-# Time Complexity
+### Time Complexity
 
 **Big-O , Big-Omega , Big-Theta**
 
@@ -14,7 +14,7 @@ draft: false
 - **Big-Theta** is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario
 
 
-# Space Complexity
+### Space Complexity
 Amount of memory or space required by an algorithm
 
 In recursive calls counts,the code would take 0 (n) time and O( n) space.
@@ -39,7 +39,7 @@ Each call adds a level to the stack.
 Each of these calls is added to the call stack and takes up actual memory. 
 
 
-# A few tips
+### A few tips
 
  - ### Drop the non-dominant terms
  ```
@@ -105,7 +105,7 @@ Pic credit : CTCI (Big O chapter)
 
 
 
-# Examples from CTCI Book
+### Examples from CTCI Book
 
 
 **Example 1** 

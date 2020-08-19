@@ -12,13 +12,13 @@ series = []
 
 REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
 
-# REST vs SOAP
+### REST vs SOAP
 
 {{< figure src="/images/restsoap.JPG" >}}
 
-# When to use REST & SOAP
+### When to use REST & SOAP
 
-**REST Usage**
+### REST Usage
 
 - **Limited resources and bandwidth**
 - **Statelessness** – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site. 
@@ -26,7 +26,7 @@ REST and SOAP are terms which are often used by engineers. But one must know tha
 - **Ease of coding** – Coding + Implementation REST Services  is far easier than SOAP. 
 
 
-**SOAP Usage**
+### SOAP Usage
 
 - **Asynchronous processing and subsequent invocation** – if there is a requirement that the client needs a guaranteed level of reliability and security 
 - **Strict format** – if both the client and server have an agreement on the exchange format then SOAP 1.2 gives the rigid specifications for this type of interaction.

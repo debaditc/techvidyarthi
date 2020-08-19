@@ -4,7 +4,7 @@ date: 2020-08-08T18:04:27-04:00
 draft: false
 ---
 
-## Kafka Architecture 
+### Kafka Architecture 
 
 - Kafka uses ZooKeeper to manage the cluster. 
 - ZooKeeper is used to coordinate the brokers/cluster topology. 
@@ -19,18 +19,18 @@ draft: false
 
 More details are [here](http://cloudurable.com/blog/kafka-architecture/index.html)
 
-#### Kafka Brokers
+### Kafka Brokers
 - A Kafka cluster is made up of multiple Kafka Brokers. 
 - Each Kafka Broker has a unique ID (number). 
 - Kafka Brokers contain topic log partitions. 
 - For failover, you want to start with at least three to five brokers. 
 - A Kafka cluster can have, 10, 100, or 1,000 brokers in a cluster if needed.
 
-#### Kafka Disaster Recover 
+### Kafka Disaster Recover 
 
 Use of Kafka Mirror Maker - It replicates kafka cluster to another data center.
 
-#### Install Zookeeper and Kafka ####
+### Install Zookeeper and Kafka 
 Step by step procedure is [here](https://dzone.com/articles/running-apache-kafka-on-windows-os)
 
 Once Zookeeper and Kafka are installed - You can play with below commands
