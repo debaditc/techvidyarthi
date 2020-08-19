@@ -1,14 +1,9 @@
-+++ 
-draft = false
-date = 2020-07-05T01:35:10-04:00
-title = "Trees in Machine Learning World"
-description = ""
-slug = "" 
-tags = []
-categories = []
-externalLink = ""
-series = []
-+++
+---
+title: "Trees in ML World"
+date: "2020-07-04T10:52:27-04:00"
+tags: ["aiml", "decision trees" ,"random forrest","trees","supervised learning"]
+draft: false
+---
 
 Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.
 

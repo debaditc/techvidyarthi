@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on Debaditya Tech Journal</title>
+    <link>/tags/security/</link>
+    <description>Recent content in security on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 14 Jul 2020 09:58:29 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Demystifying HTTP and HTTPS</title>
+      <link>/system-design/https/</link>
+      <pubDate>Tue, 14 Jul 2020 09:58:29 -0400</pubDate>
+      
+      <guid>/system-design/https/</guid>
+      <description>HTTP and HTTPS HTTPS (Hyper Text transfer protoco secure) is basically http with security. SSL (Secure Socket Layer) certificate encrypts information users put into any website. Addtionally, HTTPS is also secured via TLS (Transport Layer Security) protocol. TLS is a succcessotr of SSL.
+SSL / TLS SSL/TLS works by binding the identities of entities such as websites and companies to cryptographic key pairs via digital documents known as X.509 certificates. Each key pair consists of a private key and a public key.</description>
+    </item>
+    
+    <item>
+      <title>Authentication vs Authorization</title>
+      <link>/system-design/auth/</link>
+      <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
+      
+      <guid>/system-design/auth/</guid>
+      <description>Definition Authentication and authorization are important terms in world of security. Often these 2 words are confused and can be used interchangeably. In this blog, a simple differentiation has been tried to lay out to clearly define both the terms in layman&amp;rsquo;s language.
+  </description>
+    </item>
+    
+    <item>
+      <title>OSI Model Layer</title>
+      <link>/system-design/osilayer/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>/system-design/osilayer/</guid>
+      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
+  Comparing OSI Model Layer with TCP/IP model   </description>
+    </item>
+    
+  </channel>
+</rss>

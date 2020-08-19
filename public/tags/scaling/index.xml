@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scaling on Debaditya Tech Journal</title>
+    <link>/tags/scaling/</link>
+    <description>Recent content in scaling on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 26 Jul 2020 16:30:42 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/scaling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vertical vs Horizontal Scaling</title>
+      <link>/system-design/verticalhorizaonal/</link>
+      <pubDate>Sun, 26 Jul 2020 16:30:42 -0400</pubDate>
+      
+      <guid>/system-design/verticalhorizaonal/</guid>
+      <description>Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling
+ Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally.</description>
+    </item>
+    
+  </channel>
+</rss>

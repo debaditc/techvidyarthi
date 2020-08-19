@@ -38,5 +38,320 @@
       <description></description>
     </item>
     
+    <item>
+      <title>hadoop</title>
+      <link>/tags/hadoop/</link>
+      <pubDate>Fri, 14 Aug 2020 20:22:49 -0400</pubDate>
+      
+      <guid>/tags/hadoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spark</title>
+      <link>/tags/spark/</link>
+      <pubDate>Fri, 14 Aug 2020 20:22:49 -0400</pubDate>
+      
+      <guid>/tags/spark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>streaming</title>
+      <link>/tags/streaming/</link>
+      <pubDate>Fri, 14 Aug 2020 20:22:49 -0400</pubDate>
+      
+      <guid>/tags/streaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>real-time</title>
+      <link>/tags/real-time/</link>
+      <pubDate>Sat, 08 Aug 2020 18:04:27 -0400</pubDate>
+      
+      <guid>/tags/real-time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Asynchronous</title>
+      <link>/tags/asynchronous/</link>
+      <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
+      
+      <guid>/tags/asynchronous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synchronous</title>
+      <link>/tags/synchronous/</link>
+      <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
+      
+      <guid>/tags/synchronous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>consistency</title>
+      <link>/tags/consistency/</link>
+      <pubDate>Tue, 28 Jul 2020 23:15:05 -0400</pubDate>
+      
+      <guid>/tags/consistency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>/tags/architecture/</link>
+      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
+      
+      <guid>/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>batch</title>
+      <link>/tags/batch/</link>
+      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
+      
+      <guid>/tags/batch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speed layer</title>
+      <link>/tags/speed-layer/</link>
+      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
+      
+      <guid>/tags/speed-layer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>/tags/performance/</link>
+      <pubDate>Sun, 26 Jul 2020 16:30:42 -0400</pubDate>
+      
+      <guid>/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scaling</title>
+      <link>/tags/scaling/</link>
+      <pubDate>Sun, 26 Jul 2020 16:30:42 -0400</pubDate>
+      
+      <guid>/tags/scaling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>/tags/aws/</link>
+      <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
+      
+      <guid>/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>/tags/cloud/</link>
+      <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
+      
+      <guid>/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>/tags/programming/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      
+      <guid>/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>space complexity</title>
+      <link>/tags/space-complexity/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      
+      <guid>/tags/space-complexity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time complexity</title>
+      <link>/tags/time-complexity/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      
+      <guid>/tags/time-complexity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cache</title>
+      <link>/tags/cache/</link>
+      <pubDate>Sun, 19 Jul 2020 22:20:15 -0400</pubDate>
+      
+      <guid>/tags/cache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distributed systems</title>
+      <link>/tags/distributed-systems/</link>
+      <pubDate>Thu, 16 Jul 2020 21:19:21 -0400</pubDate>
+      
+      <guid>/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zookeeper</title>
+      <link>/tags/zookeeper/</link>
+      <pubDate>Thu, 16 Jul 2020 21:19:21 -0400</pubDate>
+      
+      <guid>/tags/zookeeper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>/tags/http/</link>
+      <pubDate>Tue, 14 Jul 2020 09:58:29 -0400</pubDate>
+      
+      <guid>/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>/tags/https/</link>
+      <pubDate>Tue, 14 Jul 2020 09:58:29 -0400</pubDate>
+      
+      <guid>/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>/tags/security/</link>
+      <pubDate>Tue, 14 Jul 2020 09:58:29 -0400</pubDate>
+      
+      <guid>/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>authentication</title>
+      <link>/tags/authentication/</link>
+      <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
+      
+      <guid>/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>authorization</title>
+      <link>/tags/authorization/</link>
+      <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
+      
+      <guid>/tags/authorization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REST</title>
+      <link>/tags/rest/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>/tags/rest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SOAP</title>
+      <link>/tags/soap/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>/tags/soap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aiml</title>
+      <link>/tags/aiml/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/aiml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bagging</title>
+      <link>/tags/bagging/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/bagging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boosting</title>
+      <link>/tags/boosting/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/boosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decision trees</title>
+      <link>/tags/decision-trees/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/decision-trees/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>random forrest</title>
+      <link>/tags/random-forrest/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/random-forrest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>supervised learning</title>
+      <link>/tags/supervised-learning/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/supervised-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trees</title>
+      <link>/tags/trees/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/trees/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>word2vec</title>
+      <link>/tags/word2vec/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/tags/word2vec/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

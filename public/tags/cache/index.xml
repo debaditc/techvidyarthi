@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cache on Debaditya Tech Journal</title>
+    <link>/tags/cache/</link>
+    <description>Recent content in cache on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 19 Jul 2020 22:20:15 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/cache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is Caching and its importance</title>
+      <link>/system-design/caching/</link>
+      <pubDate>Sun, 19 Jul 2020 22:20:15 -0400</pubDate>
+      
+      <guid>/system-design/caching/</guid>
+      <description>3 Main use-case of Cache  Avoid Network calls Avoid repeated computation Avoid load on Database / System  Why not use cache every time  Hardware where Cache runs are mainly in SSDs which are expensive More data in Cache will increase the search time - so it will make cache data retrieval slower  Cache Policy The way we decide to load or evict data from cache is called Cache policy</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,7 @@
 ---
 title: "AWS Basic Terminologies"
 date: 2020-07-24T00:10:26-04:00
+tags: ["aws","cloud"]
 draft: false
 ---
 

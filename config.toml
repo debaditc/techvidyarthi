@@ -28,19 +28,23 @@ languageName = "English"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
-identifier = "ds"
 url = "https://github.com/debaditc"
 weight = 30
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-camera'></i> Hobby Projects"
+name = "<i class='fas fa-atom'></i> Hobby Projects"
 url = "/showcase"
 weight = 21
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-linkedin'></i> Linkedin"
+name = "<i class='fab fa-linkedin'></i> Linkedin"
 url = "https://www.linkedin.com/in/debaditya-chakravorty/"
 weight = 15
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tags'></i> Tags"
+url = "/tags"
+weight = 30
 
 [deployment]
 [[deployment.targets]]

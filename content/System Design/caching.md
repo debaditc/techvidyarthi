@@ -1,6 +1,7 @@
 ---
 title: "What is Caching and its importance"
 date: 2020-07-19T22:20:15-04:00
+tags: ["system design","cache","performance"]
 draft: false
 ---
 

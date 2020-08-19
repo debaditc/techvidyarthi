@@ -1,6 +1,7 @@
 ---
 title: "All about Eventual and Strongly Consistency"
 date: 2020-07-28T23:15:05-04:00
+tags: ["system design","consistency"]
 draft: false
 ---
 

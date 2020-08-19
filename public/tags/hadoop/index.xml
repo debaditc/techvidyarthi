@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hadoop on Debaditya Tech Journal</title>
+    <link>/tags/hadoop/</link>
+    <description>Recent content in hadoop on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 14 Aug 2020 20:22:49 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spark Structured Streaming</title>
+      <link>/code-programming/srucstream/</link>
+      <pubDate>Fri, 14 Aug 2020 20:22:49 -0400</pubDate>
+      
+      <guid>/code-programming/srucstream/</guid>
+      <description>Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&amp;rsquo;s data is utilized for computation else the event&amp;rsquo;s data is dropped for that time interval.
+Unsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets.</description>
+    </item>
+    
+    <item>
+      <title>Basic code : Spark streaming</title>
+      <link>/code-programming/sparkstream/</link>
+      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
+      
+      <guid>/code-programming/sparkstream/</guid>
+      <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
+Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
+    </item>
+    
+    <item>
+      <title>Brief on Spark Memory and Optimizer </title>
+      <link>/code-programming/sparkmemory/</link>
+      <pubDate>Sat, 08 Aug 2020 20:28:12 -0400</pubDate>
+      
+      <guid>/code-programming/sparkmemory/</guid>
+      <description>Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
+ Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
+  Designed for 2 main pruposes :
+ Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.</description>
+    </item>
+    
+    <item>
+      <title>Spark definition and overall execution</title>
+      <link>/code-programming/sparklearn/</link>
+      <pubDate>Sat, 08 Aug 2020 17:14:45 -0400</pubDate>
+      
+      <guid>/code-programming/sparklearn/</guid>
+      <description>Install Spark For Windows : Please follow this site
+Basics of Spark Flow Run Spark application -&amp;gt; Driver program starts -&amp;gt; Main function starts -&amp;gt; SparkContext gets initiated -&amp;gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&amp;rsquo;t work.
+Serialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream.</description>
+    </item>
+    
+  </channel>
+</rss>

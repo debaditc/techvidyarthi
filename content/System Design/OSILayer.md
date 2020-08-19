@@ -1,6 +1,7 @@
 ---
 title: "OSI Model Layer"
 date: "2020-07-11T19:29:02-04:00"
+tags: ["system design","security","architecture"]
 draft: false
 ---
 ### About OSI Model

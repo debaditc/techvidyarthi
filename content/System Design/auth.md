@@ -1,6 +1,7 @@
 ---
 title: "Authentication vs Authorization"
 date: 2020-07-12T16:51:09-04:00
+tags: ["system design","security","authentication","authorization"]
 draft: false
 ---
 

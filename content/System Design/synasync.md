@@ -1,6 +1,7 @@
 ---
 title: "Nutshell on Synchronous and Asynchronous process"
 date: 2020-08-01T23:36:51-04:00
+tags: ["system design","Synchronous","Asynchronous"]
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "About Zookeeper"
 date: 2020-07-16T21:19:21-04:00
+tags: ["system design","zookeeper","distributed systems"]
 draft: false
 ---
 

@@ -193,16 +193,6 @@ SSL / TLS SSL/TLS works by binding the identities of entities such as websites a
     </item>
     
     <item>
-      <title>What is REST &amp; SOAP</title>
-      <link>/system-design/restsoap/</link>
-      <pubDate>Mon, 13 Jul 2020 19:54:23 -0400</pubDate>
-      
-      <guid>/system-design/restsoap/</guid>
-      <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
-REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
-    </item>
-    
-    <item>
       <title>Authentication vs Authorization</title>
       <link>/system-design/auth/</link>
       <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
@@ -213,12 +203,13 @@ REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and
     </item>
     
     <item>
-      <title>Word2Vec Algorithm</title>
-      <link>/ai-ml/word2vec/</link>
-      <pubDate>Sat, 11 Jul 2020 20:24:10 -0400</pubDate>
+      <title>About REST and SOAP</title>
+      <link>/system-design/restsoap/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
       
-      <guid>/ai-ml/word2vec/</guid>
-      <description>About Word2Vec algorithm  Word2Vec is not a single algorithm Word2vec is a group of related models that are used to produce word embedding&amp;rsquo;s. These models are two-layer neural networks that are trained to reconstruct linguistic contexts of words. Word2vec takes large corpus of text as its input and produces a vector-space, with each unique word in the corpus being assigned a corresponding vector in the space.  Word2Vec can utilize either of 2 model architectures –  CBOW (Continuous Bag of Words) Skip Gram    CBOW (Continuous Bag of Words) The input to the model could be wi−2,wi−1,wi+1,wi+2wi−2,wi−1,wi+1,wi+2, the preceding and following words of the current word we are at.</description>
+      <guid>/system-design/restsoap/</guid>
+      <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
+REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
     </item>
     
     <item>
@@ -232,9 +223,19 @@ REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and
     </item>
     
     <item>
-      <title>Trees in Machine Learning World</title>
+      <title>Bagging &amp; Boosting in Machine Learning World</title>
+      <link>/ai-ml/baggingboosting/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/ai-ml/baggingboosting/</guid>
+      <description>In my last tech blog, I discussed on Decision trees and Random Forrest. So I thought of articulating on Gradient Boosting model and XgBoost. But before these algorithms , its important to understand 2 basic concepts :
+ Bagging (Bootstrap Aggregation) Boosting  Bagging (Bootstrap Aggregation) Bootstrapping is a process of creating random samples with replacement for estimating sample statistics. With replacement means , the sample might have duplicated values from the original set.</description>
+    </item>
+    
+    <item>
+      <title>Trees in ML World</title>
       <link>/ai-ml/treesml/</link>
-      <pubDate>Sun, 05 Jul 2020 01:35:10 -0400</pubDate>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
       
       <guid>/ai-ml/treesml/</guid>
       <description>Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.
@@ -244,13 +245,12 @@ Decision Trees Decision trees represent rules, which can be understood by humans
     </item>
     
     <item>
-      <title>Bagging &amp; Boosting in Machine Learning World</title>
-      <link>/ai-ml/baggingboosting/</link>
+      <title>Word2Vec Algorithm</title>
+      <link>/ai-ml/word2vec/</link>
       <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
       
-      <guid>/ai-ml/baggingboosting/</guid>
-      <description>In my last tech blog, I discussed on Decision trees and Random Forrest. So I thought of articulating on Gradient Boosting model and XgBoost. But before these algorithms , its important to understand 2 basic concepts :
- Bagging (Bootstrap Aggregation) Boosting  Bagging (Bootstrap Aggregation) Bootstrapping is a process of creating random samples with replacement for estimating sample statistics. With replacement means , the sample might have duplicated values from the original set.</description>
+      <guid>/ai-ml/word2vec/</guid>
+      <description>About Word2Vec algorithm  Word2Vec is not a single algorithm Word2vec is a group of related models that are used to produce word embedding&amp;rsquo;s. These models are two-layer neural networks that are trained to reconstruct linguistic contexts of words. Word2vec takes large corpus of text as its input and produces a vector-space, with each unique word in the corpus being assigned a corresponding vector in the space.  Word2Vec can utilize either of 2 model architectures –  CBOW (Continuous Bag of Words) Skip Gram    CBOW (Continuous Bag of Words) The input to the model could be wi−2,wi−1,wi+1,wi+2wi−2,wi−1,wi+1,wi+2, the preceding and following words of the current word we are at.</description>
     </item>
     
     <item>

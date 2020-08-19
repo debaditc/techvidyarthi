@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http on Debaditya Tech Journal</title>
+    <link>/tags/http/</link>
+    <description>Recent content in http on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 14 Jul 2020 09:58:29 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Demystifying HTTP and HTTPS</title>
+      <link>/system-design/https/</link>
+      <pubDate>Tue, 14 Jul 2020 09:58:29 -0400</pubDate>
+      
+      <guid>/system-design/https/</guid>
+      <description>HTTP and HTTPS HTTPS (Hyper Text transfer protoco secure) is basically http with security. SSL (Secure Socket Layer) certificate encrypts information users put into any website. Addtionally, HTTPS is also secured via TLS (Transport Layer Security) protocol. TLS is a succcessotr of SSL.
+SSL / TLS SSL/TLS works by binding the identities of entities such as websites and companies to cryptographic key pairs via digital documents known as X.509 certificates. Each key pair consists of a private key and a public key.</description>
+    </item>
+    
+  </channel>
+</rss>

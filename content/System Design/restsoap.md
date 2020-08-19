@@ -1,14 +1,9 @@
-+++ 
-draft = false
-date = 2020-07-13T19:54:23-04:00
-title = "What is REST & SOAP"
-description = ""
-slug = "" 
-tags = []
-categories = []
-externalLink = ""
-series = []
-+++
+---
+title: "About REST and SOAP"
+date: "2020-07-11T19:29:02-04:00"
+tags: ["system design","REST","SOAP"]
+draft: false
+---
 
 REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
 

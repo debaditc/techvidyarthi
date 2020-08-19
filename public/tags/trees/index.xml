@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>trees on Debaditya Tech Journal</title>
+    <link>/tags/trees/</link>
+    <description>Recent content in trees on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 04 Jul 2020 10:52:27 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/trees/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trees in ML World</title>
+      <link>/ai-ml/treesml/</link>
+      <pubDate>Sat, 04 Jul 2020 10:52:27 -0400</pubDate>
+      
+      <guid>/ai-ml/treesml/</guid>
+      <description>Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.
+A tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.
+The Image at the beginning of the article (Source) explains the terminologies of a Tree.
+Decision Trees Decision trees represent rules, which can be understood by humans and used in knowledge system such as database</description>
+    </item>
+    
+  </channel>
+</rss>

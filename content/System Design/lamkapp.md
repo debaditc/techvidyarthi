@@ -1,6 +1,7 @@
 ---
 title: "Demystify Lambda and Kappa Architecture"
 date: 2020-07-27T21:15:14-04:00
+tags: ["system design","architecture","speed layer","real-time","batch"]
 draft: false
 ---
 

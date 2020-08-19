@@ -1,6 +1,7 @@
 ---
 title: "Spark Structured Streaming"
 date: 2020-08-14T20:22:49-04:00
+tags: ["spark", "hadoop","streaming"]
 draft: false
 ---
 

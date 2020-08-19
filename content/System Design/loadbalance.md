@@ -1,6 +1,7 @@
 ---
 title: "Load Balancer"
 date: 2020-07-16T20:54:54-04:00
+tags: ["system design","performance"]
 draft: false
 ---
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>real-time on Debaditya Tech Journal</title>
+    <link>/tags/real-time/</link>
+    <description>Recent content in real-time on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 08 Aug 2020 18:04:27 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/real-time/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Kafka</title>
+      <link>/system-design/kafka/</link>
+      <pubDate>Sat, 08 Aug 2020 18:04:27 -0400</pubDate>
+      
+      <guid>/system-design/kafka/</guid>
+      <description>Kafka Architecture   Kafka uses ZooKeeper to manage the cluster.
+  ZooKeeper is used to coordinate the brokers/cluster topology.
+  ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.
+  Kafka producers write to Topics -&amp;gt; Kafka consumers read from Topics.
+  Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log.</description>
+    </item>
+    
+    <item>
+      <title>Event Driven model</title>
+      <link>/system-design/evntdrive/</link>
+      <pubDate>Sat, 01 Aug 2020 15:03:38 -0400</pubDate>
+      
+      <guid>/system-design/evntdrive/</guid>
+      <description>Event Driven Model Event driven model is based on either Pub/sub or Event streaming model
+Pub-sub model Messaging infrastructure is based on subscription based model (Active MQ)
+Event streaming model Events are written into logs. Consumers need not require to subscribe event - rather they can be read or join from any part of the stream (Kafka)
+System Design - Microservice + Kafka + KSQL Picture credits : Please visit Confluent site for more details</description>
+    </item>
+    
+    <item>
+      <title>Demystify Lambda and Kappa Architecture</title>
+      <link>/system-design/lamkapp/</link>
+      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
+      
+      <guid>/system-design/lamkapp/</guid>
+      <description>Nutshell Lambda vs Kappa Architecture   Lambda Architecture   Kappa Architecture   Picture credits are to Talend.
+Please visit Talend site here for more details.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,15 +1,9 @@
-+++ 
-draft = false
-date = 2020-07-11T20:24:10-04:00
-title = "Word2Vec Algorithm"
-description = ""
-slug = "" 
-tags = []
-categories = []
-externalLink = ""
-series = []
-+++
-
+---
+title: "Word2Vec Algorithm"
+date: "2020-07-04T10:52:27-04:00"
+tags: ["aiml", "word2vec"]
+draft: false
+---
 ### About Word2Vec algorithm
 
 - Word2Vec is not a single algorithm

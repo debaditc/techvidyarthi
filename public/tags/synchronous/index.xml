@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Synchronous on Debaditya Tech Journal</title>
+    <link>/tags/synchronous/</link>
+    <description>Recent content in Synchronous on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 01 Aug 2020 23:36:51 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/synchronous/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nutshell on Synchronous and Asynchronous process</title>
+      <link>/system-design/synasync/</link>
+      <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
+      
+      <guid>/system-design/synasync/</guid>
+      <description>Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.
+  Asynchronous processing : Ordering food in restaurant , FTP , email , social media.
+  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread |&amp;lt;---T1----&amp;gt;||&amp;lt;----T2----------&amp;gt;||&amp;lt;------T3-----&amp;gt;| Multi Thread thread A -&amp;gt; |&amp;lt;---A----&amp;gt;| thread B ----------------&amp;gt;|&amp;lt;----B----------&amp;gt;| thread C -------------------------------------&amp;gt;|&amp;lt;------C-----&amp;gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>consistency on Debaditya Tech Journal</title>
+    <link>/tags/consistency/</link>
+    <description>Recent content in consistency on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 28 Jul 2020 23:15:05 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/consistency/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>All about Eventual and Strongly Consistency</title>
+      <link>/system-design/evntconst/</link>
+      <pubDate>Tue, 28 Jul 2020 23:15:05 -0400</pubDate>
+      
+      <guid>/system-design/evntconst/</guid>
+      <description>Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel&amp;rsquo;s blog - here
+Strongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog</description>
+    </item>
+    
+  </channel>
+</rss>

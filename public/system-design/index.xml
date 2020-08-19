@@ -139,16 +139,6 @@ SSL / TLS SSL/TLS works by binding the identities of entities such as websites a
     </item>
     
     <item>
-      <title>What is REST &amp; SOAP</title>
-      <link>/system-design/restsoap/</link>
-      <pubDate>Mon, 13 Jul 2020 19:54:23 -0400</pubDate>
-      
-      <guid>/system-design/restsoap/</guid>
-      <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
-REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
-    </item>
-    
-    <item>
       <title>Authentication vs Authorization</title>
       <link>/system-design/auth/</link>
       <pubDate>Sun, 12 Jul 2020 16:51:09 -0400</pubDate>
@@ -156,6 +146,16 @@ REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and
       <guid>/system-design/auth/</guid>
       <description>Definition Authentication and authorization are important terms in world of security. Often these 2 words are confused and can be used interchangeably. In this blog, a simple differentiation has been tried to lay out to clearly define both the terms in layman&amp;rsquo;s language.
   </description>
+    </item>
+    
+    <item>
+      <title>About REST and SOAP</title>
+      <link>/system-design/restsoap/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>/system-design/restsoap/</guid>
+      <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
+REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
     </item>
     
     <item>
