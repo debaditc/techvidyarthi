@@ -2,6 +2,15 @@
 title: "Database Sharding"
 date: 2020-08-16T15:47:23-04:00
 draft: false
+author: ["Debaditya"]
+tags:
+  - database
+  - shard
+  - system design
+categories:
+  - database
+  - system design
+slug: installation
 ---
 
 #### Simple definition

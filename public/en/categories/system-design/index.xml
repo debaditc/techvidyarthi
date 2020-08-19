@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>system design on Documentation for Hugo Learn Theme</title>
+    <link>/en/categories/system-design/</link>
+    <description>Recent content in system design on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 16 Aug 2020 15:47:23 -0400</lastBuildDate>
+    
+	<atom:link href="/en/categories/system-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Database Sharding</title>
+      <link>/en/system-design-post/installation/</link>
+      <pubDate>Sun, 16 Aug 2020 15:47:23 -0400</pubDate>
+      
+      <guid>/en/system-design-post/installation/</guid>
+      <description>Simple definition Process of making paritions of data in database
+Vertical and Horizontal Sharding Let us understand using simple example
+Table
+  Veritical Sharding   Horizontal Sharding
+Sharding is performed on the basis of salary.
+ Horizontal Shard1 = salary &amp;lt; 100000 Horizontal Shard2 = salary &amp;gt; 100000 AND salary &amp;lt; 250000 Horizontal Shard3 = salary &amp;gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?</description>
+    </item>
+    
+  </channel>
+</rss>

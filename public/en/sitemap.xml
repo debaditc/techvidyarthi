@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/en/categories/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/tags/database/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/categories/database/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/installation/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/tags/shard/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/tags/system-design/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/categories/system-design/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/tags/</loc>
+    <lastmod>2020-08-16T15:47:23-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/windowops/</loc>
+    <lastmod>2020-08-16T13:01:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/code-concept-post/</loc>
+    <lastmod>2020-08-14T20:22:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/code-concept-post/srucstream/</loc>
+    <lastmod>2020-08-14T20:22:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/ai-ml-posts/</loc>
+    <lastmod>2020-08-09T11:29:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/ai-ml-posts/awsml/</loc>
+    <lastmod>2020-08-09T11:29:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/code-concept-post/sparkstream/</loc>
+    <lastmod>2020-08-09T02:47:18-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/code-concept-post/sparkcommands/</loc>
+    <lastmod>2020-08-08T20:57:34-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/code-concept-post/sparkmemory/</loc>
+    <lastmod>2020-08-08T20:28:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/kafka/</loc>
+    <lastmod>2020-08-08T18:04:27-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/code-concept-post/sparklearn/</loc>
+    <lastmod>2020-08-08T17:14:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/synasync/</loc>
+    <lastmod>2020-08-01T23:36:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/evntdrive/</loc>
+    <lastmod>2020-08-01T15:03:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/evntconst/</loc>
+    <lastmod>2020-07-28T23:15:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/lamkapp/</loc>
+    <lastmod>2020-07-27T21:15:14-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/verticalhorizaonal/</loc>
+    <lastmod>2020-07-26T16:30:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/awsterminology/</loc>
+    <lastmod>2020-07-24T00:10:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/code-concept-post/tscomplexity/</loc>
+    <lastmod>2020-07-24T00:03:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/caching/</loc>
+    <lastmod>2020-07-19T22:20:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/zookeeper/</loc>
+    <lastmod>2020-07-16T21:19:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/loadbalance/</loc>
+    <lastmod>2020-07-16T20:54:54-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/https/</loc>
+    <lastmod>2020-07-14T09:58:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/restsoap/</loc>
+    <lastmod>2020-07-13T19:54:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/auth/</loc>
+    <lastmod>2020-07-12T16:51:09-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/ai-ml-posts/word2vec/</loc>
+    <lastmod>2020-07-11T20:24:10-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/system-design-post/osilayer/</loc>
+    <lastmod>2020-07-11T19:29:02-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/ai-ml-posts/treesml/</loc>
+    <lastmod>2020-07-05T01:35:10-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/ai-ml-posts/baggingboosting/</loc>
+    <lastmod>2020-07-04T10:52:27-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/projects/</loc>
+  </url>
+  
+</urlset>

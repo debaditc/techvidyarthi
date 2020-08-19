@@ -1,0 +1,288 @@
+[
+{
+	"uri": "/",
+	"title": "About the Blog",
+	"tags": [],
+	"description": "",
+	"content": "About me   I consider myself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is my journal on sharing technology knowledge with everyone and also learn during my tech journey.\nAreas of Interests  Architechture \u0026amp; System Design Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - dev.techvidyarthi@gmail.com\nNote : I kept blog\u0026rsquo;s UI very basic and focussed more on my journal. I am still learning UI 😊\nThanks for reading!\n"
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/database/",
+	"title": "database",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/categories/database/",
+	"title": "database",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/system-design-post/installation/",
+	"title": "Database Sharding",
+	"tags": ["database", "shard", "system design"],
+	"description": "",
+	"content": "Simple definition Process of making paritions of data in database\nVertical and Horizontal Sharding Let us understand using simple example\nTable\n  Veritical Sharding   Horizontal Sharding\nSharding is performed on the basis of salary.\n Horizontal Shard1 = salary \u0026lt; 100000 Horizontal Shard2 = salary \u0026gt; 100000 AND salary \u0026lt; 250000 Horizontal Shard3 = salary \u0026gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ? Have Master Slave architechture where we wont have single point of failure. As leader is chosen when master fails.\n"
+},
+{
+	"uri": "/tags/shard/",
+	"title": "shard",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/system-design/",
+	"title": "system design",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/categories/system-design/",
+	"title": "system design",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/system-design-post/",
+	"title": "System Design posts",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/system-design-post/windowops/",
+	"title": "Windowing in Data Stream Management",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/code-programming-post/",
+	"title": "Code Programming posts",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/code-programming-post/srucstream/",
+	"title": "Spark Structured Streaming",
+	"tags": [],
+	"description": "",
+	"content": "Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event\u0026rsquo;s data is utilized for computation else the event\u0026rsquo;s data is dropped for that time interval.\nUnsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets. Limit and take the first N rows are not supported on streaming Datasets. Distinct operations on streaming Datasets Sorting operations are supported on streaming Datasets only after an aggregation and in Complete Output Mode. Few types of outer joins on streaming Datasets are not supported. List is here  Details and credits are [here] (https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#unsupported-operations)\nSample code on Stuctured Spark Streaming (Apache site) spark = SparkSession. ... # Read text from socket socketDF = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() socketDF.isStreaming() # Returns True for DataFrames that have streaming sources socketDF.printSchema() # Read all the csv files written atomically in a directory userSchema = StructType().add(\u0026#34;name\u0026#34;, \u0026#34;string\u0026#34;).add(\u0026#34;age\u0026#34;, \u0026#34;integer\u0026#34;) csvDF = spark \\ .readStream \\ .option(\u0026#34;sep\u0026#34;, \u0026#34;;\u0026#34;) \\ .schema(userSchema) \\ .csv(\u0026#34;/path/to/directory\u0026#34;) # Equivalent to format(\u0026#34;csv\u0026#34;).load(\u0026#34;/path/to/directory\u0026#34;) "
+},
+{
+	"uri": "/ai-ml-post/",
+	"title": "AI ML posts",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/ai-ml-post/awsml/",
+	"title": "Machine Learning in AWS",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/code-programming-post/sparkstream/",
+	"title": "Basic code : Spark streaming",
+	"tags": [],
+	"description": "",
+	"content": "Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here\nWindow Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y: x - y, 30, 10) Checkpointing 2 types of checkpoints in Spark streaming\n  Metadata checkpointing : Saving information defining the streaming computation to fault-tolerant storage like HDFS. Required to recover from failure of the node running the driver of the streaming application Metadata checkpointing -\u0026gt; recovery from driver failures\n  Data checkpointing : Saving generated RDDs to reliable storage like HDFS. Necessary during stateful transformation where previous batch information (RDD) is important. Data checkpointing -\u0026gt; Necessary for Stateful transformation scenario\n  Example Spark streaming code (from Apache site) A simple code to read words in stream and count number of words.\nSave the code for word count and run producer with netcat command\nfrom pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \\ .builder \\ .appName(\u0026#34;Word Count\u0026#34;) \\ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() # Split the lines into words words = lines.select( explode( split(lines.value, \u0026#34; \u0026#34;) ).alias(\u0026#34;word\u0026#34;) ) # Generate running word count wordCounts = words.groupBy(\u0026#34;word\u0026#34;).count() # Start running the query that prints the running counts to the console query = wordCounts \\ .writeStream \\ .outputMode(\u0026#34;complete\u0026#34;) \\ .format(\u0026#34;console\u0026#34;) \\ .start() query.awaitTermination() For Unix users\nnc -lk 9999 For Windows , install nmap from here\nncat.exe -lk 9999 Open another CMD (in Windows) or Terminal (in Linux/Mac) and the run the code to see the result\nspark-submit sparkstream.py localhost 9999 Pic / documentation credits : Apache Spark\n"
+},
+{
+	"uri": "/code-programming-post/sparkcommands/",
+	"title": "Spark Commands",
+	"tags": [],
+	"description": "",
+	"content": "Useful Site Analytics Vidya link\nCommands "
+},
+{
+	"uri": "/code-programming-post/sparkmemory/",
+	"title": "Brief on Spark Memory and Optimizer ",
+	"tags": [],
+	"description": "",
+	"content": "Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features\n Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.\n  Designed for 2 main pruposes :\n Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.g. adding data source specific rules, support for new data types, etc)    More details are here\nMemory For better memory management - Spark included Tungsten\nIt has 3 basic features\n Memory management and binary processing : It removes the overhead of JVM and Garbage collection Cache aware computaion : algorithms and data structures to exploit memory hierarchy Code generation : using code generation to exploit modern compilers and CPUs  More details are here\nKyro-Serializer Kryo is a significantly optimized serializer, and performs better than the standard java serializer. It helps in shuffles (wide transformatiions) where mostly serialization is utilized.\nIt can be setup as\nconf.set( \u0026#34;spark.serializer\u0026#34;, \u0026#34;org.apache.spark.serializer.KryoSerializer\u0026#34; ) "
+},
+{
+	"uri": "/system-design-post/kafka/",
+	"title": "About Kafka",
+	"tags": [],
+	"description": "",
+	"content": "Kafka Architecture   Kafka uses ZooKeeper to manage the cluster.\n  ZooKeeper is used to coordinate the brokers/cluster topology.\n  ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.\n  Kafka producers write to Topics -\u0026gt; Kafka consumers read from Topics.\n  Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log. A topic log consists of many partitions that are spread over multiple files which can be spread on multiple Kafka cluster nodes. Consumers read from Kafka topics at their cadence and can pick where they are (offset) in the topic log. Each consumer group tracks offset from where they left off reading. Kafka distributes topic log partitions on different nodes in a cluster for high performance with horizontal scalability. Spreading partitions aids in writing data quickly. Topic log partitions are Kafka way to shard reads and writes to the topic log.\n    More details are here\nKafka Brokers  A Kafka cluster is made up of multiple Kafka Brokers. Each Kafka Broker has a unique ID (number). Kafka Brokers contain topic log partitions. For failover, you want to start with at least three to five brokers. A Kafka cluster can have, 10, 100, or 1,000 brokers in a cluster if needed.  Kafka Disaster Recover Use of Kafka Mirror Maker - It replicates kafka cluster to another data center.\nInstall Zookeeper and Kafka Step by step procedure is here\nOnce Zookeeper and Kafka are installed - You can play with below commands\nStart Zookeeper in background\nzkserver Start Kafka in background\nMake sure to shorten the parent directory - else you would recieve error as \u0026ldquo;Tool long input line\u0026rdquo;\n.\\bin\\windows\\kafka-server-start.bat .\\config\\server.properties Create topic in Kafka\nkafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testtopic Start producer\nkafka-console-producer.bat --broker-list localhost:9092 --topic testtopic Start consumer\nkafka-console-consumer.bat --bootstrap-server localhost:9092 --topic testtopic "
+},
+{
+	"uri": "/code-programming-post/sparklearn/",
+	"title": "Spark definition and overall execution",
+	"tags": [],
+	"description": "",
+	"content": "Install Spark For Windows : Please follow this site\nBasics of Spark Flow Run Spark application -\u0026gt; Driver program starts -\u0026gt; Main function starts -\u0026gt; SparkContext gets initiated -\u0026gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won\u0026rsquo;t work.\nSerialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory.\n Serialization : Java object -\u0026gt; Byte stream Deserialization : Byte stream -\u0026gt; Java object  We need serialization because the hard disk or network infrastructure are hardware component and we cannot send java objects because it understands just bytes :)\nExecution of Spark Job   Image Credits to Data Flair\nSpark Stages 2 types of Spark Stages\n  ShuffleMapStage : Intermediate stage in physical excution of DAG. In Adaptive Query Planning , it can be considered as final stage as well which can save output map files.\n  ResultStage : Final stage in Spark. It helps in computation of result of an action.\n  Lazy Execution Lazy evaluation in Spark means execution of any task wont start start until an action is triggered. Spark has 2 operations\n Transformation Action  Transformation is lazy which means operation wont be performed until an action is triggered.\nMajor Advantage of Lazy execution\n Reduces number of queries - Increase optimization Increases speed of the application - less trips between cluster and driver    Image Credits to Data Flair\nRDD vs Data frame vs Data Set   *Type safe\n RDDs and Datasets are type safe means that compiler know the Columns and it\u0026rsquo;s data type of the Column In Dataframe, it will always return the result as an Array of Rows not as Long, String data type  Broadcast and Accumulators Spark provides Shared variables which are broadcast and accumulator variables.\nBroadcast variables It allows users to keep a copy of variable (which can consist of large dataset) cached in each machine which can be utilized during task execution. It saves the communication cost and thus increases speed of application.\nAccumulators They can be used to implement counters (as in MapReduce) or sums. Its only “added” to through an associative and commutative operation\nCache in Spark Cache is an important factor in Spark application. Cache the dataframe whenever user feels the data is going to be used several times. It helps to improve the performance of application and also create checkpoints in application\nTypes of Storage level in Spark\n DISK_ONLY: Persist data on disk only in serialized format. MEMORY_ONLY: Persist data in memory only in deserialized format (DEFAULT) MEMORY_AND_DISK: Persist data in memory and if enough memory is not available evicted blocks will be stored on disk. OFF_HEAP : Persist data in off-heap memory.  Note - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.\nSpark Narrow vs Wide dependency   "
+},
+{
+	"uri": "/system-design-post/synasync/",
+	"title": "Nutshell on Synchronous and Asynchronous process",
+	"tags": [],
+	"description": "",
+	"content": "Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.\n  Asynchronous processing : Ordering food in restaurant , FTP , email , social media.\n  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread\n|\u0026lt;---T1----\u0026gt;||\u0026lt;----T2----------\u0026gt;||\u0026lt;------T3-----\u0026gt;| Multi Thread\nthread A -\u0026gt; |\u0026lt;---A----\u0026gt;| thread B ----------------\u0026gt;|\u0026lt;----B----------\u0026gt;| thread C -------------------------------------\u0026gt;|\u0026lt;------C-----\u0026gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.   |--------A--------| |--------B--------| "
+},
+{
+	"uri": "/system-design-post/evntdrive/",
+	"title": "Event Driven model",
+	"tags": [],
+	"description": "",
+	"content": "Event Driven Model Event driven model is based on either Pub/sub or Event streaming model\nPub-sub model Messaging infrastructure is based on subscription based model (Active MQ)\nEvent streaming model Events are written into logs. Consumers need not require to subscribe event - rather they can be read or join from any part of the stream (Kafka)\nSystem Design - Microservice + Kafka + KSQL Picture credits : Please visit Confluent site for more details\n  "
+},
+{
+	"uri": "/system-design-post/evntconst/",
+	"title": "All about Eventual and Strongly Consistency",
+	"tags": [],
+	"description": "",
+	"content": "Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel\u0026rsquo;s blog - here\nStrongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog\n"
+},
+{
+	"uri": "/system-design-post/lamkapp/",
+	"title": "Demystify Lambda and Kappa Architecture",
+	"tags": [],
+	"description": "",
+	"content": "Nutshell Lambda vs Kappa Architecture   Lambda Architecture   Kappa Architecture   Picture credits are to Talend.\nPlease visit Talend site here for more details.\n"
+},
+{
+	"uri": "/system-design-post/verticalhorizaonal/",
+	"title": "Vertical vs Horizontal Scaling",
+	"tags": [],
+	"description": "",
+	"content": "Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling\n Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally.\nCredits Gaurav Sen - Please watch video in Youtube\n"
+},
+{
+	"uri": "/system-design-post/awsterminology/",
+	"title": "AWS Basic Terminologies",
+	"tags": [],
+	"description": "",
+	"content": "Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.  Computing Services  EC2: It is a virtual server that provides resizable compute capacity on the cloud. Elastic Beanstalk: It is an application container used for deploying and managing containers. It creates an environment for working with web applications. Lambda: It is a computing service that runs the code in response to events and automatically manages the computing resources. EC2 Container Service: It allows us to easily run and manage Docker containers across a cluster of EC2 instances.  Storage Services  S3: It refers to Simple Storage Service and allows the storage of data objects of any sort and flat files in the cloud. It is secure, scalable, and durable. CloudFront: It defines a Content Delivery Network. It provides a way to distribute content to end-users with low-latency and high data-transfer speeds. Glacier: It is a low-cost storage service that provides secure and durable storage for long-term data archiving and backup. EFS (Elastic File Storage): It is a file storage service used in EC2 instances and connects to multiple EC2 instances. Snowball: It is used for moving large amounts of data into/out of AWS using secure appliances, i.e., it provides the data archiving functionality for the data that no longer needs to be accessed actively. Storage Gateway: It is used for securely integrating on-premises IT environments with cloud storage for backup and disaster recovery.  Database  RDS (Relational Database Service): It allows the storage of data objects as part of the relational database. It makes it easy to set up, operate, and scale familiar relational databases in the cloud. DynamoDB: It is a scalable NoSQL data store that is used to manage distributed replicas of data for high availability. ElastiCache: It improves application performance by allowing us to retrieve information from an in-memory caching system. It is a way of caching databases in the cloud. Redshift: It is a fast, fully managed data warehousing service, which makes it cost-effective to analyze all data using the existing Business Intelligence tools. DMS (Data Migration Service): It helps in migrating databases to the cloud easily and securely. It can also be used for converting databases.  Analytics  EMR: Amazon Elastic MapReduce helps in performing big data tasks such as web indexing, data mining, and log file analysis. Data Pipeline: It helps in moving data from one service to another. It is a service used for periodic, data-driven workflows. AWS Elasticsearch: It is a managed service that helps in deploying, operating, and scaling Elasticsearch. Kinesis: It makes it easy to work with real-time streaming data in the AWS cloud. AWS Machine Learning: It is a service that enables us to easily build smart applications. AWS QuickSight: It is a cloud-assisted Business Intelligence service that helps in deriving insights from data easily.  Security and Identity  IAM (Identity and Access Management): It helps in configuring security for all the services. It is used to ensure that our other services remain safe and inaccessible to others. *Directory Service: It is used to provide a managed directory in the cloud. Inspector: It enables us to analyze the behavior of the applications we run on AWS and helps in identifying potential security issues. WAF (Web Application Firewall): It protects our web application from attacks by providing web traffic filters. Cloud HSM: It is a Hardware Security Module. KMS (Key Management Service): It is a Key Management Service.  Management Tools  CloudWatch: It is used to create different metrics. It provides monitoring for resources and applications. CloudFormation: It helps in creating and updating a collection of related AWS resources. CloudTrial: It provides increased visibility into user activity by recording API calls made on an account. OpsWorks: It is a DevOps platform for managing applications of any size or complexity on the AWS cloud. Config: It gives an inventory of AWS resources, lets us audit the AWS resource configuration history, and notifies the changes. Service Catalog: It allows organizations to manage approved catalogs of IT resources. Trusted Advisor: It inspects the AWS environment and finds opportunities to save money and improve system performance.  Application Services  API Gateway: It is used to create, maintain, monitor, and secure APIs. AppStream: It is used to stream resource-intensive applications and games from the cloud to multiple users. CloudSearch: It is a completely managed search service for websites and apps. Elastic Transcoder: It is used to convert media files in the cloud easily at a lower cost. SES (Simple Email Service): It is used to send and receive emails. SQS (Simple Queue Service): It is a reliable, hosted queue for storing messages. SWF (Simple Workflow Service): It is used to coordinate all the processing steps with an application.  Developer Tools  Code commit: It is a managed source-control service that hosts private Git repositories. Code deploy: It is used to automate the code deployment. Code pipeline: It is a continuous delivery service that enables us to visualize and automate the steps required to release software.  S3 vs EBS vs EFS   "
+},
+{
+	"uri": "/code-programming-post/tscomplexity/",
+	"title": "Time &amp; Space Complexity",
+	"tags": [],
+	"description": "",
+	"content": "Time Complexity Big-O , Big-Omega , Big-Theta\n Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm\nIn recursive calls counts,the code would take 0 (n) time and O( n) space.\nint sum(int n) { if (n \u0026lt;= a) { return B; } return n + sum(n-1); } Each call adds a level to the stack.\n   sum(4)\n    sum(3)\n    sum(2)\n    sum(l)\n    sum(0)\n           Each of these calls is added to the call stack and takes up actual memory.\nA few tips   Drop the non-dominant terms   1. O(W + N) becomes O(W) 2. O(N + log N) becomes O(N) 3. 0(5*2N + 1000N^100 ) becomes O(2N)   Multi-part algorithms - Add vs Multiply       Amortized time  An ArrayList or a dynamically resizing array, allows the benefits of array + resizing Array has finite size while arrayList have flixbility in size.    The array could be full. Suppose an array contains N elements, then inserting a new element will take 0 (N) time. We need to create a new array of size 2N and then copy N elements over. This insertion will take 0 (N) time. This insertion wont happen time and again , however it(insertion) would take O(1) time. This is the time where we say time is \u0026ldquo;Amortized\u0026rdquo;\n  Log N Runtimes   Lets take example of Binary search. We first compare x to the midpoint of the array.\n If x == middle, then we return 1 If x \u0026lt; middle, then we search on the left side of the array. If x \u0026gt; middle, then we search on the right side ofthe array.  In this way , if we observe - we are stepping down n/2 elements , then n/4 and then n/8 ,etc.\n    This is how we reach to O(log N) time complexity. It is nicely explained in CTCI book - Please have the book - it has really good content.\n  Recursive functions   Example of Fibonacci series using recursive function\nint f(int n) { if (n \u0026lt;= 1) { return 1; } return f(n - 1) + f(n - 1); Lets consider how the calls of above code in tree stack\n  For each level and node , lets compute the number of calls\n  Note : O( branches^depth ) for most of recursive functions.\nThis is the reason why Recursive calls are very expensive.\nPic credit : CTCI (Big O chapter)\nExamples from CTCI Book Example 1   Time Complexity = O(N)\nExample 2   Time Complexity = O(N^2)\nExample 3   Time Complexity = O(N^2)\nExample 4   Time Complexity = O(ab)\nNote : There are 2 different arrays (a and b) in the nested loop\n"
+},
+{
+	"uri": "/system-design-post/caching/",
+	"title": "What is Caching and its importance",
+	"tags": [],
+	"description": "",
+	"content": "3 Main use-case of Cache  Avoid Network calls Avoid repeated computation Avoid load on Database / System  Why not use cache every time  Hardware where Cache runs are mainly in SSDs which are expensive More data in Cache will increase the search time - so it will make cache data retrieval slower  Cache Policy The way we decide to load or evict data from cache is called Cache policy\nLRU - Least Recently Used Cache It organizes items in order of use, allowing us to quickly identify which item hasn\u0026rsquo;t been used for the longest amount of time. Its similar as a clothes rack, where clothes are always hung up on one side. Unsed clothes are at other end.\nLRU cache is often implemented by pairing a doubly linked list with a hash map.\n  Strengths:\n  Super fast accesses. LRU caches store items in order from most-recently used to least-recently used. That means both can be accessed in O(1) time.\n  Super fast updates. Each time an item is accessed, updating the cache takes O(1) time.\n    Weaknesses\n Space heavy. An LRU cache tracking nn items requires a linked list of length nn, and a hash map holding nn items. That\u0026rsquo;s O(n) space.    LRU eviction More details\nAn LRU cache is an efficient cache data structure that can be used to figure out what we should evict when the cache is full. The goal is to always have the least-recently used item accessible in O(1) time.\nSliding window cache Global cache - About redis\nVarnish Cache\n"
+},
+{
+	"uri": "/system-design-post/zookeeper/",
+	"title": "About Zookeeper",
+	"tags": [],
+	"description": "",
+	"content": "Zookeeper is registry for large distributed systems. It is beneficial for tasks like master election, crash detection and managing meta data related to distributed systems.\nThe ZooKeeper framework was originally built at “Yahoo!” for accessing their applications in an easy and robust manner. Apache ZooKeeper is a standard for organized service used by Hadoop, HBase, and other distributed frameworks.\nServices Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service − Identifying the nodes in a cluster by name.\n  Configuration management − Update configuration information of the system for a joining node.\n  Cluster management − Joining / leaving of a node in a cluster and node status at real time.\n  Leader election − Electing a node as leader for coordination purpose. (SOLR)\n  Locking and synchronization service − Locking the data while modifying it.\n  Highly reliable data registry − Availability of data even when one or a few nodes are down.\n  How does Zookeeper work ? The data within Zookeeper is divided across multiple collection of nodes (ZNODES) and this is how it achieves its high availability and consistency. In case a node fails, Zookeeper can perform instant failover migration; e.g. if a master node fails, a new one is selected in real-time by polling within an ensemble. A client connecting to the server can query a different node if the first one fails to respond.\nCan Load Balancer act as Zookeeper? NO - Load balancer helps in distribution of work loads across multiple servers. Whereas , Zookeeper is good for master election , crash detection , storing configurations / state of the services , etc.\nWhy is Zookeeper necessary for Apache Kafka? I remember it as \u0026ldquo;C-CAM\u0026rdquo;\n Controller election  The controller is one of the most important broking entity in a Kafka ecosystem, and it also has the responsibility to maintain the leader-follower relationship across all the partitions. If a node by some reason is shutting down, it’s the controller’s responsibility to tell all the replicas to act as partition leaders in order to fulfill the duties of the partition leaders on the node that is about to fail. So, whenever a node shuts down, a new controller can be elected and it can also be made sure that at any given time, there is only one controller and all the follower nodes have agreed on that.\n Configuration Of Topics  The configuration regarding all the topics including the list of existing topics, the number of partitions for each topic, the location of all the replicas, list of configuration overrides for all topics and which node is the preferred leader, etc.\n Access control lists  Access control lists or ACLs for all the topics are also maintained within Zookeeper.\n Membership of the cluster  Zookeeper also maintains a list of all the brokers that are functioning at any given moment and are a part of the cluster.\n  "
+},
+{
+	"uri": "/system-design-post/loadbalance/",
+	"title": "Load Balancer",
+	"tags": [],
+	"description": "",
+	"content": "Load Balancing is the process of re-distributing network traffic across multiple server.\n  What Load Balancers can perform ?\n Detect server failures and redirect client traffic automatically/ Provide automated disaster recovery to backup sites Add and remove application servers without disruption Monitor and block malicious content  Load Balance Algorithms (remember as CRRI) There is a variety of load balancing methods, which use different algorithms best suited for a particular situation.\n Least Connection Method — directs traffic to the server with the fewest active connections Least Response Time Method — directs traffic to the server with the fewest active connections and the lowest average response time. Round Robin Method — rotates servers by directing traffic to the first available server and then moves that server to the bottom of the queue. IP Hash — the IP address of the client determines which server receives the request.  Layer 4 and Layer 7 Load balacing   Layer 4 operates on Transport layer which involves TCP , UDP.\n  It does not inspect the message contents\n  Layer 7 operates on application layer basically combines 5,6,7 - http,https,ssl,etc\n  It has application awareness and can use this additional application information to make more complex and informed load balancing decisions.\n  It has great feature \u0026ldquo;Cookie Persistance\u0026rdquo;\n  About DNS The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources. The process of DNS resolution involves converting a hostname (such as www.example.com) into a computer-friendly IP address (such as 192.168.1.1)\n"
+},
+{
+	"uri": "/system-design-post/https/",
+	"title": "Demystifying HTTP and HTTPS",
+	"tags": [],
+	"description": "",
+	"content": "HTTP and HTTPS HTTPS (Hyper Text transfer protoco secure) is basically http with security. SSL (Secure Socket Layer) certificate encrypts information users put into any website. Addtionally, HTTPS is also secured via TLS (Transport Layer Security) protocol. TLS is a succcessotr of SSL.\nSSL / TLS SSL/TLS works by binding the identities of entities such as websites and companies to cryptographic key pairs via digital documents known as X.509 certificates. Each key pair consists of a private key and a public key. The private key is kept secure, and the public key can be widely distributed via a certificate.\nGlimpse on TCP , UDP and FTP TCP provides a guarantee that document gets transferred correctly. It splits up the document into little packets and makes sure each packet gets across the network in an orderly fashion so the packets can be re-assembled into the original file. In UDP, packets can arrive in any order and some may not arrive at all. Its not suitable for transferring big/huge files.\nHTTP sits on top of TCP and transfers files along with metadata. HTTP requests are sent using TCP and the server sends back it’s response (usually an HTML file) using TCP as well. It uses TCP to ensure that the entire request gets to the client or server intact.\nFTP uses TCP in communication.\nA poor IT Joke : I would tell you a joke about UDP …. but you might not get it 😊\nSimple example on HTTP and HTTPS   More information on SSL/TLS\n"
+},
+{
+	"uri": "/system-design-post/restsoap/",
+	"title": "What is REST &amp; SOAP",
+	"tags": [],
+	"description": "",
+	"content": "REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.\nREST vs SOAP   When to use REST \u0026amp; SOAP REST Usage\n Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site. Caching – Use-case where we need to cache a lot of requests , then REST is way to go. Use-case where it demands usage of similar requests. Ease of coding – Coding + Implementation REST Services is far easier than SOAP.  SOAP Usage\n Asynchronous processing and subsequent invocation – if there is a requirement that the client needs a guaranteed level of reliability and security Strict format – if both the client and server have an agreement on the exchange format then SOAP 1.2 gives the rigid specifications for this type of interaction. Stateful operations – Any Use-case which needs to store the state. This means SOAP is suitable for any online purchase site. Saving the state is very critical for any purchase site.  "
+},
+{
+	"uri": "/system-design-post/auth/",
+	"title": "Authentication vs Authorization",
+	"tags": [],
+	"description": "",
+	"content": "Authentication and authorization are important terms in world of security. Often these 2 words are confused and can be used interchangeably. In this blog, a simple differentiation has been tried to lay out to clearly define both the terms in layman\u0026rsquo;s language.\n  "
+},
+{
+	"uri": "/ai-ml-post/word2vec/",
+	"title": "Word2Vec Algorithm",
+	"tags": [],
+	"description": "",
+	"content": "About Word2Vec algorithm  Word2Vec is not a single algorithm Word2vec is a group of related models that are used to produce word embedding\u0026rsquo;s. These models are two-layer neural networks that are trained to reconstruct linguistic contexts of words. Word2vec takes large corpus of text as its input and produces a vector-space, with each unique word in the corpus being assigned a corresponding vector in the space.  Word2Vec can utilize either of 2 model architectures –  CBOW (Continuous Bag of Words) Skip Gram    CBOW (Continuous Bag of Words) The input to the model could be wi−2,wi−1,wi+1,wi+2wi−2,wi−1,wi+1,wi+2, the preceding and following words of the current word we are at. The output of the neural network will be wiwi. Hence you can think of the task as \u0026ldquo;predicting the word given its context\u0026rdquo;   Skip-Grams Algorithm The input to the model is wiwi, and the output could be wi−1,wi−2,wi+1,wi+2wi−1,wi−2,wi+1,wi+2. So the task here is \u0026ldquo;predicting the context given a word\u0026rdquo;. Also, the context is not limited to its immediate context, training instances can be created by skipping a constant number of words in its context, so for example, wi−3,wi−4,wi+3,wi+4wi−3,wi−4,wi+3,wi+4, hence the name skip-gram.   Use-case : Predicting context of search word from SOLR Documents using Word2Vec   "
+},
+{
+	"uri": "/system-design-post/osilayer/",
+	"title": "OSI Model Layer",
+	"tags": [],
+	"description": "",
+	"content": "About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as \u0026ldquo;PDN-T-SPA\u0026rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.\n  Comparing OSI Model Layer with TCP/IP model   "
+},
+{
+	"uri": "/ai-ml-post/treesml/",
+	"title": "Trees in Machine Learning World",
+	"tags": [],
+	"description": "",
+	"content": "Trees are well-known as a non-linear data structure. They don’t store data in a linear way. They organize data hierarchically.\nA tree is a collection of entities called nodes. Nodes are connected by edges. Each node contains a value or data, and it may or may not have a child node.\nThe Image at the beginning of the article (Source) explains the terminologies of a Tree.\nDecision Trees Decision trees represent rules, which can be understood by humans and used in knowledge system such as database\n    Here is the Link and source of above image\nStrengths  Less computation process is required Rules generated by Decision trees are quite easy to understand  Weakness  Perform poorly with many class and small data. Training is computationally expensive process . As at each node, each field (which is getting splitted) must be sorted before its best split can be found. Its not the best choice for predicting continuous attributes Random Forrest Learning ensemble consisting of a bagging of un-pruned decision tree learners with a randomized selection of features at each split  Purpose (in nutshell)  Definition : Collection of unpruned CARTs + Rule to combine individual tree decisions Purpose : Improve prediction accuracy Principle : Encouraging diversity among the tree Solution : Bagging + Random decision trees (rCART)  Flow  Let N trees be the number of trees to build for each of N trees iterations Select a new bootstrap sample (See Bagging) from training set Grow an un-pruned tree on this bootstrap. At each internal node, randomly select ‘m’ predictors and determine the best split using only these predictors. Do not perform cost complexity pruning. Save tree as is, along side those built thus far. Output overall prediction as the average response (regression) or majority vote (classification) from all individually trained trees  Strengths  Unlike decision trees - it can handle thousands of input variables without variable deletion. Forrest generated during the process can be used for other tasks With my personal experience , it runs efficiently on large datasets  Weakness  It has been observed to overfit for some datasets with noisy classification/regression tasks. The categorical variables with different number of levels, the algorithm is biased in favor of those attributes with more levels.  My DataBricks Notebook I am publishing my Databricks Notebook where I have tested the Decision Tree and Random Forrest Spark code (which is referred from Apache Spark site)\nDecision Trees Link for Databricks - Decision Trees\nRandom Forrest Link for Databricks - Random forrest\nNote This article is prepared after reading a lot of articles from various sources (blogs,pdfs,lectures,videos,etc) and articulating them in single blog.\nFor this article, we will keep it short with Decision and Random Forrest - Next article will be followed with Gradient Boost (with more details) and the famous XGBOOST.\nSources  https://www.cse.ust.hk/~twinsen/Decision_Tree.ppt https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm http://www.cs.ucsb.edu/~ambuj/Courses/165B/Lectures/ensemble%20learning.ppt https://www.edureka.co/community/46102/disadvantages-of-using-decision-tree https://perso.math.univ-toulouse.fr/motimo/files/2013/07/random-forest.pdf https://www.datasciencecentral.com/profiles/blogs/decision-tree-vs-random-forest-vs-boosted-trees-explained https://www.youtube.com/watch?v=eKD5gxPPeY0 https://spark.apache.org/docs/latest/ml-classification-regression.html  "
+},
+{
+	"uri": "/ai-ml-post/baggingboosting/",
+	"title": "Bagging &amp; Boosting in Machine Learning World",
+	"tags": [],
+	"description": "",
+	"content": "In my last tech blog, I discussed on Decision trees and Random Forrest. So I thought of articulating on Gradient Boosting model and XgBoost. But before these algorithms , its important to understand 2 basic concepts :\n Bagging (Bootstrap Aggregation) Boosting  Bagging (Bootstrap Aggregation) Bootstrapping is a process of creating random samples with replacement for estimating sample statistics. With replacement means , the sample might have duplicated values from the original set.\nFor example:\nSample S = {10,23,12,11,34,11,1,4,2,14}\rBootstrap sample 1: {10, 23, 11, 4, 2, 14, 11}\rBootstrap sample 2 {23, 10, 12, 11, 14, 2, 14} – 14 is duplicate (which means with replacement in bootstrap sample set)\rBootstrap sample n : {10, 1, 2, 2, 14, 1, 23}\rReason to create BootStrap samples Once bootstrap samples are created, model classifier is used for training or building a model and then selecting model based on popularity votes.\nIn case of a classification model, a label with maximum votes will assigned to the observations.\nIn case of a regression model - average value is used.\nBagging is an ensembling process – where a model is trained on each of the bootstrap samples and the final model is an aggregated models of the all sample models. Refer to below diagram to understand the Bagging process\n  For confidence interval\nSample Code in Python for Bagging Databricks link for Bagging\nBoosting In layman’s term , it is a process to convert the weak learners to strong learners\nConsider our life where we develop life skills by learning from our mistakes, we can train our model to learn from the errors predicted and improvise the model’s prediction . Source\n Step 1: The base learner takes all the distributions and assign equal weight or attention to each observation. Step 2: If there is any prediction error caused by first base learning algorithm, then we pay higher attention to observations having prediction error. Then, we apply the next base learning algorithm. Step 3: Iterate Step 2 till the limit of base learning algorithm is reached or higher accuracy is achieved.  Finally, it combines the outputs from weak learner and creates a strong learner which eventually improves the prediction power of the model. .\nTypes of Boosting algorithms  Ada-Boost Gradient Boosting algorithm XgBoost (Oe of the popular ones in Kaggle J )  Source  https://web.stanford.edu/class/stats202/content/lec20.pdf https://www.analyticsvidhya.com/blog/2015/11/quick-introduction-boosting-algorithms-machine-learning/ https://medium.com/analytics-vidhya/boosting-bagging-and-stacking-a-comparative-analysis-e6b213d416b9 https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205 https://cse.iitk.ac.in/users/piyush/courses/ml_autumn16/771A_lec21_slides.pdf https://medium.com/greyatom/a-quick-guide-to-boosting-in-ml-acf7c1585cb5 https://machinelearningmastery.com/implement-bagging-scratch-python/ https://machinelearningmastery.com/ensemble-machine-learning-algorithms-python-scikit-learn/  "
+},
+{
+	"uri": "/about/",
+	"title": "About the Blog",
+	"tags": [],
+	"description": "",
+	"content": "I consider myself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is my journal on sharing technology knowledge with everyone and also learn during my tech journey.\nAreas of Interests  Architechture \u0026amp; System Design Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - dev.techvidyarthi@gmail.com\nNote : I kept blog\u0026rsquo;s UI very basic and focussed more on my journal. I am still learning UI 😊\nThanks for reading!\n"
+},
+{
+	"uri": "/contact/",
+	"title": "Contact",
+	"tags": [],
+	"description": "",
+	"content": " Contact : dev.techvidyarthi@gmail.com | debaditya.chakravorty@gmail.com  "
+},
+{
+	"uri": "/projects/",
+	"title": "Hobby Projects",
+	"tags": [],
+	"description": "",
+	"content": "Social Distancing Application In this fun project (Social distance Detection) , I am using YOLO (You only look once) + weights and COCO (Common Objects in Context) dataset for identifying person in real-time video.\n Yolo V3 COCO labels Distance : Euclidean (between boxes)  We can create the same concept in our workplace and maintain social distancing.\nInspiration This home project is inspired from Sir Andrew Ng\u0026rsquo;s startup More details are here\n  Face Mask detector using Opencv , keras , CNN Fun/Hobby project on Real-time face mask detector during quarantine period 😊. It can be enhanced a lot and can be integrated with Mobile app (Pythonista) , Raspeberry Pi (Miniconda3) , etc and can be utilized in many ways.\nDetails\n Python - 3.6.5 | Conda - 4.8.3 | Keras and Tf Algorithm - MTCNN (Multi-Task Convolution Neural Network) - Lot to learn !! Activation function - RELU (Rectified Linear Unit) for hidden layers Optimizer - Adam optimizer Choose your Optimizer - https://lnkd.in/ec5XngA Loss function - Binary Classification Loss Functions Choose your Loss function - https://lnkd.in/eqyhW7z Learn more on Core layers (using keras) https://lnkd.in/eckgdVa    Drowziness Detection Weekend fun project - Detect drowsiness using OpenCV,Python and Dlib\nInspired\n Article1 Article2 Paper  Great links to begin with .. Its fun when it says - \u0026ldquo;Wake up Deb .. Deb Wake up :D :D\u0026rdquo;\n  Detect eye movement and control mouse pointer (without touching mouse pad) Last year December holidays , I was reading various articles , papers , blogs on Human Computer Interaction . With all those techniques / papers , came up with small project.\nProject : Detect eye movement and control mouse pointer (without touching mouse pad)\nReference Sites/Papers (Awesome pointers to start)\n Paper Site1 Site2    Object detection using OpenCV and CNN Yolo - You Only Look Once This is an interesting topic of detecting objects in picture or video [in real time] (and is becoming very popular). Yolo is extremely fast and outperforms detection methods like DPM and RCNN. Interestingly , YOLO performs detecting objects using single neural network.\nA simple Python application is created to detect objects in image (using Opencv library ) to experiment the model (images below)\nResearch Papers on Yolo\n Yolov1 Yolov2 Yolov3  Credits to the whole team of Yolo (Awesome Algorithm)\n  "
+},
+{
+	"uri": "/showcase/",
+	"title": "Hobby Projects",
+	"tags": [],
+	"description": "",
+	"content": "Social Distancing Application In this fun project (Social distance Detection) , I am using YOLO (You only look once) + weights and COCO (Common Objects in Context) dataset for identifying person in real-time video.\n Yolo V3 COCO labels Distance : Euclidean (between boxes)  We can create the same concept in our workplace and maintain social distancing.\nInspiration This home project is inspired from Sir Andrew Ng\u0026rsquo;s startup More details are here\n  Face Mask detector using Opencv , keras , CNN Fun/Hobby project on Real-time face mask detector during quarantine period 😊. It can be enhanced a lot and can be integrated with Mobile app (Pythonista) , Raspeberry Pi (Miniconda3) , etc and can be utilized in many ways.\nDetails\n Python - 3.6.5 | Conda - 4.8.3 | Keras and Tf Algorithm - MTCNN (Multi-Task Convolution Neural Network) - Lot to learn !! Activation function - RELU (Rectified Linear Unit) for hidden layers Optimizer - Adam optimizer Choose your Optimizer - https://lnkd.in/ec5XngA Loss function - Binary Classification Loss Functions Choose your Loss function - https://lnkd.in/eqyhW7z Learn more on Core layers (using keras) https://lnkd.in/eckgdVa    Drowziness Detection Weekend fun project - Detect drowsiness using OpenCV,Python and Dlib\nInspired\n Article1 Article2 Paper  Great links to begin with .. Its fun when it says - \u0026ldquo;Wake up Deb .. Deb Wake up :D :D\u0026rdquo;\n  Detect eye movement and control mouse pointer (without touching mouse pad) Last year December holidays , I was reading various articles , papers , blogs on Human Computer Interaction . With all those techniques / papers , came up with small project.\nProject : Detect eye movement and control mouse pointer (without touching mouse pad)\nReference Sites/Papers (Awesome pointers to start)\n Paper Site1 Site2    Object detection using OpenCV and CNN Yolo - You Only Look Once This is an interesting topic of detecting objects in picture or video [in real time] (and is becoming very popular). Yolo is extremely fast and outperforms detection methods like DPM and RCNN. Interestingly , YOLO performs detecting objects using single neural network.\nA simple Python application is created to detect objects in image (using Opencv library ) to experiment the model (images below)\nResearch Papers on Yolo\n Yolov1 Yolov2 Yolov3  Credits to the whole team of Yolo (Awesome Algorithm)\n  "
+}]

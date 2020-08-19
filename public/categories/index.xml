@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Debaditya&#39;s Tech Journal</title>
-    <link>http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/categories/</link>
-    <description>Recent content in Categories on Debaditya&#39;s Tech Journal</description>
+    <title>Categories on Debaditya Tech Journal</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 16 Aug 2020 15:47:23 -0400</lastBuildDate>
     
-	<atom:link href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>database</title>
+      <link>/categories/database/</link>
+      <pubDate>Sun, 16 Aug 2020 15:47:23 -0400</pubDate>
+      
+      <guid>/categories/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system design</title>
+      <link>/categories/system-design/</link>
+      <pubDate>Sun, 16 Aug 2020 15:47:23 -0400</pubDate>
+      
+      <guid>/categories/system-design/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -1,158 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en">
-
-    <meta name="author" content="Debaditya Chakravorty">
-    <meta name="description" content="Simple definition Process of making paritions of data in database
+<html lang='en' dir='auto'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Simple definition Process of making paritions of data in database
 Vertical and Horizontal Sharding Let us understand using simple example
 Table
   Veritical Sharding   Horizontal Sharding
 Sharding is performed on the basis of salary.
- Horizontal Shard1 = salary &lt; 100000 Horizontal Shard2 = salary &gt; 100000 AND salary &lt; 250000 Horizontal Shard3 = salary &gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?">
-    <meta name="keywords" content="blog,developer,personal">
+ Horizontal Shard1 = salary &lt; 100000 Horizontal Shard2 = salary &gt; 100000 AND salary &lt; 250000 Horizontal Shard3 = salary &gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?'>
+<meta name='theme-color' content='#ffcd00'>
 
-    
-      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Database Sharding"/>
-<meta name="twitter:description" content="Simple definition Process of making paritions of data in database
+<meta property='og:title' content='Database Sharding • Minimo'>
+<meta property='og:description' content='Simple definition Process of making paritions of data in database
 Vertical and Horizontal Sharding Let us understand using simple example
 Table
   Veritical Sharding   Horizontal Sharding
 Sharding is performed on the basis of salary.
- Horizontal Shard1 = salary &lt; 100000 Horizontal Shard2 = salary &gt; 100000 AND salary &lt; 250000 Horizontal Shard3 = salary &gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?"/>
+ Horizontal Shard1 = salary &lt; 100000 Horizontal Shard2 = salary &gt; 100000 AND salary &lt; 250000 Horizontal Shard3 = salary &gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?'>
+<meta property='og:url' content='http://www.example.com/system-design-post/dbshard/'>
+<meta property='og:site_name' content='Minimo'>
+<meta property='og:type' content='article'><meta property='article:section' content='System-Design-post'><meta property='article:published_time' content='2020-08-16T15:47:23-04:00'/><meta property='article:modified_time' content='2020-08-16T15:47:23-04:00'/><meta name='twitter:card' content='summary'>
 
-    <meta property="og:title" content="Database Sharding" />
-<meta property="og:description" content="Simple definition Process of making paritions of data in database
-Vertical and Horizontal Sharding Let us understand using simple example
-Table
-  Veritical Sharding   Horizontal Sharding
-Sharding is performed on the basis of salary.
- Horizontal Shard1 = salary &lt; 100000 Horizontal Shard2 = salary &gt; 100000 AND salary &lt; 250000 Horizontal Shard3 = salary &gt; 250000    Benefits of Sharding  Improves the efficiency of queries Sharding results to small logical table which makes query faster Read and write performance increases  Problems with Sharding  Joining data across shards is expensive process as the join happens across the network Too many shards is a problem and increase the overhead  What happens the shard fails ?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/dbshard/" />
-<meta property="article:published_time" content="2020-08-16T15:47:23-04:00" />
-<meta property="article:modified_time" content="2020-08-16T15:47:23-04:00" />
+<meta name="generator" content="Hugo 0.73.0" />
 
+  <title>Database Sharding • Minimo</title>
+  <link rel='canonical' href='http://www.example.com/system-design-post/dbshard/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
 
+  
+
+</head>
+<body class='page type-System-Design-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
     
-      <base href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/dbshard/">
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
     
-    <title>
-  Database Sharding · Debaditya&#39;s Tech Journal
-</title>
+    <h2 class='title site-title '>
+      <a href='/'>
+      Minimo
+      </a>
+    </h2>
+    <div class='desc'>
+    Minimalist theme for Hugo
+    </div>
+  </header>
 
-    
-      <link rel="canonical" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/dbshard/">
-    
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
 
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><span>Not a single Tag!</span></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
     
+    
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+
+</svg>
+</span>
+  <span class='close'><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='https://github.com/MunifTanjim/minimo'>Repo</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Minimo</a></li><li><a href='/system-design-post/'>System-Design-posts</a></li><li><span>Database Sharding</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Minimo</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Database Sharding</h1>
       
-      
-      <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder.min.3219ef62ae52679b7a9c19043171c3cd9f523628c2a65f3ef247ee18836bc90b.css" integrity="sha256-MhnvYq5SZ5t6nBkEMXHDzZ9SNijCpl8&#43;8kfuGINryQs=" crossorigin="anonymous" media="screen" />
-    
 
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
     
-
     
-      
-        
-        
-        <link rel="stylesheet" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/css/coder-dark.min.e78e80fc3a585a4d1c8fc7f58623b6ff852411e38431a9cd1792877ecaa160f6.css" integrity="sha256-546A/DpYWk0cj8f1hiO2/4UkEeOEManNF5KHfsqhYPY=" crossorigin="anonymous" media="screen" />
-      
-    
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
 
-    
-
-    
-
-    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/favicon-16x16.png" sizes="16x16">
-
-    <meta name="generator" content="Hugo 0.73.0" />
-  </head>
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2020-08-16T15:47:23-04:00'>2020, Aug 16</time>
+</span>
 
   
   
+<span class='reading-time'><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
     
+    
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
   
-  <body class="colorscheme-dark"
-        onload=" twemoji.parse(document.body); "
-  >
-    <main class="wrapper">
-      <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">
-      Debaditya&#39;s Tech Journal
-    </a>
-    
-    <input type="checkbox" id="menu-toggle" />
-    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-    <ul class="navigation-list">
-      
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/">Home</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/about/">About</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/system-design-post/">System-Design</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/ai-ml-posts/">AI &amp; ML</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/code-concept-post/">Programming</a>
-          </li>
-        
-          <li class="navigation-item">
-            <a class="navigation-link" href="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/projects/">Projects</a>
-          </li>
-        
-      
-      
-    </ul>
-    
-  </section>
-</nav>
+  
 
-
-      <div class="content">
-        
-  <section class="container page">
-  <article>
-    <header>
-      <h1>Database Sharding</h1>
-    </header>
-
-    <h4 id="simple-definition">Simple definition</h4>
+  <div class='container entry-content'>
+  <h4 id="simple-definition">Simple definition</h4>
 <p>Process of making paritions of data in database</p>
 <h4 id="vertical-and-horizontal-sharding">Vertical and Horizontal Sharding</h4>
 <p>Let us understand using simple example</p>
 <p><strong>Table</strong></p>
 <figure>
-    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/dbshard1.JPG"/> 
+    <img src="/images/dbshard1.JPG"/> 
 </figure>
 
 <p><strong>Veritical Sharding</strong>
 <figure>
-    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/dbshard2.JPG"/> 
+    <img src="/images/dbshard2.JPG"/> 
 </figure>
 </p>
 <p><strong>Horizontal Sharding</strong></p>
@@ -163,7 +202,7 @@ Sharding is performed on the basis of salary.
 <li>Horizontal Shard3 = salary &gt; 250000</li>
 </ul>
 <figure>
-    <img src="http://techvidyarthi.com.s3-website.us-east-1.amazonaws.com/images/dbshard3.JPG"/> 
+    <img src="/images/dbshard3.JPG"/> 
 </figure>
 
 <h4 id="benefits-of-sharding">Benefits of Sharding</h4>
@@ -180,39 +219,140 @@ Read and write performance increases</li>
 <h4 id="what-happens-the-shard-fails-">What happens the shard fails ?</h4>
 <p>Have Master Slave architechture where we wont have single point of failure. As leader is chosen when master fails.</p>
 
-  </article>
-</section>
+</div>
 
   
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  </div>
+</footer>
 
-      </div>
 
-      
-  <footer class="footer">
-    <section class="container">
-      
-      
-        ©
-        
-        2020
-         Debaditya Chakravorty 
-      
-      
-         · 
-        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-      
-      
-    </section>
-  </footer>
+</article>
 
-    </main>
-
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/system-design-post/windowops/'>
+        <span aria-hidden='true'><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
     
-
     
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
 
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Windowing in Data Stream Management</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
     
+    
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
 
-  </body>
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Facebook account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    
+  <title>Twitter icon</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Instagram account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:contact@example.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+      </li><li>
+        <a href='https://codepen.io/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Codepen account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line>
+</svg>
+</a>
+      </li><li>
+        <a href='https://gitlab.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Gitlab account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <title>GitLab icon</title>  <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/>
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/muniftanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+      </li><li>
+        <a href='https://t.me/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Telegram account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <title>Telegram icon</title><path d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z"/>
+</svg>
+</a>
+      </li><li>
+        <a href='https://scholar.google.com/citations?user=qc6CJjYAAAAJ' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Google_scholar account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <title>Google Scholar icon</title><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.youtube.com/channel/UCT-U0rNerYxItGcuoPX-WYA' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Youtube account in new tab</span><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    
+    <title>YouTube icon</title>
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2020 MunifTanjim </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+
+</body>
 
 </html>
+
