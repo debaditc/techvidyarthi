@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Database Sharding :: Debaditya Tech Journal</title>
+    <title> :: Debaditya Tech Journal</title>
 
     
     <link href="/css/nucleus.css?1597796814" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/system-design-post/installation/">
+  <body class="" data-url="/credits/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -126,7 +126,7 @@
   
     
     <li data-nav-id="/system-design-post/" title="System Design posts" class="dd-item 
-        parent
+        
         
         
         ">
@@ -154,7 +154,7 @@
  
   
     
-      <li data-nav-id="/system-design-post/installation/" title="Database Sharding" class="dd-item active">
+      <li data-nav-id="/system-design-post/installation/" title="Database Sharding" class="dd-item ">
         <a href="/system-design-post/installation/">
         Database Sharding
         <i class="fas fa-check read-icon"></i>
@@ -844,13 +844,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>About the Blog</a> > <a href='/system-design-post/'>System Design posts</a> > Database Sharding
-          
-        
+            <a href='/'>About the Blog</a> > 
           
         
           
@@ -861,15 +855,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -879,67 +865,19 @@
             
         <div id="head-tags">
         
-<div class="tags">
-
-  <a class="tag-link" href="/tags/database">database</a>
-
-  <a class="tag-link" href="/tags/shard">shard</a>
-
-  <a class="tag-link" href="/tags/system-design">system design</a>
-
-</div>
-
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Database Sharding
+              
             </h1>
           
 
         
 
 
-<h4 id="simple-definition">Simple definition</h4>
-<p>Process of making paritions of data in database</p>
-<h4 id="vertical-and-horizontal-sharding">Vertical and Horizontal Sharding</h4>
-<p>Let us understand using simple example</p>
-<p><strong>Table</strong></p>
-<figure>
-    <img src="/images/dbshard1.JPG"/> 
-</figure>
-
-<p><strong>Veritical Sharding</strong>
-<figure>
-    <img src="/images/dbshard2.JPG"/> 
-</figure>
-</p>
-<p><strong>Horizontal Sharding</strong></p>
-<p>Sharding is performed on the basis of salary.</p>
-<ul>
-<li>Horizontal Shard1 = salary &lt; 100000</li>
-<li>Horizontal Shard2 = salary &gt; 100000 AND salary &lt; 250000</li>
-<li>Horizontal Shard3 = salary &gt; 250000</li>
-</ul>
-<figure>
-    <img src="/images/dbshard3.JPG"/> 
-</figure>
-
-<h4 id="benefits-of-sharding">Benefits of Sharding</h4>
-<ul>
-<li>Improves the efficiency of queries</li>
-<li>Sharding results to small logical table which makes query faster
-Read and write performance increases</li>
-</ul>
-<h4 id="problems-with-sharding">Problems with Sharding</h4>
-<ul>
-<li>Joining data across shards is expensive process as the join happens across the network</li>
-<li>Too many shards is a problem and increase the overhead</li>
-</ul>
-<h4 id="what-happens-the-shard-fails-">What happens the shard fails ?</h4>
-<p>Have Master Slave architechture where we wont have single point of failure. As leader is chosen when master fails.</p>
 
 
 <footer class="footline">
@@ -977,6 +915,8 @@ Read and write performance increases</li>
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -990,7 +930,6 @@ Read and write performance increases</li>
             
             
                 
-                    
                     
                 
                 
@@ -1007,9 +946,6 @@ Read and write performance increases</li>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1450,10 +1386,8 @@ Read and write performance increases</li>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/system-design-post/" title="System Design posts"> <i class="fa fa-chevron-left"></i></a>
 		
-		
-			<a class="nav nav-next" href="/system-design-post/windowops/" title="Windowing in Data Stream Management" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/system-design-post/" title="System Design posts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

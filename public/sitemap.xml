@@ -188,6 +188,11 @@
   </url>
   
   <url>
+    <loc>/credits/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
   </url>
   
