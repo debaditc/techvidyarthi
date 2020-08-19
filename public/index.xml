@@ -43,15 +43,6 @@ Unsupported Operations in Structured Spark streaming  Multiple streaming aggrega
     </item>
     
     <item>
-      <title>Machine Learning in AWS</title>
-      <link>/ai-ml-post/awsml/</link>
-      <pubDate>Sun, 09 Aug 2020 11:29:04 -0400</pubDate>
-      
-      <guid>/ai-ml-post/awsml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Basic code : Spark streaming</title>
       <link>/code-programming-post/sparkstream/</link>
       <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
