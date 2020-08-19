@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>What is Caching and its importance :: Debaditya Tech Journal</title>
+    <title>regression :: Debaditya Tech Journal</title>
 
     
-    <link href="/css/nucleus.css?1597814158" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1597814158" rel="stylesheet">
-    <link href="/css/hybrid.css?1597814158" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1597814158" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1597814158" rel="stylesheet">
-    <link href="/css/auto-complete.css?1597814158" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1597814158" rel="stylesheet">
-    <link href="/css/theme.css?1597814158" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1597814158" rel="stylesheet">
+    <link href="/css/nucleus.css?1597814159" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1597814159" rel="stylesheet">
+    <link href="/css/hybrid.css?1597814159" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1597814159" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1597814159" rel="stylesheet">
+    <link href="/css/auto-complete.css?1597814159" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1597814159" rel="stylesheet">
+    <link href="/css/theme.css?1597814159" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1597814159" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1597814158" rel="stylesheet">
+    <link href="/css/theme-blue.css?1597814159" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1597814158"></script>
+    <script src="/js/jquery-3.3.1.min.js?1597814159"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/system-design/caching/">
+  <body class="" data-url="/tags/regression/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -95,14 +95,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1597814158"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1597814158"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1597814159"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1597814159"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1597814158"></script>
+<script type="text/javascript" src="/js/search.js?1597814159"></script>
 
     
   </div>
@@ -262,7 +262,7 @@
   
     
     <li data-nav-id="/system-design/" title="System Design" class="dd-item 
-        parent
+        
         
         
         ">
@@ -458,7 +458,7 @@
  
   
     
-      <li data-nav-id="/system-design/caching/" title="What is Caching and its importance" class="dd-item active">
+      <li data-nav-id="/system-design/caching/" title="What is Caching and its importance" class="dd-item ">
         <a href="/system-design/caching/">
         What is Caching and its importance
         <i class="fas fa-check read-icon"></i>
@@ -780,7 +780,7 @@
             
           
           
-            <a href='/'>About the Blog</a> > <a href='/system-design/'>System Design</a> > What is Caching and its importance
+            <a href='/'>About the Blog</a> > <a href='/tags/'>Tags</a> > regression
           
         
           
@@ -793,19 +793,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#3-main-use-case-of-cache">3 Main use-case of Cache</a></li>
-        <li><a href="#why-not-use-cache-every-time">Why not use cache every time</a></li>
-        <li><a href="#cache-policy">Cache Policy</a></li>
-        <li><a href="#lru---least-recently-used-cache">LRU - Least Recently Used Cache</a></li>
-        <li><a href="#lru-eviction">LRU eviction</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+
     </div>
 </div>
 
@@ -815,73 +803,24 @@
             
         <div id="head-tags">
         
-<div class="tags">
-
-  <a class="tag-link" href="/tags/system-design">system design</a>
-
-  <a class="tag-link" href="/tags/cache">cache</a>
-
-  <a class="tag-link" href="/tags/performance">performance</a>
-
-</div>
-
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              What is Caching and its importance
+              regression
             </h1>
           
 
         
 
 
-<h3 id="3-main-use-case-of-cache">3 Main use-case of Cache</h3>
-<ul>
-<li>Avoid Network calls</li>
-<li>Avoid repeated computation</li>
-<li>Avoid load on Database / System</li>
-</ul>
-<h3 id="why-not-use-cache-every-time">Why not use cache every time</h3>
-<ul>
-<li>Hardware where Cache runs are mainly in SSDs which are expensive</li>
-<li>More data in Cache will increase the search time - so it will make cache data retrieval slower</li>
-</ul>
-<h3 id="cache-policy">Cache Policy</h3>
-<p>The way we decide to load or evict data from cache is called Cache policy</p>
-<h3 id="lru---least-recently-used-cache">LRU - Least Recently Used Cache</h3>
-<p>It organizes items in order of use, allowing us to quickly identify which item hasn&rsquo;t been used for the longest amount of time. Its similar as a clothes rack, where clothes are always hung up on one side. Unsed clothes are at other end.</p>
-<p>LRU cache is often implemented by pairing a doubly linked list with a hash map.</p>
-<ul>
-<li>
-<p>Strengths:</p>
-<ul>
-<li>
-<p>Super fast accesses. LRU caches store items in order from most-recently used to least-recently used. That means both can be accessed in <strong>O(1) time.</strong></p>
-</li>
-<li>
-<p>Super fast updates. Each time an item is accessed, updating the cache takes <strong>O(1) time.</strong></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Weaknesses</p>
-<ul>
-<li>Space heavy. An LRU cache tracking nn items requires a linked list of length nn, and a hash map holding nn items. That&rsquo;s <strong>O(n) space.</strong></li>
-</ul>
-</li>
-</ul>
-<h3 id="lru-eviction">LRU eviction</h3>
-<p><a href="https://www.interviewcake.com/concept/java/lru-cache">More details</a></p>
-<p>An LRU cache is an efficient cache data structure that can be used to figure out what we should evict when the cache is full. The goal is to always have the least-recently used item accessible in O(1) time.</p>
-<p>Sliding window cache
-Global cache - About redis</p>
-<p>Varnish Cache</p>
 
 
-<footer class="footline">
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -1015,7 +954,6 @@ Global cache - About redis</p>
             
                 
                     
-                    
                 
                 
 
@@ -1028,9 +966,6 @@ Global cache - About redis</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1160,7 +1095,6 @@ Global cache - About redis</p>
             
                 
                     
-                    
                 
                 
 
@@ -1176,9 +1110,6 @@ Global cache - About redis</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1347,10 +1278,8 @@ Global cache - About redis</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/system-design/awsterminology/" title="AWS Basic Terminologies"> <i class="fa fa-chevron-left"></i></a>
 		
-		
-			<a class="nav nav-next" href="/system-design/zookeeper/" title="About Zookeeper" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/code-programming/" title="Code Programming" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1360,19 +1289,19 @@ Global cache - About redis</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1597814158"></script>
-    <script src="/js/perfect-scrollbar.min.js?1597814158"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1597814158"></script>
-    <script src="/js/jquery.sticky.js?1597814158"></script>
-    <script src="/js/featherlight.min.js?1597814158"></script>
-    <script src="/js/highlight.pack.js?1597814158"></script>
+    <script src="/js/clipboard.min.js?1597814159"></script>
+    <script src="/js/perfect-scrollbar.min.js?1597814159"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1597814159"></script>
+    <script src="/js/jquery.sticky.js?1597814159"></script>
+    <script src="/js/featherlight.min.js?1597814159"></script>
+    <script src="/js/highlight.pack.js?1597814159"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1597814158"></script>
-    <script src="/js/learn.js?1597814158"></script>
-    <script src="/js/hugo-learn.js?1597814158"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1597814159"></script>
+    <script src="/js/learn.js?1597814159"></script>
+    <script src="/js/hugo-learn.js?1597814159"></script>
 
-    <link href="/mermaid/mermaid.css?1597814158" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1597814158"></script>
+    <link href="/mermaid/mermaid.css?1597814159" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1597814159"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -1388,4 +1317,3 @@ Global cache - About redis</p>
 </script>
   </body>
 </html>
-

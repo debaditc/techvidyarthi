@@ -1,7 +1,7 @@
 ---
 title: "Bagging & Boosting in Machine Learning World"
 date: "2020-07-04T10:52:27-04:00"
-tags: ["aiml", "bagging" ,"boosting"]
+tags: ["aiml", "bagging" ,"boosting","regression","classification"]
 draft: false
 ---
 In my last tech blog, I discussed on Decision trees and Random Forrest. So I thought of articulating on Gradient Boosting model and XgBoost. But before these algorithms , its important to understand 2 basic concepts :

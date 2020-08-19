@@ -313,12 +313,22 @@
   </url>
   
   <url>
+    <loc>/tags/classification/</loc>
+    <lastmod>2020-07-04T10:52:27-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/decision-trees/</loc>
     <lastmod>2020-07-04T10:52:27-04:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/random-forrest/</loc>
+    <lastmod>2020-07-04T10:52:27-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/regression/</loc>
     <lastmod>2020-07-04T10:52:27-04:00</lastmod>
   </url>
   

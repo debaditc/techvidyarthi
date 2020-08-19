@@ -6,7 +6,7 @@ slug = "about"
 # About Debaditya
 {{< figure src="/images/deb22.JPG" >}}
 
-I consider myself as Life long - "Vidyārthī" which is a Sanskrit word (means "Student"). This website is my journal on sharing technology knowledge with everyone and also learn during my tech journey.
+Debaditya considers himself as Life long - "Vidyārthī" which is a Sanskrit word (means "Student"). This website is Deb's tech journal on sharing knowledge with everyone and also learn during his tech journey.
 
 ## Areas of Interests
 * Architechture & System Design
@@ -17,6 +17,6 @@ I consider myself as Life long - "Vidyārthī" which is a Sanskrit word (means "
 
 Have questions or suggestions? Feel free to email - dev.techvidyarthi@gmail.com
 
-**Note** : I kept blog's UI very basic and focussed more on my journal. I am still learning UI 😊
+**Note** : Blog's UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊
 
 Thanks for reading!
