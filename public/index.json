@@ -28,15 +28,36 @@
 	"content": "About Debaditya   Debaditya considers himself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is Deb\u0026rsquo;s tech journal on sharing knowledge with everyone and also learn during his tech journey.\nPlease dont forget to check Hobby projects section.\nAreas of Interests  Architechture \u0026amp; System Design Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - dev.techvidyarthi@gmail.com\nNote : Blog\u0026rsquo;s UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊\nThanks for reading!\n"
 },
 {
-	"uri": "/categories/",
-	"title": "Categories",
+	"uri": "/tags/cap/",
+	"title": "cap",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
+	"uri": "/system-design/captheorem/",
+	"title": "CAP Theorem",
+	"tags": ["database", "cap"],
+	"description": "",
+	"content": "About CAP Theorem It is also known as Brewer\u0026rsquo;s theorem after computer scientist Eric Brewer.\nSimple terms It states no distributed data store can provide more than 2 out of 3 gurantees\n  Consistency : Every client views the same data. Every node in distributed cluster recieves same data.\n  Availability : During node failure time, every node must respond in a reasonable amount of time.\n  Partition tolerance : Gurantees partition tolerance can recover from partitions once the partition heals.\n    "
+},
+{
 	"uri": "/tags/database/",
 	"title": "database",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -72,13 +93,6 @@
 {
 	"uri": "/categories/system-design/",
 	"title": "system design",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""

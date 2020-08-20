@@ -6,10 +6,23 @@
     <description>Recent content in database on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 16 Aug 2020 15:47:23 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 21:22:43 -0400</lastBuildDate>
     
 	<atom:link href="/tags/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CAP Theorem</title>
+      <link>/system-design/captheorem/</link>
+      <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
+      
+      <guid>/system-design/captheorem/</guid>
+      <description>About CAP Theorem It is also known as Brewer&amp;rsquo;s theorem after computer scientist Eric Brewer.
+Simple terms It states no distributed data store can provide more than 2 out of 3 gurantees
+  Consistency : Every client views the same data. Every node in distributed cluster recieves same data.
+  Availability : During node failure time, every node must respond in a reasonable amount of time.
+  Partition tolerance : Gurantees partition tolerance can recover from partitions once the partition heals.</description>
+    </item>
     
     <item>
       <title>Database Sharding</title>
