@@ -8,6 +8,8 @@ slug = "about"
 
 Debaditya considers himself as Life long - "Vidyārthī" which is a Sanskrit word (means "Student"). This website is Deb's tech journal on sharing knowledge with everyone and also learn during his tech journey.
 
+Please dont forget to check Hobby projects section.
+
 ## Areas of Interests
 * Architechture & System Design
 * Big Data , Datalake , DeltaLake

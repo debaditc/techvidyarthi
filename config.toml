@@ -11,7 +11,7 @@ defaultContentLanguageInSubdir= true
 [params]
   description = "Debaditya Tech Journal"
   author = "Debaditya Chakravorty"
-  showVisitedLinks = true
+  showVisitedLinks = false
   disableBreadcrumb = false
   disableNextPrev = false
   themeVariant = "blue"
