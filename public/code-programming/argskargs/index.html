@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Python : Args vs Kwargs :: Debaditya Tech Journal</title>
+    <title>Python : *args vs **kwargs :: Debaditya Tech Journal</title>
 
     
-    <link href="/css/nucleus.css?1598070027" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1598070027" rel="stylesheet">
-    <link href="/css/hybrid.css?1598070027" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1598070027" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1598070027" rel="stylesheet">
-    <link href="/css/auto-complete.css?1598070027" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1598070027" rel="stylesheet">
-    <link href="/css/theme.css?1598070027" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1598070027" rel="stylesheet">
+    <link href="/css/nucleus.css?1598109039" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1598109039" rel="stylesheet">
+    <link href="/css/hybrid.css?1598109039" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1598109039" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1598109039" rel="stylesheet">
+    <link href="/css/auto-complete.css?1598109039" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1598109039" rel="stylesheet">
+    <link href="/css/theme.css?1598109039" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1598109039" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1598070027" rel="stylesheet">
+    <link href="/css/theme-blue.css?1598109039" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1598070027"></script>
+    <script src="/js/jquery-3.3.1.min.js?1598109039"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -95,14 +95,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1598070027"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1598070027"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1598109039"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1598109039"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1598070027"></script>
+<script type="text/javascript" src="/js/search.js?1598109039"></script>
 
     
   </div>
@@ -231,9 +231,9 @@
  
   
     
-      <li data-nav-id="/code-programming/argskargs/" title="Python : Args vs Kwargs" class="dd-item active">
+      <li data-nav-id="/code-programming/argskargs/" title="Python : *args vs **kwargs" class="dd-item active">
         <a href="/code-programming/argskargs/">
-        Python : Args vs Kwargs
+        Python : *args vs **kwargs
         
         </a>
     </li>
@@ -826,7 +826,7 @@
             
           
           
-            <a href='/'>About the Blog</a> > <a href='/code-programming/'>Code Programming</a> > Python : Args vs Kwargs
+            <a href='/'>About the Blog</a> > <a href='/code-programming/'>Code Programming</a> > Python : *args vs **kwargs
           
         
           
@@ -855,13 +855,41 @@
           
             <h1>
               
-              Python : Args vs Kwargs
+              Python : *args vs **kwargs
             </h1>
           
 
         
 
 
+<p>*<strong>args</strong></p>
+<p>It is used to pass variable number of arguments to a function</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printFunc</span>(arg1, <span style="color:#f92672">*</span>argv): 
+    <span style="color:#66d9ef">print</span> (<span style="color:#e6db74">&#34;Argument via argv1 :&#34;</span>, arg1) 
+    <span style="color:#66d9ef">for</span> arg <span style="color:#f92672">in</span> argv: 
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Argument via *argv :&#34;</span>, arg) 
+  
+printFunc(<span style="color:#e6db74">&#39;Hello&#39;</span>, <span style="color:#e6db74">&#39;this&#39;</span>, <span style="color:#e6db74">&#39;is&#39;</span>, <span style="color:#e6db74">&#39;Debaditya&#39;</span>) 
+
+<span style="color:#f92672">&gt;&gt;</span> First argument : Hello
+Argument <span style="color:#f92672">*</span>argv : this
+Argument <span style="color:#f92672">*</span>argv : <span style="color:#f92672">is</span>
+Argument <span style="color:#f92672">*</span>argv : Debaditya
+
+</code></pre></div><p>*<strong>kwargs</strong></p>
+<p>It is used to pass variable number of keyworded arguments to a function</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printFunc</span>(arg1, arg2, arg3): 
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;arg1:&#34;</span>, arg1 ) 
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;arg2:&#34;</span>, arg2) 
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;arg3:&#34;</span>, arg3) 
+      
+args <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;This&#34;</span>, <span style="color:#e6db74">&#34;is&#34;</span>, <span style="color:#e6db74">&#34;Debaditya&#34;</span>) 
+printFunc(<span style="color:#f92672">*</span>args) 
+  
+kwargs <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;arg1&#34;</span> : <span style="color:#e6db74">&#34;This&#34;</span>, <span style="color:#e6db74">&#34;arg2&#34;</span> : <span style="color:#e6db74">&#34;is&#34;</span>, <span style="color:#e6db74">&#34;arg3&#34;</span> : <span style="color:#e6db74">&#34;Debaditya&#34;</span>} 
+printFunc(<span style="color:#f92672">**</span>kwargs)
+
+</code></pre></div><p>More contents and details are here <a href="https://www.geeksforgeeks.org/args-kwargs-python/">Geeksforgeeks</a></p>
 
 
 <footer class="footline">
@@ -1388,19 +1416,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1598070027"></script>
-    <script src="/js/perfect-scrollbar.min.js?1598070027"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1598070027"></script>
-    <script src="/js/jquery.sticky.js?1598070027"></script>
-    <script src="/js/featherlight.min.js?1598070027"></script>
-    <script src="/js/highlight.pack.js?1598070027"></script>
+    <script src="/js/clipboard.min.js?1598109039"></script>
+    <script src="/js/perfect-scrollbar.min.js?1598109039"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1598109039"></script>
+    <script src="/js/jquery.sticky.js?1598109039"></script>
+    <script src="/js/featherlight.min.js?1598109039"></script>
+    <script src="/js/highlight.pack.js?1598109039"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1598070027"></script>
-    <script src="/js/learn.js?1598070027"></script>
-    <script src="/js/hugo-learn.js?1598070027"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1598109039"></script>
+    <script src="/js/learn.js?1598109039"></script>
+    <script src="/js/hugo-learn.js?1598109039"></script>
 
-    <link href="/mermaid/mermaid.css?1598070027" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1598070027"></script>
+    <link href="/mermaid/mermaid.css?1598109039" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1598109039"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

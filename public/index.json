@@ -64,10 +64,10 @@
 },
 {
 	"uri": "/code-programming/argskargs/",
-	"title": "Python : Args vs Kwargs",
+	"title": "Python : *args vs **kwargs",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "*args\nIt is used to pass variable number of arguments to a function\ndef printFunc(arg1, *argv): print (\u0026#34;Argument via argv1 :\u0026#34;, arg1) for arg in argv: print(\u0026#34;Argument via *argv :\u0026#34;, arg) printFunc(\u0026#39;Hello\u0026#39;, \u0026#39;this\u0026#39;, \u0026#39;is\u0026#39;, \u0026#39;Debaditya\u0026#39;) \u0026gt;\u0026gt; First argument : Hello Argument *argv : this Argument *argv : is Argument *argv : Debaditya *kwargs\nIt is used to pass variable number of keyworded arguments to a function\ndef printFunc(arg1, arg2, arg3): print(\u0026#34;arg1:\u0026#34;, arg1 ) print(\u0026#34;arg2:\u0026#34;, arg2) print(\u0026#34;arg3:\u0026#34;, arg3) args = (\u0026#34;This\u0026#34;, \u0026#34;is\u0026#34;, \u0026#34;Debaditya\u0026#34;) printFunc(*args) kwargs = {\u0026#34;arg1\u0026#34; : \u0026#34;This\u0026#34;, \u0026#34;arg2\u0026#34; : \u0026#34;is\u0026#34;, \u0026#34;arg3\u0026#34; : \u0026#34;Debaditya\u0026#34;} printFunc(**kwargs) More contents and details are here Geeksforgeeks\n"
 },
 {
 	"uri": "/tags/dictionary/",
