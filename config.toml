@@ -8,6 +8,7 @@ themesdir = "/themes/"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
+
 [params]
   description = "Debaditya Tech Journal"
   author = "Debaditya Chakravorty"
@@ -15,6 +16,8 @@ defaultContentLanguageInSubdir= true
   disableBreadcrumb = false
   disableNextPrev = false
   themeVariant = "blue"
+
+
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

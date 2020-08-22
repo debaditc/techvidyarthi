@@ -2,7 +2,7 @@
 title: "Time & Space Complexity"
 date: 2020-07-24T00:03:26-04:00
 tags: ["time complexity","space complexity","programming"]
-
+weight: 1
 draft: false
 
 ---
@@ -33,10 +33,10 @@ return B;
 Each call adds a level to the stack.
 
 - > sum(4)
-   - > sum(3)
-     - >  sum(2) 
-       - > sum(l)
-         - > sum(0)
+  - > sum(3)
+    - > sum(2) 
+      - > sum(l)
+        - > sum(0)
 
 Each of these calls is added to the call stack and takes up actual memory. 
 

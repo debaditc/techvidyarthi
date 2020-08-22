@@ -12,16 +12,6 @@
     
     
     <item>
-      <title>Demystify Lambda and Kappa Architecture</title>
-      <link>/system-design/lamkapp/</link>
-      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
-      
-      <guid>/system-design/lamkapp/</guid>
-      <description>Nutshell Lambda vs Kappa Architecture   Lambda Architecture   Kappa Architecture   Picture credits are to Talend.
-Please visit Talend site here for more details.</description>
-    </item>
-    
-    <item>
       <title>OSI Model Layer</title>
       <link>/system-design/osilayer/</link>
       <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
@@ -29,6 +19,16 @@ Please visit Talend site here for more details.</description>
       <guid>/system-design/osilayer/</guid>
       <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
   Comparing OSI Model Layer with TCP/IP model   </description>
+    </item>
+    
+    <item>
+      <title>Demystify Lambda and Kappa Architecture</title>
+      <link>/system-design/lamkapp/</link>
+      <pubDate>Mon, 27 Jul 2020 21:15:14 -0400</pubDate>
+      
+      <guid>/system-design/lamkapp/</guid>
+      <description>Nutshell Lambda vs Kappa Architecture   Lambda Architecture   Kappa Architecture   Picture credits are to Talend.
+Please visit Talend site here for more details.</description>
     </item>
     
   </channel>

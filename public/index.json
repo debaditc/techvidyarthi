@@ -7,11 +7,46 @@
 	"content": "Code Programming Post   Journey on Code and Programming\n"
 },
 {
+	"uri": "/code-programming/tscomplexity/",
+	"title": "Time &amp; Space Complexity",
+	"tags": ["time complexity", "space complexity", "programming"],
+	"description": "",
+	"content": "Time Complexity Big-O , Big-Omega , Big-Theta\n Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm\nIn recursive calls counts,the code would take 0 (n) time and O( n) space.\nint sum(int n) { if (n \u0026lt;= a) { return B; } return n + sum(n-1); } Each call adds a level to the stack.\n   sum(4)\n    sum(3)\n    sum(2)\n    sum(l)\n    sum(0)\n           Each of these calls is added to the call stack and takes up actual memory.\nA few tips   Drop the non-dominant terms   1. O(W + N) becomes O(W) 2. O(N + log N) becomes O(N) 3. 0(5*2N + 1000N^100 ) becomes O(2N)   Multi-part algorithms - Add vs Multiply       Amortized time  An ArrayList or a dynamically resizing array, allows the benefits of array + resizing Array has finite size while arrayList have flixbility in size.    The array could be full. Suppose an array contains N elements, then inserting a new element will take 0 (N) time. We need to create a new array of size 2N and then copy N elements over. This insertion will take 0 (N) time. This insertion wont happen time and again , however it(insertion) would take O(1) time. This is the time where we say time is \u0026ldquo;Amortized\u0026rdquo;\n  Log N Runtimes   Lets take example of Binary search. We first compare x to the midpoint of the array.\n If x == middle, then we return 1 If x \u0026lt; middle, then we search on the left side of the array. If x \u0026gt; middle, then we search on the right side ofthe array.  In this way , if we observe - we are stepping down n/2 elements , then n/4 and then n/8 ,etc.\n    This is how we reach to O(log N) time complexity. It is nicely explained in CTCI book - Please have the book - it has really good content.\n  Recursive functions   Example of Fibonacci series using recursive function\nint f(int n) { if (n \u0026lt;= 1) { return 1; } return f(n - 1) + f(n - 1); Lets consider how the calls of above code in tree stack\n  For each level and node , lets compute the number of calls\n  Note : O( branches^depth ) for most of recursive functions.\nThis is the reason why Recursive calls are very expensive.\nPic credit : CTCI (Big O chapter)\nExamples from CTCI Book Example 1   Time Complexity = O(N)\nExample 2   Time Complexity = O(N^2)\nExample 3   Time Complexity = O(N^2)\nExample 4   Time Complexity = O(ab)\nNote : There are 2 different arrays (a and b) in the nested loop\n"
+},
+{
+	"uri": "/system-design/osilayer/",
+	"title": "OSI Model Layer",
+	"tags": ["system design", "security", "architecture"],
+	"description": "",
+	"content": "About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as \u0026ldquo;PDN-T-SPA\u0026rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.\n  Comparing OSI Model Layer with TCP/IP model   "
+},
+{
 	"uri": "/system-design/",
 	"title": "System Design",
 	"tags": [],
 	"description": "",
 	"content": "System Design Posts   Journey on System Design and Architechture\n"
+},
+{
+	"uri": "/code-programming/srucstream/",
+	"title": "Spark Structured Streaming",
+	"tags": ["spark", "hadoop", "streaming"],
+	"description": "",
+	"content": "Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event\u0026rsquo;s data is utilized for computation else the event\u0026rsquo;s data is dropped for that time interval.\nUnsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets. Limit and take the first N rows are not supported on streaming Datasets. Distinct operations on streaming Datasets Sorting operations are supported on streaming Datasets only after an aggregation and in Complete Output Mode. Few types of outer joins on streaming Datasets are not supported. List is here  Details and credits are here\nSample code on Stuctured Spark Streaming (Apache site) spark = SparkSession. ... # Read text from socket socketDF = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() socketDF.isStreaming() # Returns True for DataFrames that have streaming sources socketDF.printSchema() # Read all the csv files written atomically in a directory userSchema = StructType().add(\u0026#34;name\u0026#34;, \u0026#34;string\u0026#34;).add(\u0026#34;age\u0026#34;, \u0026#34;integer\u0026#34;) csvDF = spark \\ .readStream \\ .option(\u0026#34;sep\u0026#34;, \u0026#34;;\u0026#34;) \\ .schema(userSchema) \\ .csv(\u0026#34;/path/to/directory\u0026#34;) # Equivalent to format(\u0026#34;csv\u0026#34;).load(\u0026#34;/path/to/directory\u0026#34;) "
+},
+{
+	"uri": "/code-programming/sparkmemory/",
+	"title": "Brief on Spark Memory and Optimizer ",
+	"tags": ["spark", "hadoop"],
+	"description": "",
+	"content": "Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features\n Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.\n  Designed for 2 main pruposes :\n Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.g. adding data source specific rules, support for new data types, etc)    More details are here\nMemory For better memory management - Spark included Tungsten\nIt has 3 basic features\n Memory management and binary processing : It removes the overhead of JVM and Garbage collection Cache aware computaion : algorithms and data structures to exploit memory hierarchy Code generation : using code generation to exploit modern compilers and CPUs  More details are here\nKyro-Serializer Kryo is a significantly optimized serializer, and performs better than the standard java serializer. It helps in shuffles (wide transformatiions) where mostly serialization is utilized.\nIt can be setup as\nconf.set( \u0026#34;spark.serializer\u0026#34;, \u0026#34;org.apache.spark.serializer.KryoSerializer\u0026#34; ) "
+},
+{
+	"uri": "/code-programming/sparklearn/",
+	"title": "Spark definition and overall execution",
+	"tags": ["spark", "hadoop"],
+	"description": "",
+	"content": "Install Spark For Windows : Please follow this site\nBasics of Spark Flow Run Spark application -\u0026gt; Driver program starts -\u0026gt; Main function starts -\u0026gt; SparkContext gets initiated -\u0026gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won\u0026rsquo;t work.\nSerialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory.\n Serialization : Java object -\u0026gt; Byte stream Deserialization : Byte stream -\u0026gt; Java object  We need serialization because the hard disk or network infrastructure are hardware component and we cannot send java objects because it understands just bytes :)\nExecution of Spark Job   Image Credits to Data Flair\nSpark Stages 2 types of Spark Stages\n  ShuffleMapStage : Intermediate stage in physical excution of DAG. In Adaptive Query Planning , it can be considered as final stage as well which can save output map files.\n  ResultStage : Final stage in Spark. It helps in computation of result of an action.\n  Lazy Execution Lazy evaluation in Spark means execution of any task wont start start until an action is triggered. Spark has 2 operations\n Transformation Action  Transformation is lazy which means operation wont be performed until an action is triggered.\nMajor Advantage of Lazy execution\n Reduces number of queries - Increase optimization Increases speed of the application - less trips between cluster and driver    Image Credits to Data Flair\nRDD vs Data frame vs Data Set   *Type safe\n RDDs and Datasets are type safe means that compiler know the Columns and it\u0026rsquo;s data type of the Column In Dataframe, it will always return the result as an Array of Rows not as Long, String data type  Broadcast and Accumulators Spark provides Shared variables which are broadcast and accumulator variables.\nBroadcast variables It allows users to keep a copy of variable (which can consist of large dataset) cached in each machine which can be utilized during task execution. It saves the communication cost and thus increases speed of application.\nAccumulators They can be used to implement counters (as in MapReduce) or sums. Its only “added” to through an associative and commutative operation\nCache in Spark Cache is an important factor in Spark application. Cache the dataframe whenever user feels the data is going to be used several times. It helps to improve the performance of application and also create checkpoints in application\nTypes of Storage level in Spark\n DISK_ONLY: Persist data on disk only in serialized format. MEMORY_ONLY: Persist data in memory only in deserialized format (DEFAULT) MEMORY_AND_DISK: Persist data in memory and if enough memory is not available evicted blocks will be stored on disk. OFF_HEAP : Persist data in off-heap memory.  Note - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.\nSpark Narrow vs Wide dependency   "
 },
 {
 	"uri": "/ai-ml/",
@@ -25,7 +60,63 @@
 	"title": "About the Blog",
 	"tags": [],
 	"description": "",
-	"content": "About Debaditya   Debaditya considers himself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is Deb\u0026rsquo;s tech journal on sharing knowledge with everyone and also learn during his tech journey.\nPlease dont forget to check Hobby projects section.\nAreas of Interests  Architechture \u0026amp; System Design Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - dev.techvidyarthi@gmail.com\nNote : Blog\u0026rsquo;s UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊\nThanks for reading!\n"
+	"content": "About Debaditya   Debaditya considers himself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is Deb\u0026rsquo;s tech journal on sharing knowledge with everyone and also learn during his tech journey.\nPlease dont forget to check Hobby projects section.\nAreas of Interests  Architechture \u0026amp; System Design Programming \u0026amp; best practices Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial Intelligence \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - debaditya.chakravorty@gmail.com\nNote : Blog\u0026rsquo;s UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊\nThanks for reading!\n"
+},
+{
+	"uri": "/code-programming/argskargs/",
+	"title": "Python : Args vs Kwargs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/dictionary/",
+	"title": "dictionary",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/list/",
+	"title": "list",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/python/",
+	"title": "python",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/code-programming/listtpledict/",
+	"title": "Python  List vs Tuple vs Dictionary",
+	"tags": ["python", "list", "tuple", "dictionary"],
+	"description": "",
+	"content": "List vs Tuples   Basic functions on list # Input list list1= [1,2,\u0026#34;python\u0026#34;,\u0026#34;scala\u0026#34;] # index 2 is included but index 3 is excluded print(\u0026#34;List - \u0026#34; ,list1[1:3]) \u0026gt;\u0026gt; List - [2, \u0026#39;python\u0026#39;] # Index from backwards print(\u0026#34;List - \u0026#34; ,list1[-1]) \u0026gt;\u0026gt; List - scala # Multiply on string = string  print(\u0026#34;List - \u0026#34; ,list1[2]*4) \u0026gt;\u0026gt; List - pythonpythonpythonpython # Check data in list print(\u0026#34;psython\u0026#34; in list1) \u0026gt;\u0026gt; False # iterate list for x in list1: print(x) \u0026gt;\u0026gt;1 2 python scala # length of list print(\u0026#34;Length of list :\u0026#34; , len(list2)) \u0026gt;\u0026gt; Length of list : 4 More functions can be learned from Tutorial point link\nDictionary  Important data type in Python Key:Value pair , Values are mutable but Keys are immutable (string , number , tuple) Represented by {}  Basic functions on Dictionary # Creating an empty Dictionary  Dict = {} # Creating a Dictionary  # with dict() method  Dict = dict({1: \u0026#39;Debaditya\u0026#39;, 2: \u0026#39;Ronaldo\u0026#39;}) print(\u0026#34;\\nDictionary with the use of dict(): \u0026#34;) print(Dict) # with each item as a Pair  Dict = dict([(1, \u0026#39;Debaditya\u0026#39;), (2, \u0026#39;Ronaldo\u0026#39;)]) print(\u0026#34;\\nDictionary with each item as a pair: \u0026#34;) print(Dict) # find value from Dictionary dictionary = {\u0026#39;Debaditya\u0026#39;: 16, \u0026#39;Ronaldo\u0026#39;: 19} search_value = 16 for name, value in dictionary.items(): if age == search_value: print(name) # find key from Dictionary test_dict = {\u0026#39;Debaditya\u0026#39; : 1, \u0026#39;Messi\u0026#39; : 2} search_key = \u0026#39;Messi\u0026#39; # Using list() + keys() + index()  result = list(test_dict.keys()).index(search_key) print(str(result)) Credits to Tutoral point - More dictionary commands are here\nA few example # Problem Statement 1 # Input : {“Gfg” : [4, 7, 5], “Best” : [8, 6, 7], “is” : [9, 3, 8]}, K = 2 # Output : [5, 7, 8] # Explanation : The 2nd index elements are 5, 7 and 8 respectively in different keys. list1 = [] ip = {\u0026#34;Gfg\u0026#34; : [4, 7, 5], \u0026#34;Best\u0026#34; : [8, 6, 7], \u0026#34;is\u0026#34; : [9, 3, 8]} for name,value in ip.items(): list1.append(value[2]) print(\u0026#34;List - \u0026#34;,list1) # Counter command is used to get frequency of values in dictionary # Merge 2 dictionary def Merge(dict1, dict2): res = {**dict1, **dict2} return res # Driver code  dict1 = {\u0026#39;a\u0026#39;: 1, \u0026#39;b\u0026#39;: 2} dict2 = {\u0026#39;d\u0026#39;: 3, \u0026#39;c\u0026#39;: 4} dict3 = Merge(dict1, dict2) print(dict3) \u0026gt;\u0026gt; {\u0026#39;b\u0026#39;: 2, \u0026#39;a\u0026#39;: 1, \u0026#39;c\u0026#39;: 4, \u0026#39;d\u0026#39;: 3} Notes  Python 2.7 : int and long int Python 3 there is only one type : int  "
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/tuple/",
+	"title": "tuple",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/availability/",
+	"title": "availability",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "/tags/cap/",
@@ -36,10 +127,17 @@
 },
 {
 	"uri": "/system-design/captheorem/",
-	"title": "CAP Theorem",
-	"tags": ["database", "cap"],
+	"title": "CAP Theorem in Nutshell",
+	"tags": ["database", "cap", "partition", "consistency", "availability"],
 	"description": "",
-	"content": "About CAP Theorem It is also known as Brewer\u0026rsquo;s theorem after computer scientist Eric Brewer.\nSimple terms It states no distributed data store can provide more than 2 out of 3 gurantees\n  Consistency : Every client views the same data. Every node in distributed cluster recieves same data.\n  Availability : During node failure time, every node must respond in a reasonable amount of time.\n  Partition tolerance : Gurantees partition tolerance can recover from partitions once the partition heals.\n    "
+	"content": "About CAP Theorem It is also known as Brewer\u0026rsquo;s theorem after computer scientist Eric Brewer\nSimple terms It states no distributed data store can provide more than 2 out of 3 gurantees\n  Consistency : Every client views the same data. Every node in distributed cluster recieves same data.\n  Availability : During node failure time, every node must respond in a reasonable amount of time.\n  Partition tolerance : Gurantees partition tolerance can recover from partitions once the partition heals.\n    Image credits : here\n"
+},
+{
+	"uri": "/tags/consistency/",
+	"title": "consistency",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "/tags/database/",
@@ -49,8 +147,8 @@
 	"content": ""
 },
 {
-	"uri": "/tags/",
-	"title": "Tags",
+	"uri": "/tags/partition/",
+	"title": "partition",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -112,13 +210,6 @@
 	"content": ""
 },
 {
-	"uri": "/code-programming/srucstream/",
-	"title": "Spark Structured Streaming",
-	"tags": ["spark", "hadoop", "streaming"],
-	"description": "",
-	"content": "Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event\u0026rsquo;s data is utilized for computation else the event\u0026rsquo;s data is dropped for that time interval.\nUnsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets. Limit and take the first N rows are not supported on streaming Datasets. Distinct operations on streaming Datasets Sorting operations are supported on streaming Datasets only after an aggregation and in Complete Output Mode. Few types of outer joins on streaming Datasets are not supported. List is here  Details and credits are here\nSample code on Stuctured Spark Streaming (Apache site) spark = SparkSession. ... # Read text from socket socketDF = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() socketDF.isStreaming() # Returns True for DataFrames that have streaming sources socketDF.printSchema() # Read all the csv files written atomically in a directory userSchema = StructType().add(\u0026#34;name\u0026#34;, \u0026#34;string\u0026#34;).add(\u0026#34;age\u0026#34;, \u0026#34;integer\u0026#34;) csvDF = spark \\ .readStream \\ .option(\u0026#34;sep\u0026#34;, \u0026#34;;\u0026#34;) \\ .schema(userSchema) \\ .csv(\u0026#34;/path/to/directory\u0026#34;) # Equivalent to format(\u0026#34;csv\u0026#34;).load(\u0026#34;/path/to/directory\u0026#34;) "
-},
-{
 	"uri": "/tags/streaming/",
 	"title": "streaming",
 	"tags": [],
@@ -133,13 +224,6 @@
 	"content": "Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here\nWindow Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y: x - y, 30, 10) Checkpointing 2 types of checkpoints in Spark streaming\n  Metadata checkpointing : Saving information defining the streaming computation to fault-tolerant storage like HDFS. Required to recover from failure of the node running the driver of the streaming application Metadata checkpointing -\u0026gt; recovery from driver failures\n  Data checkpointing : Saving generated RDDs to reliable storage like HDFS. Necessary during stateful transformation where previous batch information (RDD) is important. Data checkpointing -\u0026gt; Necessary for Stateful transformation scenario\n  Example Spark streaming code (from Apache site) A simple code to read words in stream and count number of words.\nSave the code for word count and run producer with netcat command\nfrom pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \\ .builder \\ .appName(\u0026#34;Word Count\u0026#34;) \\ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() # Split the lines into words words = lines.select( explode( split(lines.value, \u0026#34; \u0026#34;) ).alias(\u0026#34;word\u0026#34;) ) # Generate running word count wordCounts = words.groupBy(\u0026#34;word\u0026#34;).count() # Start running the query that prints the running counts to the console query = wordCounts \\ .writeStream \\ .outputMode(\u0026#34;complete\u0026#34;) \\ .format(\u0026#34;console\u0026#34;) \\ .start() query.awaitTermination() For Unix users\nnc -lk 9999 For Windows , install nmap from here\nncat.exe -lk 9999 Open another CMD (in Windows) or Terminal (in Linux/Mac) and the run the code to see the result\nspark-submit sparkstream.py localhost 9999 Pic / documentation credits : Apache Spark\n"
 },
 {
-	"uri": "/code-programming/sparkmemory/",
-	"title": "Brief on Spark Memory and Optimizer ",
-	"tags": ["spark", "hadoop"],
-	"description": "",
-	"content": "Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features\n Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.\n  Designed for 2 main pruposes :\n Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.g. adding data source specific rules, support for new data types, etc)    More details are here\nMemory For better memory management - Spark included Tungsten\nIt has 3 basic features\n Memory management and binary processing : It removes the overhead of JVM and Garbage collection Cache aware computaion : algorithms and data structures to exploit memory hierarchy Code generation : using code generation to exploit modern compilers and CPUs  More details are here\nKyro-Serializer Kryo is a significantly optimized serializer, and performs better than the standard java serializer. It helps in shuffles (wide transformatiions) where mostly serialization is utilized.\nIt can be setup as\nconf.set( \u0026#34;spark.serializer\u0026#34;, \u0026#34;org.apache.spark.serializer.KryoSerializer\u0026#34; ) "
-},
-{
 	"uri": "/system-design/kafka/",
 	"title": "About Kafka",
 	"tags": ["system design", "real-time", "streaming"],
@@ -152,13 +236,6 @@
 	"tags": [],
 	"description": "",
 	"content": ""
-},
-{
-	"uri": "/code-programming/sparklearn/",
-	"title": "Spark definition and overall execution",
-	"tags": ["spark", "hadoop"],
-	"description": "",
-	"content": "Install Spark For Windows : Please follow this site\nBasics of Spark Flow Run Spark application -\u0026gt; Driver program starts -\u0026gt; Main function starts -\u0026gt; SparkContext gets initiated -\u0026gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won\u0026rsquo;t work.\nSerialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory.\n Serialization : Java object -\u0026gt; Byte stream Deserialization : Byte stream -\u0026gt; Java object  We need serialization because the hard disk or network infrastructure are hardware component and we cannot send java objects because it understands just bytes :)\nExecution of Spark Job   Image Credits to Data Flair\nSpark Stages 2 types of Spark Stages\n  ShuffleMapStage : Intermediate stage in physical excution of DAG. In Adaptive Query Planning , it can be considered as final stage as well which can save output map files.\n  ResultStage : Final stage in Spark. It helps in computation of result of an action.\n  Lazy Execution Lazy evaluation in Spark means execution of any task wont start start until an action is triggered. Spark has 2 operations\n Transformation Action  Transformation is lazy which means operation wont be performed until an action is triggered.\nMajor Advantage of Lazy execution\n Reduces number of queries - Increase optimization Increases speed of the application - less trips between cluster and driver    Image Credits to Data Flair\nRDD vs Data frame vs Data Set   *Type safe\n RDDs and Datasets are type safe means that compiler know the Columns and it\u0026rsquo;s data type of the Column In Dataframe, it will always return the result as an Array of Rows not as Long, String data type  Broadcast and Accumulators Spark provides Shared variables which are broadcast and accumulator variables.\nBroadcast variables It allows users to keep a copy of variable (which can consist of large dataset) cached in each machine which can be utilized during task execution. It saves the communication cost and thus increases speed of application.\nAccumulators They can be used to implement counters (as in MapReduce) or sums. Its only “added” to through an associative and commutative operation\nCache in Spark Cache is an important factor in Spark application. Cache the dataframe whenever user feels the data is going to be used several times. It helps to improve the performance of application and also create checkpoints in application\nTypes of Storage level in Spark\n DISK_ONLY: Persist data on disk only in serialized format. MEMORY_ONLY: Persist data in memory only in deserialized format (DEFAULT) MEMORY_AND_DISK: Persist data in memory and if enough memory is not available evicted blocks will be stored on disk. OFF_HEAP : Persist data in off-heap memory.  Note - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.\nSpark Narrow vs Wide dependency   "
 },
 {
 	"uri": "/tags/asynchronous/",
@@ -194,13 +271,6 @@
 	"tags": ["system design", "consistency"],
 	"description": "",
 	"content": "Eventual Consistent  Mainly used in NoSQL databases (Solr, Cassandra , MongoDb) Used for analytics , time series analysis , etc Low latency - Faster writes    Please follow Werner Voggel\u0026rsquo;s blog - here\nStrongly Consistent  Mainly used in RDBMS like Oracle , MySQL , PostgreSQL Primarily used in banking and payment systems High latency - Slower writes    Please read about F1 database by Google here Photo Credits : Google Blog\n"
-},
-{
-	"uri": "/tags/consistency/",
-	"title": "consistency",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "/tags/architecture/",
@@ -285,13 +355,6 @@
 	"tags": [],
 	"description": "",
 	"content": ""
-},
-{
-	"uri": "/code-programming/tscomplexity/",
-	"title": "Time &amp; Space Complexity",
-	"tags": ["time complexity", "space complexity", "programming"],
-	"description": "",
-	"content": "Time Complexity Big-O , Big-Omega , Big-Theta\n Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm\nIn recursive calls counts,the code would take 0 (n) time and O( n) space.\nint sum(int n) { if (n \u0026lt;= a) { return B; } return n + sum(n-1); } Each call adds a level to the stack.\n   sum(4)\n    sum(3)\n    sum(2)\n    sum(l)\n    sum(0)\n           Each of these calls is added to the call stack and takes up actual memory.\nA few tips   Drop the non-dominant terms   1. O(W + N) becomes O(W) 2. O(N + log N) becomes O(N) 3. 0(5*2N + 1000N^100 ) becomes O(2N)   Multi-part algorithms - Add vs Multiply       Amortized time  An ArrayList or a dynamically resizing array, allows the benefits of array + resizing Array has finite size while arrayList have flixbility in size.    The array could be full. Suppose an array contains N elements, then inserting a new element will take 0 (N) time. We need to create a new array of size 2N and then copy N elements over. This insertion will take 0 (N) time. This insertion wont happen time and again , however it(insertion) would take O(1) time. This is the time where we say time is \u0026ldquo;Amortized\u0026rdquo;\n  Log N Runtimes   Lets take example of Binary search. We first compare x to the midpoint of the array.\n If x == middle, then we return 1 If x \u0026lt; middle, then we search on the left side of the array. If x \u0026gt; middle, then we search on the right side ofthe array.  In this way , if we observe - we are stepping down n/2 elements , then n/4 and then n/8 ,etc.\n    This is how we reach to O(log N) time complexity. It is nicely explained in CTCI book - Please have the book - it has really good content.\n  Recursive functions   Example of Fibonacci series using recursive function\nint f(int n) { if (n \u0026lt;= 1) { return 1; } return f(n - 1) + f(n - 1); Lets consider how the calls of above code in tree stack\n  For each level and node , lets compute the number of calls\n  Note : O( branches^depth ) for most of recursive functions.\nThis is the reason why Recursive calls are very expensive.\nPic credit : CTCI (Big O chapter)\nExamples from CTCI Book Example 1   Time Complexity = O(N)\nExample 2   Time Complexity = O(N^2)\nExample 3   Time Complexity = O(N^2)\nExample 4   Time Complexity = O(ab)\nNote : There are 2 different arrays (a and b) in the nested loop\n"
 },
 {
 	"uri": "/tags/time-complexity/",
@@ -397,13 +460,6 @@
 	"tags": ["system design", "REST", "SOAP"],
 	"description": "",
 	"content": "REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.\nREST vs SOAP   When to use REST \u0026amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site. Caching – Use-case where we need to cache a lot of requests , then REST is way to go. Use-case where it demands usage of similar requests. Ease of coding – Coding + Implementation REST Services is far easier than SOAP.  SOAP Usage  Asynchronous processing and subsequent invocation – if there is a requirement that the client needs a guaranteed level of reliability and security Strict format – if both the client and server have an agreement on the exchange format then SOAP 1.2 gives the rigid specifications for this type of interaction. Stateful operations – Any Use-case which needs to store the state. This means SOAP is suitable for any online purchase site. Saving the state is very critical for any purchase site.  "
-},
-{
-	"uri": "/system-design/osilayer/",
-	"title": "OSI Model Layer",
-	"tags": ["system design", "security", "architecture"],
-	"description": "",
-	"content": "About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as \u0026ldquo;PDN-T-SPA\u0026rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.\n  Comparing OSI Model Layer with TCP/IP model   "
 },
 {
 	"uri": "/tags/rest/",

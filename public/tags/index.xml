@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 19 Aug 2020 21:22:43 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 21:26:07 -0400</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dictionary</title>
+      <link>/tags/dictionary/</link>
+      <pubDate>Fri, 21 Aug 2020 21:26:07 -0400</pubDate>
+      
+      <guid>/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>list</title>
+      <link>/tags/list/</link>
+      <pubDate>Fri, 21 Aug 2020 21:26:07 -0400</pubDate>
+      
+      <guid>/tags/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Fri, 21 Aug 2020 21:26:07 -0400</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tuple</title>
+      <link>/tags/tuple/</link>
+      <pubDate>Fri, 21 Aug 2020 21:26:07 -0400</pubDate>
+      
+      <guid>/tags/tuple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>availability</title>
+      <link>/tags/availability/</link>
+      <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
+      
+      <guid>/tags/availability/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cap</title>
@@ -21,11 +66,29 @@
     </item>
     
     <item>
+      <title>consistency</title>
+      <link>/tags/consistency/</link>
+      <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
+      
+      <guid>/tags/consistency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>database</title>
       <link>/tags/database/</link>
       <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
       
       <guid>/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>partition</title>
+      <link>/tags/partition/</link>
+      <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
+      
+      <guid>/tags/partition/</guid>
       <description></description>
     </item>
     
@@ -98,15 +161,6 @@
       <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
       
       <guid>/tags/synchronous/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>consistency</title>
-      <link>/tags/consistency/</link>
-      <pubDate>Tue, 28 Jul 2020 23:15:05 -0400</pubDate>
-      
-      <guid>/tags/consistency/</guid>
       <description></description>
     </item>
     

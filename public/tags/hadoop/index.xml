@@ -22,16 +22,6 @@ Unsupported Operations in Structured Spark streaming  Multiple streaming aggrega
     </item>
     
     <item>
-      <title>Basic code : Spark streaming</title>
-      <link>/code-programming/sparkstream/</link>
-      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
-      
-      <guid>/code-programming/sparkstream/</guid>
-      <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
-Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
-    </item>
-    
-    <item>
       <title>Brief on Spark Memory and Optimizer </title>
       <link>/code-programming/sparkmemory/</link>
       <pubDate>Sat, 08 Aug 2020 20:28:12 -0400</pubDate>
@@ -52,6 +42,16 @@ Window Operations Spark provides window operation which helps to perform transfo
       <description>Install Spark For Windows : Please follow this site
 Basics of Spark Flow Run Spark application -&amp;gt; Driver program starts -&amp;gt; Main function starts -&amp;gt; SparkContext gets initiated -&amp;gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&amp;rsquo;t work.
 Serialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream.</description>
+    </item>
+    
+    <item>
+      <title>Basic code : Spark streaming</title>
+      <link>/code-programming/sparkstream/</link>
+      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
+      
+      <guid>/code-programming/sparkstream/</guid>
+      <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
+Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
     </item>
     
   </channel>

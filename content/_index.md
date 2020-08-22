@@ -12,12 +12,13 @@ Please dont forget to check Hobby projects section.
 
 ## Areas of Interests
 * Architechture & System Design
+* Programming & best practices
 * Big Data , Datalake , DeltaLake
 * Cloud and distributed computing
-* Artificial & Machine learning
+* Artificial Intelligence & Machine learning
 * Algorithms & Code complexities
 
-Have questions or suggestions? Feel free to email - dev.techvidyarthi@gmail.com
+Have questions or suggestions? Feel free to email - debaditya.chakravorty@gmail.com
 
 **Note** : Blog's UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊
 

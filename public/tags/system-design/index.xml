@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>OSI Model Layer</title>
+      <link>/system-design/osilayer/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>/system-design/osilayer/</guid>
+      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
+  Comparing OSI Model Layer with TCP/IP model   </description>
+    </item>
+    
+    <item>
       <title>Database Sharding</title>
       <link>/system-design/installation/</link>
       <pubDate>Sun, 16 Aug 2020 15:47:23 -0400</pubDate>
@@ -137,16 +147,6 @@ Services Provided by Zookeeper (NCCLLH - thats How I remember)   Naming service 
       <guid>/system-design/restsoap/</guid>
       <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
 REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
-    </item>
-    
-    <item>
-      <title>OSI Model Layer</title>
-      <link>/system-design/osilayer/</link>
-      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
-      
-      <guid>/system-design/osilayer/</guid>
-      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
-  Comparing OSI Model Layer with TCP/IP model   </description>
     </item>
     
   </channel>

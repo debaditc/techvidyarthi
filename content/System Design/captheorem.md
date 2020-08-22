@@ -1,12 +1,13 @@
 ---
 title: "CAP Theorem in Nutshell"
 date: 2020-08-19T21:22:43-04:00
-tags: ["database","cap"]
+tags: ["database","cap","partition","consistency","availability"]
 draft: false
 ---
 
 ### About CAP Theorem
 It is also known as Brewer's theorem after computer scientist Eric Brewer
+
 
 ### Simple terms
 It states no distributed data store can provide more than 2 out of 3 gurantees
@@ -19,4 +20,4 @@ It states no distributed data store can provide more than 2 out of 3 gurantees
 
 {{< figure src="/images/cap.png" >}}
 
-Image credits [here](https://www.researchgate.net/figure/Database-Systems-according-to-the-CAP-Theorem_fig1_334554423)
+**Image credits :** [here](https://www.researchgate.net/figure/Database-Systems-according-to-the-CAP-Theorem_fig1_334554423)

@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>CAP Theorem</title>
+      <title>CAP Theorem in Nutshell</title>
       <link>/system-design/captheorem/</link>
       <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
       
       <guid>/system-design/captheorem/</guid>
-      <description>About CAP Theorem It is also known as Brewer&amp;rsquo;s theorem after computer scientist Eric Brewer.
+      <description>About CAP Theorem It is also known as Brewer&amp;rsquo;s theorem after computer scientist Eric Brewer
 Simple terms It states no distributed data store can provide more than 2 out of 3 gurantees
   Consistency : Every client views the same data. Every node in distributed cluster recieves same data.
   Availability : During node failure time, every node must respond in a reasonable amount of time.

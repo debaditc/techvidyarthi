@@ -6,10 +6,21 @@
     <description>Recent content in Code Programming on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 14 Aug 2020 20:22:49 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 23:58:38 -0400</lastBuildDate>
     
 	<atom:link href="/code-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Time &amp; Space Complexity</title>
+      <link>/code-programming/tscomplexity/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      
+      <guid>/code-programming/tscomplexity/</guid>
+      <description>Time Complexity Big-O , Big-Omega , Big-Theta
+ Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
+In recursive calls counts,the code would take 0 (n) time and O( n) space.</description>
+    </item>
     
     <item>
       <title>Spark Structured Streaming</title>
@@ -19,16 +30,6 @@
       <guid>/code-programming/srucstream/</guid>
       <description>Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&amp;rsquo;s data is utilized for computation else the event&amp;rsquo;s data is dropped for that time interval.
 Unsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets.</description>
-    </item>
-    
-    <item>
-      <title>Basic code : Spark streaming</title>
-      <link>/code-programming/sparkstream/</link>
-      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
-      
-      <guid>/code-programming/sparkstream/</guid>
-      <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
-Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
     </item>
     
     <item>
@@ -55,14 +56,31 @@ Serialization and Deserialization Serialization is a mechanism of converting the
     </item>
     
     <item>
-      <title>Time &amp; Space Complexity</title>
-      <link>/code-programming/tscomplexity/</link>
-      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      <title>Python : Args vs Kwargs</title>
+      <link>/code-programming/argskargs/</link>
+      <pubDate>Fri, 21 Aug 2020 23:58:38 -0400</pubDate>
       
-      <guid>/code-programming/tscomplexity/</guid>
-      <description>Time Complexity Big-O , Big-Omega , Big-Theta
- Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
-In recursive calls counts,the code would take 0 (n) time and O( n) space.</description>
+      <guid>/code-programming/argskargs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python  List vs Tuple vs Dictionary</title>
+      <link>/code-programming/listtpledict/</link>
+      <pubDate>Fri, 21 Aug 2020 21:26:07 -0400</pubDate>
+      
+      <guid>/code-programming/listtpledict/</guid>
+      <description>List vs Tuples   Basic functions on list # Input list list1= [1,2,&amp;#34;python&amp;#34;,&amp;#34;scala&amp;#34;] # index 2 is included but index 3 is excluded print(&amp;#34;List - &amp;#34; ,list1[1:3]) &amp;gt;&amp;gt; List - [2, &amp;#39;python&amp;#39;] # Index from backwards print(&amp;#34;List - &amp;#34; ,list1[-1]) &amp;gt;&amp;gt; List - scala # Multiply on string = string  print(&amp;#34;List - &amp;#34; ,list1[2]*4) &amp;gt;&amp;gt; List - pythonpythonpythonpython # Check data in list print(&amp;#34;psython&amp;#34; in list1) &amp;gt;&amp;gt; False # iterate list for x in list1: print(x) &amp;gt;&amp;gt;1 2 python scala # length of list print(&amp;#34;Length of list :&amp;#34; , len(list2)) &amp;gt;&amp;gt; Length of list : 4 More functions can be learned from Tutorial point link</description>
+    </item>
+    
+    <item>
+      <title>Basic code : Spark streaming</title>
+      <link>/code-programming/sparkstream/</link>
+      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
+      
+      <guid>/code-programming/sparkstream/</guid>
+      <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
+Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
     </item>
     
   </channel>

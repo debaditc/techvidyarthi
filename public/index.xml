@@ -6,18 +6,90 @@
     <description>Recent content in About the Blog on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 19 Aug 2020 21:22:43 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 23:58:38 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>CAP Theorem</title>
+      <title>Time &amp; Space Complexity</title>
+      <link>/code-programming/tscomplexity/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
+      
+      <guid>/code-programming/tscomplexity/</guid>
+      <description>Time Complexity Big-O , Big-Omega , Big-Theta
+ Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
+In recursive calls counts,the code would take 0 (n) time and O( n) space.</description>
+    </item>
+    
+    <item>
+      <title>OSI Model Layer</title>
+      <link>/system-design/osilayer/</link>
+      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
+      
+      <guid>/system-design/osilayer/</guid>
+      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
+  Comparing OSI Model Layer with TCP/IP model   </description>
+    </item>
+    
+    <item>
+      <title>Spark Structured Streaming</title>
+      <link>/code-programming/srucstream/</link>
+      <pubDate>Fri, 14 Aug 2020 20:22:49 -0400</pubDate>
+      
+      <guid>/code-programming/srucstream/</guid>
+      <description>Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&amp;rsquo;s data is utilized for computation else the event&amp;rsquo;s data is dropped for that time interval.
+Unsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets.</description>
+    </item>
+    
+    <item>
+      <title>Brief on Spark Memory and Optimizer </title>
+      <link>/code-programming/sparkmemory/</link>
+      <pubDate>Sat, 08 Aug 2020 20:28:12 -0400</pubDate>
+      
+      <guid>/code-programming/sparkmemory/</guid>
+      <description>Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
+ Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
+  Designed for 2 main pruposes :
+ Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.</description>
+    </item>
+    
+    <item>
+      <title>Spark definition and overall execution</title>
+      <link>/code-programming/sparklearn/</link>
+      <pubDate>Sat, 08 Aug 2020 17:14:45 -0400</pubDate>
+      
+      <guid>/code-programming/sparklearn/</guid>
+      <description>Install Spark For Windows : Please follow this site
+Basics of Spark Flow Run Spark application -&amp;gt; Driver program starts -&amp;gt; Main function starts -&amp;gt; SparkContext gets initiated -&amp;gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&amp;rsquo;t work.
+Serialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream.</description>
+    </item>
+    
+    <item>
+      <title>Python : Args vs Kwargs</title>
+      <link>/code-programming/argskargs/</link>
+      <pubDate>Fri, 21 Aug 2020 23:58:38 -0400</pubDate>
+      
+      <guid>/code-programming/argskargs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python  List vs Tuple vs Dictionary</title>
+      <link>/code-programming/listtpledict/</link>
+      <pubDate>Fri, 21 Aug 2020 21:26:07 -0400</pubDate>
+      
+      <guid>/code-programming/listtpledict/</guid>
+      <description>List vs Tuples   Basic functions on list # Input list list1= [1,2,&amp;#34;python&amp;#34;,&amp;#34;scala&amp;#34;] # index 2 is included but index 3 is excluded print(&amp;#34;List - &amp;#34; ,list1[1:3]) &amp;gt;&amp;gt; List - [2, &amp;#39;python&amp;#39;] # Index from backwards print(&amp;#34;List - &amp;#34; ,list1[-1]) &amp;gt;&amp;gt; List - scala # Multiply on string = string  print(&amp;#34;List - &amp;#34; ,list1[2]*4) &amp;gt;&amp;gt; List - pythonpythonpythonpython # Check data in list print(&amp;#34;psython&amp;#34; in list1) &amp;gt;&amp;gt; False # iterate list for x in list1: print(x) &amp;gt;&amp;gt;1 2 python scala # length of list print(&amp;#34;Length of list :&amp;#34; , len(list2)) &amp;gt;&amp;gt; Length of list : 4 More functions can be learned from Tutorial point link</description>
+    </item>
+    
+    <item>
+      <title>CAP Theorem in Nutshell</title>
       <link>/system-design/captheorem/</link>
       <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
       
       <guid>/system-design/captheorem/</guid>
-      <description>About CAP Theorem It is also known as Brewer&amp;rsquo;s theorem after computer scientist Eric Brewer.
+      <description>About CAP Theorem It is also known as Brewer&amp;rsquo;s theorem after computer scientist Eric Brewer
 Simple terms It states no distributed data store can provide more than 2 out of 3 gurantees
   Consistency : Every client views the same data. Every node in distributed cluster recieves same data.
   Availability : During node failure time, every node must respond in a reasonable amount of time.
@@ -37,16 +109,6 @@ Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the ba
     </item>
     
     <item>
-      <title>Spark Structured Streaming</title>
-      <link>/code-programming/srucstream/</link>
-      <pubDate>Fri, 14 Aug 2020 20:22:49 -0400</pubDate>
-      
-      <guid>/code-programming/srucstream/</guid>
-      <description>Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event&amp;rsquo;s data is utilized for computation else the event&amp;rsquo;s data is dropped for that time interval.
-Unsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets.</description>
-    </item>
-    
-    <item>
       <title>Basic code : Spark streaming</title>
       <link>/code-programming/sparkstream/</link>
       <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
@@ -54,18 +116,6 @@ Unsupported Operations in Structured Spark streaming  Multiple streaming aggrega
       <guid>/code-programming/sparkstream/</guid>
       <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
 Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
-    </item>
-    
-    <item>
-      <title>Brief on Spark Memory and Optimizer </title>
-      <link>/code-programming/sparkmemory/</link>
-      <pubDate>Sat, 08 Aug 2020 20:28:12 -0400</pubDate>
-      
-      <guid>/code-programming/sparkmemory/</guid>
-      <description>Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features
- Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.
-  Designed for 2 main pruposes :
- Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.</description>
     </item>
     
     <item>
@@ -79,17 +129,6 @@ Window Operations Spark provides window operation which helps to perform transfo
   ZooKeeper gets used for leadership election for Broker Topic Partition Leaders.
   Kafka producers write to Topics -&amp;gt; Kafka consumers read from Topics.
   Topic is associated with a log which is data structure on disk. Kafka appends records from a producer(s) to the end of a topic log.</description>
-    </item>
-    
-    <item>
-      <title>Spark definition and overall execution</title>
-      <link>/code-programming/sparklearn/</link>
-      <pubDate>Sat, 08 Aug 2020 17:14:45 -0400</pubDate>
-      
-      <guid>/code-programming/sparklearn/</guid>
-      <description>Install Spark For Windows : Please follow this site
-Basics of Spark Flow Run Spark application -&amp;gt; Driver program starts -&amp;gt; Main function starts -&amp;gt; SparkContext gets initiated -&amp;gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won&amp;rsquo;t work.
-Serialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream.</description>
     </item>
     
     <item>
@@ -155,17 +194,6 @@ Please visit Talend site here for more details.</description>
     </item>
     
     <item>
-      <title>Time &amp; Space Complexity</title>
-      <link>/code-programming/tscomplexity/</link>
-      <pubDate>Fri, 24 Jul 2020 00:03:26 -0400</pubDate>
-      
-      <guid>/code-programming/tscomplexity/</guid>
-      <description>Time Complexity Big-O , Big-Omega , Big-Theta
- Big-O is the upper asymptotic bound for an algorithm . Worst-case scenarios Big-Omega is the lower bound asymptotic bound of an algorithm. Bast-case sceanrio Big-Theta is in between lower and upper asymptotic bound (tight bound) of an algorithm. Average or expected case scenario  Space Complexity Amount of memory or space required by an algorithm
-In recursive calls counts,the code would take 0 (n) time and O( n) space.</description>
-    </item>
-    
-    <item>
       <title>What is Caching and its importance</title>
       <link>/system-design/caching/</link>
       <pubDate>Sun, 19 Jul 2020 22:20:15 -0400</pubDate>
@@ -223,16 +251,6 @@ SSL / TLS SSL/TLS works by binding the identities of entities such as websites a
       <guid>/system-design/restsoap/</guid>
       <description>REST and SOAP are terms which are often used by engineers. But one must know that REST is architechtural style while SOAP is protocol.
 REST vs SOAP   When to use REST &amp;amp; SOAP REST Usage  Limited resources and bandwidth Statelessness – Any Use-case which doesnot need to store the state. This means REST is not suitable for any online purchase site. Saving the state is very critical for any purchase site.</description>
-    </item>
-    
-    <item>
-      <title>OSI Model Layer</title>
-      <link>/system-design/osilayer/</link>
-      <pubDate>Sat, 11 Jul 2020 19:29:02 -0400</pubDate>
-      
-      <guid>/system-design/osilayer/</guid>
-      <description>About OSI Model OSI stands for Open System Interconnection Model enables syetems to communicate using standard protocols. It is based on 7 layers . During my college days, I used to remeber it as &amp;ldquo;PDN-T-SPA&amp;rdquo; which is Physical , Data , Network , Transport , Session , Presentation and Application layer.
-  Comparing OSI Model Layer with TCP/IP model   </description>
     </item>
     
     <item>
