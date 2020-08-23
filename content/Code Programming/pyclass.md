@@ -109,21 +109,21 @@ class Starship:
         return False
    
    
-# Inherited or Subclass (Note Person in bracket) 
+# Inherited or Subclass (Note Starship in bracket) 
 class Employee(Starship): 
    
     def isWorking(self): 
         return True
     
-emp = Starship("Picard")  # An Object of Person 
+emp = Starship("Romulan")  # An Object of Starship 
 print(emp.getName(), emp.isWorking()) 
    
-emp = Employee("Ryker") # An Object of Employee 
+emp = Employee("Picard") # An Object of Employee 
 print(emp.getName(), emp.isWorking()) 
 
 
 >>
-Picard False
-Ryker True
+Romulan False
+Picard True
 
 ```
