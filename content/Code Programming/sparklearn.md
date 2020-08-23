@@ -1,5 +1,5 @@
 ---
-title: "Nasic definition of Spark"
+title: "Basic definition of Spark"
 date: 2020-08-08T17:14:45-04:00
 tags: ["spark", "hadoop"]
 weight: 2
