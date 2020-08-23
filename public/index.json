@@ -35,18 +35,46 @@
 	"content": "Comparison of Spark streaming , Structured streaming and Kafka Streams   What is a Watermark? Its a method to hande the lateness. Basically , it can be regarded as threshold to specify how long system wait before data arrives. If the event falls under the watermark interval , then the event\u0026rsquo;s data is utilized for computation else the event\u0026rsquo;s data is dropped for that time interval.\nUnsupported Operations in Structured Spark streaming  Multiple streaming aggregations are not yet supported on streaming Datasets. Limit and take the first N rows are not supported on streaming Datasets. Distinct operations on streaming Datasets Sorting operations are supported on streaming Datasets only after an aggregation and in Complete Output Mode. Few types of outer joins on streaming Datasets are not supported. List is here  Details and credits are here\nSample code on Stuctured Spark Streaming (Apache site) spark = SparkSession. ... # Read text from socket socketDF = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() socketDF.isStreaming() # Returns True for DataFrames that have streaming sources socketDF.printSchema() # Read all the csv files written atomically in a directory userSchema = StructType().add(\u0026#34;name\u0026#34;, \u0026#34;string\u0026#34;).add(\u0026#34;age\u0026#34;, \u0026#34;integer\u0026#34;) csvDF = spark \\ .readStream \\ .option(\u0026#34;sep\u0026#34;, \u0026#34;;\u0026#34;) \\ .schema(userSchema) \\ .csv(\u0026#34;/path/to/directory\u0026#34;) # Equivalent to format(\u0026#34;csv\u0026#34;).load(\u0026#34;/path/to/directory\u0026#34;) "
 },
 {
+	"uri": "/code-programming/sparkstream/",
+	"title": "Basic code : Spark streaming",
+	"tags": ["spark", "hadoop", "streaming"],
+	"description": "",
+	"content": "Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here\nWindow Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y: x - y, 30, 10) Checkpointing 2 types of checkpoints in Spark streaming\n  Metadata checkpointing : Saving information defining the streaming computation to fault-tolerant storage like HDFS. Required to recover from failure of the node running the driver of the streaming application Metadata checkpointing -\u0026gt; recovery from driver failures\n  Data checkpointing : Saving generated RDDs to reliable storage like HDFS. Necessary during stateful transformation where previous batch information (RDD) is important. Data checkpointing -\u0026gt; Necessary for Stateful transformation scenario\n  Example Spark streaming code (from Apache site) A simple code to read words in stream and count number of words.\nSave the code for word count and run producer with netcat command\nfrom pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \\ .builder \\ .appName(\u0026#34;Word Count\u0026#34;) \\ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() # Split the lines into words words = lines.select( explode( split(lines.value, \u0026#34; \u0026#34;) ).alias(\u0026#34;word\u0026#34;) ) # Generate running word count wordCounts = words.groupBy(\u0026#34;word\u0026#34;).count() # Start running the query that prints the running counts to the console query = wordCounts \\ .writeStream \\ .outputMode(\u0026#34;complete\u0026#34;) \\ .format(\u0026#34;console\u0026#34;) \\ .start() query.awaitTermination() For Unix users\nnc -lk 9999 For Windows , install nmap from here\nncat.exe -lk 9999 Open another CMD (in Windows) or Terminal (in Linux/Mac) and the run the code to see the result\nspark-submit sparkstream.py localhost 9999 Pic / documentation credits : Apache Spark\n"
+},
+{
 	"uri": "/code-programming/sparkmemory/",
-	"title": "Brief on Spark Memory and Optimizer ",
+	"title": "Spark Memory and Optimizer ",
 	"tags": ["spark", "hadoop"],
 	"description": "",
 	"content": "Spark Memory and Optimizer Optimizer   Core of Spark SQL has Catalyst optimizer which leverages 2 important Scala features\n Pattern matching Quasi Notes (Easy to generate code at runtime from composable expressions)    Catalyst supports both rule-based and cost-based optimization.\n  Designed for 2 main pruposes :\n Easily add new optimization techniques and features to Spark SQL Enable external developers to extend the optimizer (e.g. adding data source specific rules, support for new data types, etc)    More details are here\nMemory For better memory management - Spark included Tungsten\nIt has 3 basic features\n Memory management and binary processing : It removes the overhead of JVM and Garbage collection Cache aware computaion : algorithms and data structures to exploit memory hierarchy Code generation : using code generation to exploit modern compilers and CPUs  More details are here\nKyro-Serializer Kryo is a significantly optimized serializer, and performs better than the standard java serializer. It helps in shuffles (wide transformatiions) where mostly serialization is utilized.\nIt can be setup as\nconf.set( \u0026#34;spark.serializer\u0026#34;, \u0026#34;org.apache.spark.serializer.KryoSerializer\u0026#34; ) "
 },
 {
 	"uri": "/code-programming/sparklearn/",
-	"title": "Spark definition and overall execution",
+	"title": "Nasic definition of Spark",
 	"tags": ["spark", "hadoop"],
 	"description": "",
 	"content": "Install Spark For Windows : Please follow this site\nBasics of Spark Flow Run Spark application -\u0026gt; Driver program starts -\u0026gt; Main function starts -\u0026gt; SparkContext gets initiated -\u0026gt; Driver program runs the operations inside the executors on worker nodes. SparkContext uses Py4J to launch a JVM and creates a JavaSparkContext. By default, PySpark has SparkContext available as ‘sc’, so creating a new SparkContext won\u0026rsquo;t work.\nSerialization and Deserialization Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory.\n Serialization : Java object -\u0026gt; Byte stream Deserialization : Byte stream -\u0026gt; Java object  We need serialization because the hard disk or network infrastructure are hardware component and we cannot send java objects because it understands just bytes :)\nExecution of Spark Job   Image Credits to Data Flair\nSpark Stages 2 types of Spark Stages\n  ShuffleMapStage : Intermediate stage in physical excution of DAG. In Adaptive Query Planning , it can be considered as final stage as well which can save output map files.\n  ResultStage : Final stage in Spark. It helps in computation of result of an action.\n  Lazy Execution Lazy evaluation in Spark means execution of any task wont start start until an action is triggered. Spark has 2 operations\n Transformation Action  Transformation is lazy which means operation wont be performed until an action is triggered.\nMajor Advantage of Lazy execution\n Reduces number of queries - Increase optimization Increases speed of the application - less trips between cluster and driver    Image Credits to Data Flair\nRDD vs Data frame vs Data Set   *Type safe\n RDDs and Datasets are type safe means that compiler know the Columns and it\u0026rsquo;s data type of the Column In Dataframe, it will always return the result as an Array of Rows not as Long, String data type  Broadcast and Accumulators Spark provides Shared variables which are broadcast and accumulator variables.\nBroadcast variables It allows users to keep a copy of variable (which can consist of large dataset) cached in each machine which can be utilized during task execution. It saves the communication cost and thus increases speed of application.\nAccumulators They can be used to implement counters (as in MapReduce) or sums. Its only “added” to through an associative and commutative operation\nCache in Spark Cache is an important factor in Spark application. Cache the dataframe whenever user feels the data is going to be used several times. It helps to improve the performance of application and also create checkpoints in application\nTypes of Storage level in Spark\n DISK_ONLY: Persist data on disk only in serialized format. MEMORY_ONLY: Persist data in memory only in deserialized format (DEFAULT) MEMORY_AND_DISK: Persist data in memory and if enough memory is not available evicted blocks will be stored on disk. OFF_HEAP : Persist data in off-heap memory.  Note - cache() in spark is lazily evaluated. Data will be cached when the 1st first action is called.\nSpark Narrow vs Wide dependency   "
+},
+{
+	"uri": "/code-programming/pyclass/",
+	"title": "OOPs Concepts in nutshell",
+	"tags": ["python", "class", "object", "oop"],
+	"description": "",
+	"content": "Features of OOP   Abstraction : Act of hiding unnecessary information and showing relevant informaion.\nReal life example\n [Watching TV and setup procedures are in TV manual. How TV internally works is part of data abstraction.]    Encapsulation : Wrapping up of data and operations in single unit.\nReal life example\n [Consider an ATM machine , it has both money (data) and ATM services (functions) integarted to ATM machine.]    Inheritance : Act of inheriting features from parent class.\nReal life example\n [Grand parents -\u0026gt; Parents -\u0026gt; us -\u0026gt; our children 😃 ]    Polymorphism : Process of representing one form in multiple forms\nReal life example\n [Consider behaiviour of a person : mother/father to their childern , wife/husband to their spouse , daughter/son to their parents , employee to a company , customer to a shopkeeper ,etc. At the end , its just a person]    Object : Instance of class . It is a bundle of data and behaiviour\n  Class : Its a blueprint of creating objects\n  Simple Class and Object implementation in Python class Startrek: shipname=\u0026#34;StarShip Enterprise\u0026#34; # __init__ is a constructor which initializes the value | self is an instance - it can be named anything def __init__(self,name,dept,rank): self.name = name self.dept = dept self.rank = rank # method to print the data  def printfeatures(self): return f\u0026#34;Name - {self.name} | Dept - {self.dept} | Rank - {self.rank}\u0026#34; # initiatizing objects to class Startrek emp1=Startrek(\u0026#34;Picard\u0026#34;,\u0026#34;Starship\u0026#34;,\u0026#34;Captain\u0026#34;) emp2=Startrek(\u0026#34;Will Ryker\u0026#34;,\u0026#34;Starship\u0026#34;,\u0026#34;1st Officer\u0026#34;) emp3=Startrek(\u0026#34;Daenna Troi\u0026#34;,\u0026#34;Starship\u0026#34;,\u0026#34;Counselor\u0026#34;) emp4=Startrek(\u0026#34;Worf\u0026#34;,\u0026#34;Security\u0026#34;,\u0026#34;Lieutenant\u0026#34;) emp5=Startrek(\u0026#34;La Forge\u0026#34;,\u0026#34;Engineering\u0026#34;,\u0026#34;Lieutenant\u0026#34;) emp6=Startrek(\u0026#34;Data\u0026#34;,\u0026#34;Engineering\u0026#34;,\u0026#34;Commander\u0026#34;) emp7=Startrek(\u0026#34;Crusher\u0026#34;,\u0026#34;Medical\u0026#34;,\u0026#34;Chief Medical officer\u0026#34;) # call the menthod from the class print(emp1.printfeatures()) print(emp2.printfeatures()) print(emp3.printfeatures()) print(emp4.printfeatures()) print(emp5.printfeatures()) print(emp6.printfeatures()) print(emp7.printfeatures()) \u0026gt;\u0026gt; Name - Picard | Dept - Starship | Rank - Captain Name - Will Ryker | Dept - Starship | Rank - 1st Officer Name - Daenna Troi | Dept - Starship | Rank - Counselor Name - Worf | Dept - Security | Rank - Lieutenant Name - La Forge | Dept - Engineering | Rank - Lieutenant Name - Data | Dept - Engineering | Rank - Commander Name - Crusher | Dept - Medical | Rank - Chief Medical officer Inheritance in Python "
+},
+{
+	"uri": "/code-programming/argskargs/",
+	"title": "Python : *args vs **kwargs",
+	"tags": ["python", "args", "kwargs"],
+	"description": "",
+	"content": "*args It is used to pass variable number of arguments to a function\ndef printFunc(arg1, *argv): print (\u0026#34;Argument via argv1 :\u0026#34;, arg1) for arg in argv: print(\u0026#34;Argument via *argv :\u0026#34;, arg) printFunc(\u0026#39;Hello\u0026#39;, \u0026#39;this\u0026#39;, \u0026#39;is\u0026#39;, \u0026#39;Debaditya\u0026#39;) \u0026gt;\u0026gt; First argument : Hello Argument *argv : this Argument *argv : is Argument *argv : Debaditya **kwargs It is used to pass variable number of keyworded arguments to a function\ndef printFunc(arg1, arg2, arg3): print(\u0026#34;arg1:\u0026#34;, arg1 ) print(\u0026#34;arg2:\u0026#34;, arg2) print(\u0026#34;arg3:\u0026#34;, arg3) args = (\u0026#34;This\u0026#34;, \u0026#34;is\u0026#34;, \u0026#34;Debaditya\u0026#34;) printFunc(*args) kwargs = {\u0026#34;arg1\u0026#34; : \u0026#34;This\u0026#34;, \u0026#34;arg2\u0026#34; : \u0026#34;is\u0026#34;, \u0026#34;arg3\u0026#34; : \u0026#34;Debaditya\u0026#34;} printFunc(**kwargs) More contents and details are here Geeksforgeeks\n"
+},
+{
+	"uri": "/code-programming/listtpledict/",
+	"title": "Python  List vs Tuple vs Dictionary",
+	"tags": ["python", "list", "tuple", "dictionary"],
+	"description": "",
+	"content": "List vs Tuples   Basic functions on list # Input list list1= [1,2,\u0026#34;python\u0026#34;,\u0026#34;scala\u0026#34;] # index 2 is included but index 3 is excluded print(\u0026#34;List - \u0026#34; ,list1[1:3]) \u0026gt;\u0026gt; List - [2, \u0026#39;python\u0026#39;] # Index from backwards print(\u0026#34;List - \u0026#34; ,list1[-1]) \u0026gt;\u0026gt; List - scala # Multiply on string = string  print(\u0026#34;List - \u0026#34; ,list1[2]*4) \u0026gt;\u0026gt; List - pythonpythonpythonpython # Check data in list print(\u0026#34;psython\u0026#34; in list1) \u0026gt;\u0026gt; False # iterate list for x in list1: print(x) \u0026gt;\u0026gt;1 2 python scala # length of list print(\u0026#34;Length of list :\u0026#34; , len(list2)) \u0026gt;\u0026gt; Length of list : 4 More functions can be learned from Tutorial point link\nDictionary  Important data type in Python Key:Value pair , Values are mutable but Keys are immutable (string , number , tuple) Represented by {}  Basic functions on Dictionary # Creating an empty Dictionary  Dict = {} # Creating a Dictionary  # with dict() method  Dict = dict({1: \u0026#39;Debaditya\u0026#39;, 2: \u0026#39;Ronaldo\u0026#39;}) print(\u0026#34;\\nDictionary with the use of dict(): \u0026#34;) print(Dict) # with each item as a Pair  Dict = dict([(1, \u0026#39;Debaditya\u0026#39;), (2, \u0026#39;Ronaldo\u0026#39;)]) print(\u0026#34;\\nDictionary with each item as a pair: \u0026#34;) print(Dict) # find value from Dictionary dictionary = {\u0026#39;Debaditya\u0026#39;: 16, \u0026#39;Ronaldo\u0026#39;: 19} search_value = 16 for name, value in dictionary.items(): if age == search_value: print(name) # find key from Dictionary test_dict = {\u0026#39;Debaditya\u0026#39; : 1, \u0026#39;Messi\u0026#39; : 2} search_key = \u0026#39;Messi\u0026#39; # Using list() + keys() + index()  result = list(test_dict.keys()).index(search_key) print(str(result)) Credits to Tutoral point - More dictionary commands are here\nA few example # Problem Statement 1 # Input : {“Gfg” : [4, 7, 5], “Best” : [8, 6, 7], “is” : [9, 3, 8]}, K = 2 # Output : [5, 7, 8] # Explanation : The 2nd index elements are 5, 7 and 8 respectively in different keys. list1 = [] ip = {\u0026#34;Gfg\u0026#34; : [4, 7, 5], \u0026#34;Best\u0026#34; : [8, 6, 7], \u0026#34;is\u0026#34; : [9, 3, 8]} for name,value in ip.items(): list1.append(value[2]) print(\u0026#34;List - \u0026#34;,list1) # Counter command is used to get frequency of values in dictionary # Merge 2 dictionary def Merge(dict1, dict2): res = {**dict1, **dict2} return res # Driver code  dict1 = {\u0026#39;a\u0026#39;: 1, \u0026#39;b\u0026#39;: 2} dict2 = {\u0026#39;d\u0026#39;: 3, \u0026#39;c\u0026#39;: 4} dict3 = Merge(dict1, dict2) print(dict3) \u0026gt;\u0026gt; {\u0026#39;b\u0026#39;: 2, \u0026#39;a\u0026#39;: 1, \u0026#39;c\u0026#39;: 4, \u0026#39;d\u0026#39;: 3} Notes  Python 2.7 : int and long int Python 3 there is only one type : int  "
 },
 {
 	"uri": "/ai-ml/",
@@ -63,22 +91,22 @@
 	"content": "About Debaditya   Debaditya considers himself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is Deb\u0026rsquo;s tech journal on sharing knowledge with everyone and also learn during his tech journey.\nPlease dont forget to check Hobby projects section.\nAreas of Interests  Architechture \u0026amp; System Design Programming \u0026amp; best practices Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial Intelligence \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - debaditya.chakravorty@gmail.com\nNote : Blog\u0026rsquo;s UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊\nThanks for reading!\n"
 },
 {
-	"uri": "/code-programming/argskargs/",
-	"title": "Python : *args vs **kwargs",
-	"tags": [],
-	"description": "",
-	"content": "*args\nIt is used to pass variable number of arguments to a function\ndef printFunc(arg1, *argv): print (\u0026#34;Argument via argv1 :\u0026#34;, arg1) for arg in argv: print(\u0026#34;Argument via *argv :\u0026#34;, arg) printFunc(\u0026#39;Hello\u0026#39;, \u0026#39;this\u0026#39;, \u0026#39;is\u0026#39;, \u0026#39;Debaditya\u0026#39;) \u0026gt;\u0026gt; First argument : Hello Argument *argv : this Argument *argv : is Argument *argv : Debaditya *kwargs\nIt is used to pass variable number of keyworded arguments to a function\ndef printFunc(arg1, arg2, arg3): print(\u0026#34;arg1:\u0026#34;, arg1 ) print(\u0026#34;arg2:\u0026#34;, arg2) print(\u0026#34;arg3:\u0026#34;, arg3) args = (\u0026#34;This\u0026#34;, \u0026#34;is\u0026#34;, \u0026#34;Debaditya\u0026#34;) printFunc(*args) kwargs = {\u0026#34;arg1\u0026#34; : \u0026#34;This\u0026#34;, \u0026#34;arg2\u0026#34; : \u0026#34;is\u0026#34;, \u0026#34;arg3\u0026#34; : \u0026#34;Debaditya\u0026#34;} printFunc(**kwargs) More contents and details are here Geeksforgeeks\n"
-},
-{
-	"uri": "/tags/dictionary/",
-	"title": "dictionary",
+	"uri": "/tags/class/",
+	"title": "class",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/list/",
-	"title": "list",
+	"uri": "/tags/object/",
+	"title": "object",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/oop/",
+	"title": "oop",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -91,15 +119,36 @@
 	"content": ""
 },
 {
-	"uri": "/code-programming/listtpledict/",
-	"title": "Python  List vs Tuple vs Dictionary",
-	"tags": ["python", "list", "tuple", "dictionary"],
-	"description": "",
-	"content": "List vs Tuples   Basic functions on list # Input list list1= [1,2,\u0026#34;python\u0026#34;,\u0026#34;scala\u0026#34;] # index 2 is included but index 3 is excluded print(\u0026#34;List - \u0026#34; ,list1[1:3]) \u0026gt;\u0026gt; List - [2, \u0026#39;python\u0026#39;] # Index from backwards print(\u0026#34;List - \u0026#34; ,list1[-1]) \u0026gt;\u0026gt; List - scala # Multiply on string = string  print(\u0026#34;List - \u0026#34; ,list1[2]*4) \u0026gt;\u0026gt; List - pythonpythonpythonpython # Check data in list print(\u0026#34;psython\u0026#34; in list1) \u0026gt;\u0026gt; False # iterate list for x in list1: print(x) \u0026gt;\u0026gt;1 2 python scala # length of list print(\u0026#34;Length of list :\u0026#34; , len(list2)) \u0026gt;\u0026gt; Length of list : 4 More functions can be learned from Tutorial point link\nDictionary  Important data type in Python Key:Value pair , Values are mutable but Keys are immutable (string , number , tuple) Represented by {}  Basic functions on Dictionary # Creating an empty Dictionary  Dict = {} # Creating a Dictionary  # with dict() method  Dict = dict({1: \u0026#39;Debaditya\u0026#39;, 2: \u0026#39;Ronaldo\u0026#39;}) print(\u0026#34;\\nDictionary with the use of dict(): \u0026#34;) print(Dict) # with each item as a Pair  Dict = dict([(1, \u0026#39;Debaditya\u0026#39;), (2, \u0026#39;Ronaldo\u0026#39;)]) print(\u0026#34;\\nDictionary with each item as a pair: \u0026#34;) print(Dict) # find value from Dictionary dictionary = {\u0026#39;Debaditya\u0026#39;: 16, \u0026#39;Ronaldo\u0026#39;: 19} search_value = 16 for name, value in dictionary.items(): if age == search_value: print(name) # find key from Dictionary test_dict = {\u0026#39;Debaditya\u0026#39; : 1, \u0026#39;Messi\u0026#39; : 2} search_key = \u0026#39;Messi\u0026#39; # Using list() + keys() + index()  result = list(test_dict.keys()).index(search_key) print(str(result)) Credits to Tutoral point - More dictionary commands are here\nA few example # Problem Statement 1 # Input : {“Gfg” : [4, 7, 5], “Best” : [8, 6, 7], “is” : [9, 3, 8]}, K = 2 # Output : [5, 7, 8] # Explanation : The 2nd index elements are 5, 7 and 8 respectively in different keys. list1 = [] ip = {\u0026#34;Gfg\u0026#34; : [4, 7, 5], \u0026#34;Best\u0026#34; : [8, 6, 7], \u0026#34;is\u0026#34; : [9, 3, 8]} for name,value in ip.items(): list1.append(value[2]) print(\u0026#34;List - \u0026#34;,list1) # Counter command is used to get frequency of values in dictionary # Merge 2 dictionary def Merge(dict1, dict2): res = {**dict1, **dict2} return res # Driver code  dict1 = {\u0026#39;a\u0026#39;: 1, \u0026#39;b\u0026#39;: 2} dict2 = {\u0026#39;d\u0026#39;: 3, \u0026#39;c\u0026#39;: 4} dict3 = Merge(dict1, dict2) print(dict3) \u0026gt;\u0026gt; {\u0026#39;b\u0026#39;: 2, \u0026#39;a\u0026#39;: 1, \u0026#39;c\u0026#39;: 4, \u0026#39;d\u0026#39;: 3} Notes  Python 2.7 : int and long int Python 3 there is only one type : int  "
-},
-{
 	"uri": "/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/args/",
+	"title": "args",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/kwargs/",
+	"title": "kwargs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/dictionary/",
+	"title": "dictionary",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/list/",
+	"title": "list",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -217,13 +266,6 @@
 	"content": ""
 },
 {
-	"uri": "/code-programming/sparkstream/",
-	"title": "Basic code : Spark streaming",
-	"tags": ["spark", "hadoop", "streaming"],
-	"description": "",
-	"content": "Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here\nWindow Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y: x - y, 30, 10) Checkpointing 2 types of checkpoints in Spark streaming\n  Metadata checkpointing : Saving information defining the streaming computation to fault-tolerant storage like HDFS. Required to recover from failure of the node running the driver of the streaming application Metadata checkpointing -\u0026gt; recovery from driver failures\n  Data checkpointing : Saving generated RDDs to reliable storage like HDFS. Necessary during stateful transformation where previous batch information (RDD) is important. Data checkpointing -\u0026gt; Necessary for Stateful transformation scenario\n  Example Spark streaming code (from Apache site) A simple code to read words in stream and count number of words.\nSave the code for word count and run producer with netcat command\nfrom pyspark.sql import SparkSession from pyspark.sql.functions import explode from pyspark.sql.functions import split spark = SparkSession \\ .builder \\ .appName(\u0026#34;Word Count\u0026#34;) \\ .getOrCreate() # Create DataFrame representing the stream of input lines from connection to localhost:9999 lines = spark \\ .readStream \\ .format(\u0026#34;socket\u0026#34;) \\ .option(\u0026#34;host\u0026#34;, \u0026#34;localhost\u0026#34;) \\ .option(\u0026#34;port\u0026#34;, 9999) \\ .load() # Split the lines into words words = lines.select( explode( split(lines.value, \u0026#34; \u0026#34;) ).alias(\u0026#34;word\u0026#34;) ) # Generate running word count wordCounts = words.groupBy(\u0026#34;word\u0026#34;).count() # Start running the query that prints the running counts to the console query = wordCounts \\ .writeStream \\ .outputMode(\u0026#34;complete\u0026#34;) \\ .format(\u0026#34;console\u0026#34;) \\ .start() query.awaitTermination() For Unix users\nnc -lk 9999 For Windows , install nmap from here\nncat.exe -lk 9999 Open another CMD (in Windows) or Terminal (in Linux/Mac) and the run the code to see the result\nspark-submit sparkstream.py localhost 9999 Pic / documentation credits : Apache Spark\n"
-},
-{
 	"uri": "/system-design/kafka/",
 	"title": "About Kafka",
 	"tags": ["system design", "real-time", "streaming"],
@@ -245,18 +287,18 @@
 	"content": ""
 },
 {
-	"uri": "/system-design/synasync/",
-	"title": "Nutshell on Synchronous and Asynchronous process",
-	"tags": ["system design", "Synchronous", "Asynchronous"],
-	"description": "",
-	"content": "Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.\n  Asynchronous processing : Ordering food in restaurant , FTP , email , social media.\n  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread |\u0026lt;---T1----\u0026gt;||\u0026lt;----T2----------\u0026gt;||\u0026lt;------T3-----\u0026gt;| Multi Thread thread A -\u0026gt; |\u0026lt;---A----\u0026gt;| thread B ----------------\u0026gt;|\u0026lt;----B----------\u0026gt;| thread C -------------------------------------\u0026gt;|\u0026lt;------C-----\u0026gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.   |--------A--------| |--------B--------| "
-},
-{
 	"uri": "/tags/synchronous/",
 	"title": "Synchronous",
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "/system-design/synasync/",
+	"title": "Synchronous and Asynchronous process",
+	"tags": ["system design", "Synchronous", "Asynchronous"],
+	"description": "",
+	"content": "Real life examples   Synchronous processing : Getting movie ticket from counter , Phone call , video conferencing.\n  Asynchronous processing : Ordering food in restaurant , FTP , email , social media.\n  Synchronous and Asynchronous process  Synchronous processing : Synchronous execution means the execution happens in a single series.  Single Thread |\u0026lt;---T1----\u0026gt;||\u0026lt;----T2----------\u0026gt;||\u0026lt;------T3-----\u0026gt;| Multi Thread thread A -\u0026gt; |\u0026lt;---A----\u0026gt;| thread B ----------------\u0026gt;|\u0026lt;----B----------\u0026gt;| thread C -------------------------------------\u0026gt;|\u0026lt;------C-----\u0026gt;|  Asynchronous processing : Execution of a multiple process can happen without having dependency on each other.   |--------A--------| |--------B--------| "
 },
 {
 	"uri": "/system-design/evntdrive/",

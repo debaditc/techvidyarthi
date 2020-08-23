@@ -47,7 +47,7 @@ Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the ba
     </item>
     
     <item>
-      <title>Nutshell on Synchronous and Asynchronous process</title>
+      <title>Synchronous and Asynchronous process</title>
       <link>/system-design/synasync/</link>
       <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
       

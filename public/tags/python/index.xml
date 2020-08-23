@@ -6,10 +6,34 @@
     <description>Recent content in python on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 21 Aug 2020 21:26:07 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 11:31:55 -0400</lastBuildDate>
     
 	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OOPs Concepts in nutshell</title>
+      <link>/code-programming/pyclass/</link>
+      <pubDate>Sat, 22 Aug 2020 11:31:55 -0400</pubDate>
+      
+      <guid>/code-programming/pyclass/</guid>
+      <description>Features of OOP   Abstraction : Act of hiding unnecessary information and showing relevant informaion.
+Real life example
+ [Watching TV and setup procedures are in TV manual. How TV internally works is part of data abstraction.]    Encapsulation : Wrapping up of data and operations in single unit.
+Real life example
+ [Consider an ATM machine , it has both money (data) and ATM services (functions) integarted to ATM machine.</description>
+    </item>
+    
+    <item>
+      <title>Python : *args vs **kwargs</title>
+      <link>/code-programming/argskargs/</link>
+      <pubDate>Fri, 21 Aug 2020 23:58:38 -0400</pubDate>
+      
+      <guid>/code-programming/argskargs/</guid>
+      <description>*args It is used to pass variable number of arguments to a function
+def printFunc(arg1, *argv): print (&amp;#34;Argument via argv1 :&amp;#34;, arg1) for arg in argv: print(&amp;#34;Argument via *argv :&amp;#34;, arg) printFunc(&amp;#39;Hello&amp;#39;, &amp;#39;this&amp;#39;, &amp;#39;is&amp;#39;, &amp;#39;Debaditya&amp;#39;) &amp;gt;&amp;gt; First argument : Hello Argument *argv : this Argument *argv : is Argument *argv : Debaditya **kwargs It is used to pass variable number of keyworded arguments to a function
+def printFunc(arg1, arg2, arg3): print(&amp;#34;arg1:&amp;#34;, arg1 ) print(&amp;#34;arg2:&amp;#34;, arg2) print(&amp;#34;arg3:&amp;#34;, arg3) args = (&amp;#34;This&amp;#34;, &amp;#34;is&amp;#34;, &amp;#34;Debaditya&amp;#34;) printFunc(*args) kwargs = {&amp;#34;arg1&amp;#34; : &amp;#34;This&amp;#34;, &amp;#34;arg2&amp;#34; : &amp;#34;is&amp;#34;, &amp;#34;arg3&amp;#34; : &amp;#34;Debaditya&amp;#34;} printFunc(**kwargs) More contents and details are here Geeksforgeeks</description>
+    </item>
     
     <item>
       <title>Python  List vs Tuple vs Dictionary</title>

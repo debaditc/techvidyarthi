@@ -1,6 +1,7 @@
 ---
 title: "Python  List vs Tuple vs Dictionary"
 date: 2020-08-21T21:26:07-04:00
+weight : 3
 tags: ["python", "list","tuple","dictionary"]
 draft: false
 ---

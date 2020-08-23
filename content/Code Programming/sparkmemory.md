@@ -1,5 +1,5 @@
 ---
-title: "Brief on Spark Memory and Optimizer "
+title: "Spark Memory and Optimizer "
 date: 2020-08-08T20:28:12-04:00
 tags: ["spark", "hadoop"]
 weight: 2

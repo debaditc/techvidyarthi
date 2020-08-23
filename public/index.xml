@@ -6,7 +6,7 @@
     <description>Recent content in About the Blog on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 21 Aug 2020 23:58:38 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2020 11:31:55 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -43,7 +43,17 @@ Unsupported Operations in Structured Spark streaming  Multiple streaming aggrega
     </item>
     
     <item>
-      <title>Brief on Spark Memory and Optimizer </title>
+      <title>Basic code : Spark streaming</title>
+      <link>/code-programming/sparkstream/</link>
+      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
+      
+      <guid>/code-programming/sparkstream/</guid>
+      <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
+Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
+    </item>
+    
+    <item>
+      <title>Spark Memory and Optimizer </title>
       <link>/code-programming/sparkmemory/</link>
       <pubDate>Sat, 08 Aug 2020 20:28:12 -0400</pubDate>
       
@@ -55,7 +65,7 @@ Unsupported Operations in Structured Spark streaming  Multiple streaming aggrega
     </item>
     
     <item>
-      <title>Spark definition and overall execution</title>
+      <title>Nasic definition of Spark</title>
       <link>/code-programming/sparklearn/</link>
       <pubDate>Sat, 08 Aug 2020 17:14:45 -0400</pubDate>
       
@@ -66,15 +76,26 @@ Serialization and Deserialization Serialization is a mechanism of converting the
     </item>
     
     <item>
+      <title>OOPs Concepts in nutshell</title>
+      <link>/code-programming/pyclass/</link>
+      <pubDate>Sat, 22 Aug 2020 11:31:55 -0400</pubDate>
+      
+      <guid>/code-programming/pyclass/</guid>
+      <description>Features of OOP   Abstraction : Act of hiding unnecessary information and showing relevant informaion.
+Real life example
+ [Watching TV and setup procedures are in TV manual. How TV internally works is part of data abstraction.]    Encapsulation : Wrapping up of data and operations in single unit.
+Real life example
+ [Consider an ATM machine , it has both money (data) and ATM services (functions) integarted to ATM machine.</description>
+    </item>
+    
+    <item>
       <title>Python : *args vs **kwargs</title>
       <link>/code-programming/argskargs/</link>
       <pubDate>Fri, 21 Aug 2020 23:58:38 -0400</pubDate>
       
       <guid>/code-programming/argskargs/</guid>
-      <description>*args
-It is used to pass variable number of arguments to a function
-def printFunc(arg1, *argv): print (&amp;#34;Argument via argv1 :&amp;#34;, arg1) for arg in argv: print(&amp;#34;Argument via *argv :&amp;#34;, arg) printFunc(&amp;#39;Hello&amp;#39;, &amp;#39;this&amp;#39;, &amp;#39;is&amp;#39;, &amp;#39;Debaditya&amp;#39;) &amp;gt;&amp;gt; First argument : Hello Argument *argv : this Argument *argv : is Argument *argv : Debaditya *kwargs
-It is used to pass variable number of keyworded arguments to a function
+      <description>*args It is used to pass variable number of arguments to a function
+def printFunc(arg1, *argv): print (&amp;#34;Argument via argv1 :&amp;#34;, arg1) for arg in argv: print(&amp;#34;Argument via *argv :&amp;#34;, arg) printFunc(&amp;#39;Hello&amp;#39;, &amp;#39;this&amp;#39;, &amp;#39;is&amp;#39;, &amp;#39;Debaditya&amp;#39;) &amp;gt;&amp;gt; First argument : Hello Argument *argv : this Argument *argv : is Argument *argv : Debaditya **kwargs It is used to pass variable number of keyworded arguments to a function
 def printFunc(arg1, arg2, arg3): print(&amp;#34;arg1:&amp;#34;, arg1 ) print(&amp;#34;arg2:&amp;#34;, arg2) print(&amp;#34;arg3:&amp;#34;, arg3) args = (&amp;#34;This&amp;#34;, &amp;#34;is&amp;#34;, &amp;#34;Debaditya&amp;#34;) printFunc(*args) kwargs = {&amp;#34;arg1&amp;#34; : &amp;#34;This&amp;#34;, &amp;#34;arg2&amp;#34; : &amp;#34;is&amp;#34;, &amp;#34;arg3&amp;#34; : &amp;#34;Debaditya&amp;#34;} printFunc(**kwargs) More contents and details are here Geeksforgeeks</description>
     </item>
     
@@ -113,16 +134,6 @@ Table   Veritical Sharding   Horizontal Sharding Sharding is performed on the ba
     </item>
     
     <item>
-      <title>Basic code : Spark streaming</title>
-      <link>/code-programming/sparkstream/</link>
-      <pubDate>Sun, 09 Aug 2020 02:47:18 -0400</pubDate>
-      
-      <guid>/code-programming/sparkstream/</guid>
-      <description>Spark Streaming DStreams (Discretized Streams)  It is an abstraction provided by Spark streaming It is basically represents series of RDD     Directory monitoring (dataDirectory) is described here
-Window Operations Spark provides window operation which helps to perform transformation on sliding window    Window length - The duration of the window Sliding interval - The interval at which the window operation is performed  Example of window operation # Reduce last 30 seconds of data, every 10 seconds windowedWordCounts = pairs.</description>
-    </item>
-    
-    <item>
       <title>About Kafka</title>
       <link>/system-design/kafka/</link>
       <pubDate>Sat, 08 Aug 2020 18:04:27 -0400</pubDate>
@@ -136,7 +147,7 @@ Window Operations Spark provides window operation which helps to perform transfo
     </item>
     
     <item>
-      <title>Nutshell on Synchronous and Asynchronous process</title>
+      <title>Synchronous and Asynchronous process</title>
       <link>/system-design/synasync/</link>
       <pubDate>Sat, 01 Aug 2020 23:36:51 -0400</pubDate>
       
