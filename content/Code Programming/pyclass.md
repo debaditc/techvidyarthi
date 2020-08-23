@@ -90,3 +90,40 @@ Name - Crusher | Dept - Medical | Rank - Chief Medical officer
 ```
 
 ### Inheritance in Python 
+
+
+```python
+
+class Starship: 
+       
+    # Constructor 
+    def __init__(self, name): 
+        self.name = name 
+   
+    # To get name 
+    def getName(self): 
+        return self.name 
+   
+    # To check if this person is working in Starship
+    def isWorking(self): 
+        return False
+   
+   
+# Inherited or Subclass (Note Person in bracket) 
+class Employee(Starship): 
+   
+    def isWorking(self): 
+        return True
+    
+emp = Starship("Picard")  # An Object of Person 
+print(emp.getName(), emp.isWorking()) 
+   
+emp = Employee("Ryker") # An Object of Employee 
+print(emp.getName(), emp.isWorking()) 
+
+
+>>
+Picard False
+Ryker True
+
+```
