@@ -17,6 +17,7 @@ Debaditya considers himself as Life long - "Vidyārthī" which is a Sanskrit wor
 * Algorithms & Code complexities
 
 Have questions or suggestions? Feel free to email - debaditya.chakravorty@gmail.com
+
 Please feel free to send me any topic which you want to cover - Even if I am not aware of the topic - I will read , understand and present in this blog. 
 
     Learning is continous process . Knowledge can be expanded by sharing it with others .
