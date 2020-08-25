@@ -6,17 +6,26 @@
     <description>Recent content in aws on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 24 Jul 2020 00:10:26 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 21:02:11 -0400</lastBuildDate>
     
 	<atom:link href="/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Onprem to AWS S3 </title>
+      <link>/cloud/onprems3/</link>
+      <pubDate>Mon, 24 Aug 2020 21:02:11 -0400</pubDate>
+      
+      <guid>/cloud/onprems3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>AWS Basic Terminologies</title>
-      <link>/system-design/awsterminology/</link>
+      <link>/cloud/awsterminology/</link>
       <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
       
-      <guid>/system-design/awsterminology/</guid>
+      <guid>/cloud/awsterminology/</guid>
       <description>Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.</description>
     </item>
     

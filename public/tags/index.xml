@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 22 Aug 2020 11:31:55 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 21:02:11 -0400</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>aws</title>
+      <link>/tags/aws/</link>
+      <pubDate>Mon, 24 Aug 2020 21:02:11 -0400</pubDate>
+      
+      <guid>/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>/tags/cloud/</link>
+      <pubDate>Mon, 24 Aug 2020 21:02:11 -0400</pubDate>
+      
+      <guid>/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>onprem</title>
+      <link>/tags/onprem/</link>
+      <pubDate>Mon, 24 Aug 2020 21:02:11 -0400</pubDate>
+      
+      <guid>/tags/onprem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>/tags/s3/</link>
+      <pubDate>Mon, 24 Aug 2020 21:02:11 -0400</pubDate>
+      
+      <guid>/tags/s3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>class</title>
@@ -251,24 +287,6 @@
       <pubDate>Sun, 26 Jul 2020 16:30:42 -0400</pubDate>
       
       <guid>/tags/scaling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>/tags/aws/</link>
-      <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
-      
-      <guid>/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloud</title>
-      <link>/tags/cloud/</link>
-      <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
-      
-      <guid>/tags/cloud/</guid>
       <description></description>
     </item>
     

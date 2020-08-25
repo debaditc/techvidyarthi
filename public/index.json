@@ -84,11 +84,60 @@
 	"content": "AI ML Posts   Journey on AI and Machine learning journals\n"
 },
 {
+	"uri": "/cloud/",
+	"title": "Cloud",
+	"tags": [],
+	"description": "",
+	"content": "Cloud Post   Journey on Code and Programming\n"
+},
+{
 	"uri": "/",
 	"title": "About the Blog",
 	"tags": [],
 	"description": "",
-	"content": "About Debaditya   Debaditya considers himself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is Deb\u0026rsquo;s tech journal on sharing knowledge with everyone and also learn during his knowledge journey.\nAreas of Interests  Architechture \u0026amp; System Design Programming \u0026amp; best practices Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial Intelligence \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - debaditya.chakravorty@gmail.com\nPlease feel free to send me any topic which you want to cover - Even if I am not aware of the topic - I will read , understand and present in this blog.\nLearning is continous process . Knowledge can be expanded by sharing it with others .\r Note : Blog\u0026rsquo;s UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊\nPlease dont forget to check Hobby projects section.\nThanks for reading!\n"
+	"content": "About Debaditya   Debaditya considers himself as Life long - \u0026ldquo;Vidyārthī\u0026rdquo; which is a Sanskrit word (means \u0026ldquo;Student\u0026rdquo;). This website is Deb\u0026rsquo;s tech journal on sharing knowledge with everyone and also learn during his knowledge journey.\nAreas of Interests  Architechture \u0026amp; System Design Programming \u0026amp; best practices Big Data , Datalake , DeltaLake Cloud and distributed computing Artificial Intelligence \u0026amp; Machine learning Algorithms \u0026amp; Code complexities  Have questions or suggestions? Feel free to email - debaditya.chakravorty@gmail.com\nPlease feel free to send me any topic which you want to cover - Even if I am not aware of the topic - I will read , understand and present in this blog.\nLearning is continous process . Knowledge can be expanded by sharing it with others .\r Note : Blog\u0026rsquo;s UI is kept simple and focussed more on journal/content. Still in UI learning phase 😊\nPlease dont forget to check Hobby projects section.\nThanks for reading !!\n"
+},
+{
+	"uri": "/tags/aws/",
+	"title": "aws",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/cloud/",
+	"title": "cloud",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/onprem/",
+	"title": "onprem",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/cloud/onprems3/",
+	"title": "Onprem to AWS S3 ",
+	"tags": ["aws", "cloud", "onprem", "s3"],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/s3/",
+	"title": "s3",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "/tags/class/",
@@ -114,13 +163,6 @@
 {
 	"uri": "/tags/python/",
 	"title": "python",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -364,25 +406,11 @@
 	"content": "Nutshell  Horizontal scaling means that we scale by adding more machines into pool of resources Vertical scaling means that we scale by adding more power (CPU, RAM) to an existing machine.  High level difference   Real world implementation Take the benfits of both Horizontal and Vertical scaling\n Vertical scaling : Inter process communication and data consistency Horizontal scaling : Scalability and Resilient (no single point of failure)  Ideal way - First have the veritical scaling (optimal level) and scale horizontally.\nCredits Gaurav Sen - Please watch video in Youtube\n"
 },
 {
-	"uri": "/tags/aws/",
-	"title": "aws",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "/system-design/awsterminology/",
+	"uri": "/cloud/awsterminology/",
 	"title": "AWS Basic Terminologies",
 	"tags": ["aws", "cloud"],
 	"description": "",
 	"content": "Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.  Computing Services  EC2: It is a virtual server that provides resizable compute capacity on the cloud. Elastic Beanstalk: It is an application container used for deploying and managing containers. It creates an environment for working with web applications. Lambda: It is a computing service that runs the code in response to events and automatically manages the computing resources. EC2 Container Service: It allows us to easily run and manage Docker containers across a cluster of EC2 instances.  Storage Services  S3: It refers to Simple Storage Service and allows the storage of data objects of any sort and flat files in the cloud. It is secure, scalable, and durable. CloudFront: It defines a Content Delivery Network. It provides a way to distribute content to end-users with low-latency and high data-transfer speeds. Glacier: It is a low-cost storage service that provides secure and durable storage for long-term data archiving and backup. EFS (Elastic File Storage): It is a file storage service used in EC2 instances and connects to multiple EC2 instances. Snowball: It is used for moving large amounts of data into/out of AWS using secure appliances, i.e., it provides the data archiving functionality for the data that no longer needs to be accessed actively. Storage Gateway: It is used for securely integrating on-premises IT environments with cloud storage for backup and disaster recovery.  Database  RDS (Relational Database Service): It allows the storage of data objects as part of the relational database. It makes it easy to set up, operate, and scale familiar relational databases in the cloud. DynamoDB: It is a scalable NoSQL data store that is used to manage distributed replicas of data for high availability. ElastiCache: It improves application performance by allowing us to retrieve information from an in-memory caching system. It is a way of caching databases in the cloud. Redshift: It is a fast, fully managed data warehousing service, which makes it cost-effective to analyze all data using the existing Business Intelligence tools. DMS (Data Migration Service): It helps in migrating databases to the cloud easily and securely. It can also be used for converting databases.  Analytics  EMR: Amazon Elastic MapReduce helps in performing big data tasks such as web indexing, data mining, and log file analysis. Data Pipeline: It helps in moving data from one service to another. It is a service used for periodic, data-driven workflows. AWS Elasticsearch: It is a managed service that helps in deploying, operating, and scaling Elasticsearch. Kinesis: It makes it easy to work with real-time streaming data in the AWS cloud. AWS Machine Learning: It is a service that enables us to easily build smart applications. AWS QuickSight: It is a cloud-assisted Business Intelligence service that helps in deriving insights from data easily.  Security and Identity  IAM (Identity and Access Management): It helps in configuring security for all the services. It is used to ensure that our other services remain safe and inaccessible to others. *Directory Service: It is used to provide a managed directory in the cloud. Inspector: It enables us to analyze the behavior of the applications we run on AWS and helps in identifying potential security issues. WAF (Web Application Firewall): It protects our web application from attacks by providing web traffic filters. Cloud HSM: It is a Hardware Security Module. KMS (Key Management Service): It is a Key Management Service.  Management Tools  CloudWatch: It is used to create different metrics. It provides monitoring for resources and applications. CloudFormation: It helps in creating and updating a collection of related AWS resources. CloudTrial: It provides increased visibility into user activity by recording API calls made on an account. OpsWorks: It is a DevOps platform for managing applications of any size or complexity on the AWS cloud. Config: It gives an inventory of AWS resources, lets us audit the AWS resource configuration history, and notifies the changes. Service Catalog: It allows organizations to manage approved catalogs of IT resources. Trusted Advisor: It inspects the AWS environment and finds opportunities to save money and improve system performance.  Application Services  API Gateway: It is used to create, maintain, monitor, and secure APIs. AppStream: It is used to stream resource-intensive applications and games from the cloud to multiple users. CloudSearch: It is a completely managed search service for websites and apps. Elastic Transcoder: It is used to convert media files in the cloud easily at a lower cost. SES (Simple Email Service): It is used to send and receive emails. SQS (Simple Queue Service): It is a reliable, hosted queue for storing messages. SWF (Simple Workflow Service): It is used to coordinate all the processing steps with an application.  Developer Tools  Code commit: It is a managed source-control service that hosts private Git repositories. Code deploy: It is used to automate the code deployment. Code pipeline: It is a continuous delivery service that enables us to visualize and automate the steps required to release software.  S3 vs EBS vs EFS   "
-},
-{
-	"uri": "/tags/cloud/",
-	"title": "cloud",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "/tags/programming/",
@@ -628,4 +656,11 @@
 	"tags": [],
 	"description": "",
 	"content": "Social Distancing Application In this fun project (Social distance Detection) , I am using YOLO (You only look once) + weights and COCO (Common Objects in Context) dataset for identifying person in real-time video.\n Yolo V3 COCO labels Distance : Euclidean (between boxes)  We can create the same concept in our workplace and maintain social distancing.\nInspiration This home project is inspired from Sir Andrew Ng\u0026rsquo;s startup More details are here\n  Face Mask detector using Opencv , keras , CNN Fun/Hobby project on Real-time face mask detector during quarantine period 😊. It can be enhanced a lot and can be integrated with Mobile app (Pythonista) , Raspeberry Pi (Miniconda3) , etc and can be utilized in many ways.\nDetails\n Python - 3.6.5 | Conda - 4.8.3 | Keras and Tf Algorithm - MTCNN (Multi-Task Convolution Neural Network) - Lot to learn !! Activation function - RELU (Rectified Linear Unit) for hidden layers Optimizer - Adam optimizer Choose your Optimizer - https://lnkd.in/ec5XngA Loss function - Binary Classification Loss Functions Choose your Loss function - https://lnkd.in/eqyhW7z Learn more on Core layers (using keras) https://lnkd.in/eckgdVa    Drowziness Detection Weekend fun project - Detect drowsiness using OpenCV,Python and Dlib\nInspired\n Article1 Article2 Paper  Great links to begin with .. Its fun when it says - \u0026ldquo;Wake up Deb .. Deb Wake up :D :D\u0026rdquo;\n  Detect eye movement and control mouse pointer (without touching mouse pad) Last year December holidays , I was reading various articles , papers , blogs on Human Computer Interaction . With all those techniques / papers , came up with small project.\nProject : Detect eye movement and control mouse pointer (without touching mouse pad)\nReference Sites/Papers (Awesome pointers to start)\n Paper Site1 Site2    Object detection using OpenCV and CNN Yolo - You Only Look Once This is an interesting topic of detecting objects in picture or video [in real time] (and is becoming very popular). Yolo is extremely fast and outperforms detection methods like DPM and RCNN. Interestingly , YOLO performs detecting objects using single neural network.\nA simple Python application is created to detect objects in image (using Opencv library ) to experiment the model (images below)\nResearch Papers on Yolo\n Yolov1 Yolov2 Yolov3  Credits to the whole team of Yolo (Awesome Algorithm)\n  "
+},
+{
+	"uri": "/publications/",
+	"title": "Publications",
+	"tags": [],
+	"description": "",
+	"content": "Paper Publications   Advanced Clustering Based Intrusion Detection (ACID) Algorithm\n Conference : International Conference on Advances in Computing and Communications Publication : Springer 2011 Link : Springer paper    Analysis of Selected Clustering Algorithms Used in Intrusion Detection Systems\n Conference : International Conference on Technology and Information Systems Publication : ICTIS 2010 Link : ICTIS paper    OPS360 - A Tool Suite for 360 degree Operational Support\n Conference : TCS Tactics (Technical Architects\u0026rsquo; Global Conference 2014) Publication : TCS Tactics (Technical Architects\u0026rsquo; Global Conference 2014) Link : Tactics paper    "
 }]

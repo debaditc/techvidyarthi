@@ -6,7 +6,7 @@
     <description>Recent content in About the Blog on Debaditya Tech Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 22 Aug 2020 11:31:55 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 21:02:11 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -109,6 +109,15 @@ def printFunc(arg1, arg2, arg3): print(&amp;#34;arg1:&amp;#34;, arg1 ) print(&am
     </item>
     
     <item>
+      <title>Onprem to AWS S3 </title>
+      <link>/cloud/onprems3/</link>
+      <pubDate>Mon, 24 Aug 2020 21:02:11 -0400</pubDate>
+      
+      <guid>/cloud/onprems3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>CAP Theorem in Nutshell</title>
       <link>/system-design/captheorem/</link>
       <pubDate>Wed, 19 Aug 2020 21:22:43 -0400</pubDate>
@@ -201,10 +210,10 @@ Please visit Talend site here for more details.</description>
     
     <item>
       <title>AWS Basic Terminologies</title>
-      <link>/system-design/awsterminology/</link>
+      <link>/cloud/awsterminology/</link>
       <pubDate>Fri, 24 Jul 2020 00:10:26 -0400</pubDate>
       
-      <guid>/system-design/awsterminology/</guid>
+      <guid>/cloud/awsterminology/</guid>
       <description>Terminology credits : intellipaat.com Networking Services  VPC: Amazon Virtual Private Cloud (VPC) is a virtual data center in AWS consisting of a set of isolated resources. Direct Connect: It is used to establish a dedicated network connection from the host network to AWS without an Internet connection. Route 53: It is a scalable and highly available Domain Name System (DNS) and domain name registration service, and 53 is the port on which this service runs.</description>
     </item>
     
@@ -328,6 +337,17 @@ Inspiration This home project is inspired from Sir Andrew Ng&amp;rsquo;s startup
       <description>Social Distancing Application In this fun project (Social distance Detection) , I am using YOLO (You only look once) + weights and COCO (Common Objects in Context) dataset for identifying person in real-time video.
  Yolo V3 COCO labels Distance : Euclidean (between boxes)  We can create the same concept in our workplace and maintain social distancing.
 Inspiration This home project is inspired from Sir Andrew Ng&amp;rsquo;s startup More details are here</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/</guid>
+      <description>Paper Publications   Advanced Clustering Based Intrusion Detection (ACID) Algorithm
+ Conference : International Conference on Advances in Computing and Communications Publication : Springer 2011 Link : Springer paper    Analysis of Selected Clustering Algorithms Used in Intrusion Detection Systems
+ Conference : International Conference on Technology and Information Systems Publication : ICTIS 2010 Link : ICTIS paper    OPS360 - A Tool Suite for 360 degree Operational Support</description>
     </item>
     
   </channel>

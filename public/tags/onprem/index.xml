@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>onprem on Debaditya Tech Journal</title>
+    <link>/tags/onprem/</link>
+    <description>Recent content in onprem on Debaditya Tech Journal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 24 Aug 2020 21:02:11 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/onprem/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Onprem to AWS S3 </title>
+      <link>/cloud/onprems3/</link>
+      <pubDate>Mon, 24 Aug 2020 21:02:11 -0400</pubDate>
+      
+      <guid>/cloud/onprems3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

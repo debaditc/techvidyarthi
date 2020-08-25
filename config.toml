@@ -42,12 +42,17 @@ weight = 21
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-linkedin'></i> Linkedin"
 url = "https://www.linkedin.com/in/debaditya-chakravorty/"
-weight = 15
+weight = 25
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-tags'></i> Tags"
 url = "/tags"
 weight = 30
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-atom'></i> Publications"
+url = "/publications"
+weight = 21
 
 [deployment]
 [[deployment.targets]]
